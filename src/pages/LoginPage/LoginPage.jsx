@@ -10,23 +10,14 @@ function LoginPage() {
   const [errorMessage, setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
-
+  
   const { storeToken, authenticateUser } = useContext(AuthContext);
-
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
-
-    // Send a request to the server using axios
-    /* 
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/auth/login`)
-      .then((response) => {})
-    */
-
-    // Or using a service
     authService
       .login(requestBody)
       .then((response) => {
@@ -42,7 +33,6 @@ function LoginPage() {
         setErrorMessage(errorDescription);
       });
   };
-
   return (
     <div className="LoginPage">
       <h1>Login</h1>
@@ -50,7 +40,6 @@ function LoginPage() {
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
-
         <label>Password:</label>
         <input
           type="password"
@@ -58,13 +47,11 @@ function LoginPage() {
           value={password}
           onChange={handlePassword}
         />
-
-        <button className="submitbutton" type="submit">Login</button>
+        <button className="btn-custom-style submitbutton" type="submit">Login</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-
       <p>Don{"'"}t have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
+      <Link className="btn-custom-style" to={"/signup"}> Sign Up</Link>
     </div>
   );
 }

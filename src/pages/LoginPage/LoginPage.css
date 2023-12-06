@@ -1,11 +1,10 @@
+.LoginPage label {
+    margin-top: 10px;
+}
+
 .LoginPage input{
     color: black;
 }
-
-.LoginPage button{
-    color: black;
-}
-
 
 .LoginPage {
     display:flex;

@@ -18,3 +18,23 @@ body{
 .pointer {
   cursor: pointer;
 }
+
+.btn-custom-style {
+  color: rgb(240, 243, 247);
+    outline: 1px solid whitesmoke;
+    padding: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 35px;
+    background: transparent;
+    font-size: 1em;
+}
+
+.btn-custom-style:hover {
+background-color: #ffa646;
+}
