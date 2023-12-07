@@ -72,7 +72,7 @@ function EditProfile() {
           <label htmlFor="location">Location: </label>
           <textarea type="textarea" name="location" value={location} onChange={(event) => setLocation(event.target.value)} />
           <br />
-          <label htmlFor="profilePicture">Profile Picture: </label>
+          <label htmlFor="profilePicture">Profile Picture URL: </label>
           <textarea type="textarea" name="profilePicture" value={profilePicture} onChange={(event) => setProfilePicture(event.target.value)} />
           <br />
           <label htmlFor="skills">Skills: </label>

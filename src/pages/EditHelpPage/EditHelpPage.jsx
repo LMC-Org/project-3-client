@@ -87,7 +87,7 @@ function EditHelpForm() {
                     <label htmlFor="Description">Description</label>
                     <textarea value={description} onChange={(event) => setDescription(event.target.value)} type="textarea" name="description" />
 
-                    <label htmlFor="helpImageUrl">Image</label>
+                    <label htmlFor="helpImageUrl">Image URL:</label>
                     <textarea value={helpImageUrl} onChange={(event) => setHelpImage(event.target.value)} type="text" name="helpImageUrl" />
 
                     <p onClick={(event) => putHelp(event)} className="create-help-button" type="submit">SAVE CHANGES</p>

@@ -157,8 +157,6 @@ function PostDetails() {
                         <p className="name-creator">{helpData.foundHelpPost.creator.name}</p>
                         <img className="creator-picture" src={helpData.foundHelpPost.creator.profilePicture} alt="" />
                     </div>
-                    <p className="creator-title">Category:</p>
-                    <p className="details-category"> {helpData.foundHelpPost.category}</p>
 
                     {(isCreator() && !isCompleted()) &&
                         <div className="edit-help-buttons">

@@ -17,16 +17,19 @@ function CreateHelpForm() {
 
     const postHelp = async (event) => {
         event.preventDefault();
+		let imageUrl = "/images/help-default.jpg";
+		if (helpImageUrl) {
+			imageUrl = helpImageUrl;
+		}
         const helpPosts = {
             title,
             location,
             description,
-            helpImageUrl,
+            helpImageUrl: imageUrl,
             creator: user._id,
             volunteers,
             isCompleted
         };
-        //console.log(helpPosts);
     
         try {
             const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
@@ -60,7 +63,7 @@ function CreateHelpForm() {
                 <label htmlFor="description">Description</label>
                 <textarea value={description} onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description"/>
 
-                <label htmlFor="helpImageUrl">Image</label>
+                <label htmlFor="helpImageUrl">Image URL:</label>
                 <input value={helpImageUrl} onChange={(event) => setHelpImage(event.target.value)} type="text" name="helpImageUrl" id="helpImageUrl"/>
 
                 <p onClick={(event) => postHelp(event)} className="create-help-button">CREATE</p>
