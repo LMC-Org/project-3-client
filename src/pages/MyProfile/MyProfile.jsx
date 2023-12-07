@@ -78,7 +78,9 @@ function MyProfile() {
                                     <div className="cards-container">
                                         {
                                             helpPostsArray.map((eachPost, index) => {
-                                                return (<PostCard key={index} post={eachPost} />);
+												if (!eachPost.isCompleted) {
+													return (<PostCard key={index} post={eachPost} />)
+												}
                                             })
                                         }
                                     </div>
@@ -90,7 +92,9 @@ function MyProfile() {
                                     <div className="cards-container">
                                         {
                                             HelpPostIHaveBeenChosen.map((eachPost, index) => {
-                                                return (<PostCard key={index} post={eachPost} />);
+												if (!eachPost.isCompleted) {
+													return (<PostCard key={index} post={eachPost} />)
+												}
                                             })
                                         }
                                     </div>
@@ -102,7 +106,9 @@ function MyProfile() {
                                     <div className="cards-container">
                                         {
                                             HelpPostIVolunteered.map((eachPost, index) => {
-                                                return (<PostCard key={index} post={eachPost} />);
+                                                if (!eachPost.isCompleted) {
+													return (<PostCard key={index} post={eachPost} />)
+												}
                                             })
                                         }
                                     </div>

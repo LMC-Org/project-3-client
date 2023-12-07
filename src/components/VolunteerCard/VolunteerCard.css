@@ -24,6 +24,9 @@
 	margin-bottom: 0;
 }
 
+.volunteerCard-link button {
+	font-size: 0.77em;
+}
 
 .volunteerCard-card{
 	margin-top: 5px;
