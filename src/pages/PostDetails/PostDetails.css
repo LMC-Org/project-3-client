@@ -122,6 +122,14 @@
     margin-left: 0 auto;
 }
 
+.volunteers-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow: scroll;
+}
+
 @media (min-width: 1000px) {
     .help-image{
         border-radius: 10px;

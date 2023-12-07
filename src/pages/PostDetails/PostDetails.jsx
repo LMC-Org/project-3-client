@@ -146,11 +146,6 @@ function PostDetails() {
                     <p className="post-details">POST DETAILS</p>
                 </div>
 
-                {
-                    message &&
-                    <div className="message">{message} [X]</div>
-                }
-
                 {helpData && <div className="info-post-container">
                     <img className="help-image" src={helpData.foundHelpPost.helpImageUrl} alt={helpData.foundHelpPost.title} />
                     <h3 className="info-title">{helpData.foundHelpPost.title}</h3>
@@ -177,15 +172,16 @@ function PostDetails() {
                     }
 
                     <p className="volunteer"></p>
-                    {(volunteersArray.length > 0 && isCreator()) ?
-                        <div>
-                            <p className="details-volunteer">  Volunteers: </p>
+                    {(volunteersArray.length > 0 && isCreator() && selectedVolunteer === null) ?
+                        <>
+						<p className="details-volunteer">  Volunteers: </p>
+						<div className="volunteers-wrapper">
                             {volunteersArray.map((eachVolunteer, index) => {
                                 //console.log(eachVolunteer);
                                 //console.log(helpId)
                                 return (<VolunteerCard key={index} volunteer={eachVolunteer} postId={helpId} setStuff={setStuff} />)
                             })}
-                        </div> : <p></p>
+                        </div></> : <p></p>
                     }
 
                     { 
@@ -194,7 +190,7 @@ function PostDetails() {
                             {(isCreator() && !isCompleted())&&
 							<>
                                 <p>{`The user ${selectedVolunteer.name} was chosen`}</p>
-                                <button onClick={complete}>Complete Task!</button>
+                                <button className="btn-custom-style" onClick={complete}>Complete Task! ✅</button>
                             </>
 							}
 							{isSelectedVolunteer() &&
