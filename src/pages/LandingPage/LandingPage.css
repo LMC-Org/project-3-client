@@ -13,7 +13,7 @@
     top: 60px;
     left: 0;
     width: 100%;
-    height: 75%;
+    height: 65%;
     z-index: -100;
 
 }
@@ -29,7 +29,7 @@
 
 #landing-upper {
     width: 100%;
-    height: 800px;
+    height: 600px;
     /*     background: url('/images/landing-img.jpeg') no-repeat 50% 50%; */
     background: url('/images/3d-hug-video.mp4') no-repeat 50% 50%;
     background-size: cover;
@@ -46,29 +46,26 @@
     background-color: rgba(202, 202, 202, 0.2);
     width: 65%;
     max-width: 400px;
-    padding: 10px;
-    height: 100px;
+    padding: 25px;
+    height: 150px;
     text-align: center;
-
+display: flex;
+flex-direction: column;
+justify-content: space-around;
     border-radius: 15px;
 }
 
 
 .features-section {
-margin-top: -20px;
     border-bottom: 1px solid whitesmoke;
     text-align: center;
+    background-color: rgb(8, 8, 8);
 }
-
-
 
 .features-text {
     font-size: 30px;
 }
 
-#landing-cta h3 {
-    margin-bottom: 20px;
-}
 
 .get-help-button {
     color: rgb(240, 243, 247);
@@ -78,7 +75,7 @@ margin-top: -20px;
     padding-left: 10px;
     border-radius: 10px;
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto ;
 }
 
 
@@ -93,12 +90,20 @@ margin-top: -20px;
 
 }
 
+.testimonies-container-landing {
+    height: 400px;
+    background-color: rgb(8, 8, 8);
+    margin-bottom: 20px;
+}
+
 #landing-testimonies {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 30px 15px 0 15px;
+    margin-bottom: 30px;
+
 
 }
 
@@ -106,11 +111,9 @@ margin-top: -20px;
     #landing-cta {
         background-color: rgba(202, 202, 202, 0.2);
         width: 40%;
-        max-width: 800px;
+        max-width: 500px;
         font-size: 26px;
         height: 180px;
-        
-
 
     }
 
@@ -120,7 +123,7 @@ margin-top: -20px;
         flex-direction: column;
 
         top: 80px;
-        height: 80%;
+        min-height: 80vh;
         width: 100vw;
 
     }
@@ -133,13 +136,14 @@ margin-top: -20px;
     .first-title {
         margin-top: 30px;
         font-size: 70px;
-        
+
     }
 
 
     .get-help-button {
         width: 250px;
     }
+
     #landing-cta h3 {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -147,17 +151,19 @@ margin-top: -20px;
 
 
     #landing-upper {
-        
-        height: 600px;
-      
-    }
-    .features-section {
 
-        margin-bottom: 20px;
+        height: 620px;
+
     }
+
+    .features-section {
+        margin-top: 120px;
+        
+    }
+
     .features-section p {
         font-size: 34px;
         padding: 20px;
-    
+
     }
 }
