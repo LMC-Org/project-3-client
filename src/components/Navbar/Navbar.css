@@ -100,7 +100,7 @@
 }
 
 .nav-b-left:hover {
-    background-color:#a8ec41;
+    background-color: #a8ec41;
     text-decoration: none;
     color: #111111;
 
@@ -176,12 +176,12 @@ nav .home {
     width: 20px;
 }
 
-.center:hover{
+.center:hover {
     color: #a8e4c1;
 }
 
 /* Hamburguer menu */
-.center:before,
+/* .center:before,
 .center:after,
 .center div {
     background: #fff;
@@ -209,7 +209,32 @@ nav .home {
 .center div {
     transform: scale(0);
 
+} */
+.center:before,
+.center:after,
+.center div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: 3px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-delay: 500ms;
 }
+
+.center:hover:before {
+    transform: translateY(7px) rotate(140deg);
+}
+
+.center:hover:after {
+    transform: translateY(-7px) rotate(-140deg);
+}
+
+.center:hover div {
+    transform: scale(0);
+}
+
 
 @media (min-width: 1000px) {
 
@@ -227,7 +252,7 @@ nav .home {
     .nav-b-left {
         height: 35px;
         width: 100px;
-        text-align: center;   
+        text-align: center;
         font-size: 20px;
     }
 
@@ -244,6 +269,7 @@ nav .home {
         padding: 5px;
         font-size: 20px;
     }
+
     .navbar {
         margin-bottom: 10px;
 
