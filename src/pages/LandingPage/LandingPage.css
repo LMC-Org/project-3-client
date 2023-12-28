@@ -32,6 +32,7 @@
     height: 600px;
     /*     background: url('/images/landing-img.jpeg') no-repeat 50% 50%; */
     background: url('/images/3d-hug-video.mp4') no-repeat 50% 50%;
+    
     background-size: cover;
     /* background-color: green; */
     display: flex;
@@ -81,6 +82,11 @@
     width: 200px;
     margin: 0 auto;
 }
+.get-help-button:hover {
+    background-color: #a8ec41;
+    color: #111111;
+
+}
 
 
 .features-section p {
@@ -110,9 +116,25 @@
         max-width: 800px;
         font-size: 26px;
         height: 180px;
+        padding: 10px;
 
-
-
+    }
+    #landing-upper {
+    
+        /*     background: url('/images/landing-img.jpeg') no-repeat 50% 50%; */
+        background: url('/images/3d-hug-video.mp4') no-repeat 50% 50%;
+        
+        background-size: cover;
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow-x: hidden;
+        justify-content: center;
+        gap: 50px;
+        height: 700px;
+    
     }
 
 
@@ -142,17 +164,12 @@
     }
 
     #landing-cta h3 {
-        margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
 
-    #landing-upper {
-        justify-content: center;
-        gap: 50px;
-        height: 700px;
-    }
-
+  
     .features-section {
         margin-bottom: 40px;
     }
@@ -167,8 +184,13 @@
 @media (min-width: 1600px) {
     #landing-upper {
 
-        height: 1000px;
+        height: 700px;
 
 
+    }
+
+    .features-section {
+        margin-top: -30px;
+        margin-bottom: 20px;
     }
 }

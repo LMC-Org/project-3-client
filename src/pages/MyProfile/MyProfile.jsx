@@ -98,7 +98,7 @@ function MyProfile() {
                                             })
                                         }
                                     </div>
-                                </div> : <p>You have not been selected to volunteer yet</p>}
+                                </div> : <p className="not-v-yet">You have not been selected to volunteer yet</p>}
                             {/* show all post you have volunteered to do */}
                             {HelpPostIVolunteered.length > 0 ?
                                 <div>

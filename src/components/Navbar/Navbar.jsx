@@ -70,7 +70,7 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-green.svg" alt="" />
             </Link>
             <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
 
@@ -102,7 +102,7 @@ function Navbar() {
                         }
                       }} className="side-element">
                         Create Help request
-                    {"  "} <i class="fa fa-plus" style={{color: "white"}}></i>
+                    {"  "} <i class="fa fa-plus" style={{color: "#a8ec41"}}></i>
                       </p>
                     </Link>
                   </li>
@@ -114,7 +114,7 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                      <i class="fa fa-plus" style={{color: "white"}}></i>
+                      <i class="fa fa-plus" style={{color: "#a8ec41"}}></i>
                       </p>
                     </Link>
                   </li>
@@ -133,7 +133,7 @@ function Navbar() {
         {!isLoggedIn && (
           <>
             <Link to="/">
-              <img className="logo" src="/images/4H-2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-green.svg" alt="" />
             </Link>
             <div className="nav-landing-left">
               <Link to="/signup">

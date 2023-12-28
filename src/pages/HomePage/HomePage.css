@@ -35,14 +35,14 @@ span i {
 
 .home-title {
 	font-size: 30px;
-	color: black;
+	color: #a8ec41;
 	font-weight: 300;
 	margin-bottom: 1px;
-	text-align: center;
+	outline: 2px solid #a8ec41;
 	width: 100vw;
-	padding: 10px;
+	padding: 15px;
 	
-	background-color: aliceblue;
+	background-color: #111111
 /* 	background: linear-gradient(100deg, rgba(255, 187, 78, 0.7) 0%, rgba(58, 83, 132, 0.7) 25%, rgba(45, 134, 128, 0.7) 79%, rgba(255, 109, 104, 0.7) 100%);*/
 }
 
@@ -50,9 +50,15 @@ span i {
 	display: flex;
 	justify-content: center;
 }
+.search-bar{
+	margin-top: 15px;
+}
 
 .search-bar input {
-	color: black;
+	color: aliceblue;
+	background-color: #111111;
+	border-radius: 10px;
+	border: 1px solid #a8ec41;
 }
 
 
