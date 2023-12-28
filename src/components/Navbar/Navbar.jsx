@@ -102,7 +102,8 @@ function Navbar() {
                         }
                       }} className="side-element">
                         Create Help request
-                    {"  "} <i class="fa fa-plus" style={{color: "#a8ec41"}}></i>
+                        {"  "} <i class="fa fa-plus" style={{ color: "#111111" }}></i>
+                        {"  "} <i class="fa fa-plus" style={{ color: "#a8ec41" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -114,7 +115,9 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                      <i class="fa fa-plus" style={{color: "#a8ec41"}}></i>
+                        {"  "} <i class="fa fa-plus" style={{ color: "#111111" }}></i>
+
+                        <i class="fa fa-plus" style={{ color: "#a8ec41" }}></i>
                       </p>
                     </Link>
                   </li>
