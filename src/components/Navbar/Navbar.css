@@ -48,14 +48,14 @@
 
 }
 
-.sidebar-stroke{
+.sidebar-stroke {
     background-color: aliceblue;
     height: 2px;
     width: 150px;
     margin-bottom: 20px;
     margin-left: 5px;
 
-    
+
 }
 
 .side-element {
@@ -225,15 +225,26 @@ nav .home {
         height: 35px;
         width: 100px;
         text-align: center;
-
+        
         font-size: 20px;
     }
 
     .navbar {
+        padding: 5px;
 
+    }
+}
 
-        padding: 15px;
-
+@media (min-width: 1100px) {
+    .nav-b-left {
+        height: 35px;
+        width: 120px;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .navbar {
+        margin-bottom: 10px;
 
     }
 }
