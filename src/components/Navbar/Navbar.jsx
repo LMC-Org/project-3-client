@@ -21,8 +21,8 @@ function Navbar() {
   const hasTokens = async () => {
     console.log(userData.tokens)
     if (userData.tokens < 1) {
-      
-      
+
+
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
         const banner = document.querySelector(".no-tokens-banner")
@@ -54,7 +54,7 @@ function Navbar() {
       fetch(`${BACKEND_ROOT}/user/${user._id}`)
         .then((response) => response.json())
         .then((responseJson) => {
-
+          console.log(responseJson)
           setUserData(responseJson);
         })
         .catch((err) => console.log(err));
@@ -72,8 +72,13 @@ function Navbar() {
             <Link to="/home">
               <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
-            <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
-
+            <div className="nav-right">
+            <span class="material-symbols-outlined">
+stat_0
+</span>
+              <p>{userData.tokens}</p>
+              <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
+            </div>
             <div className="sidebar hidden">
               <div onClick={handleSidebar} className="center">
                 <div></div>
@@ -96,7 +101,7 @@ function Navbar() {
                         handleSidebar(event);
                         if (userData.tokens < 1) {
                           event.preventDefault(); // prevent the default action
-                          
+
                           hasTokens();
                           hideBanner();
                         }
