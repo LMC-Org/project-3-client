@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:wght@300&family=Poppins:wght@200;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,12 +8,12 @@
 }
 
 .create-help-container input,
-.create-help-container select{
+.create-help-container select {
 
     color: black;
 }
 
-.create-help-container{
+.create-help-container {
     display: flex;
     flex-direction: column;
     max-width: 70vw;
@@ -22,28 +22,29 @@
     z-index: 0;
     margin: 0 auto;
     gap: 5px;
-    
-    
+
+
 }
-h1{
+
+h1 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.create-help-container > label{
+.create-help-container>label {
     margin-top: 20px;
 }
 
-.create-help-container p{
+.create-help-container p {
     margin-top: 20px;
 }
 
-.create-help-container p:hover{
+.create-help-container p:hover {
     background-color: rgb(255, 166, 70);
 }
 
-.create-help-button{
+.create-help-button {
     color: rgb(240, 243, 247);
     outline: 1px solid whitesmoke;
     padding: 2px;
@@ -52,4 +53,7 @@ h1{
     border-radius: 10px;
 }
 
-  
+.img-preview {
+    max-width: 50vw;
+    border-radius: 10px;
+}

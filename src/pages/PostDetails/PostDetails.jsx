@@ -12,6 +12,7 @@ function PostDetails() {
     const navigate = useNavigate()
     const [helpData, setHelpData] = useState('')
     const [message, setMessage] = useState();
+    const [helpImageUrl, setHelpImageUrl] = useState('')
     const [volunteersArray, setVolunteersArray] = useState([])
     const [selectedVolunteer, setSelectedVolunteer] = useState(null)
     console.log(selectedVolunteer)
@@ -154,8 +155,8 @@ function PostDetails() {
                     <p className="info-description"> {helpData.foundHelpPost.description}</p>
                     <p className="creator-title">Creator: </p>
                     <div className="post-creator-container">
-                        <p className="name-creator">{helpData.foundHelpPost.creator.name}</p>
                         <img className="creator-picture" src={helpData.foundHelpPost.creator.profilePicture} alt="" />
+                        <p className="name-creator">{helpData.foundHelpPost.creator.name}</p>
                     </div>
 
                     {(isCreator() && !isCompleted()) &&

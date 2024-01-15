@@ -9,15 +9,16 @@
     line-height: 25px;
     padding: 10px;
     border-radius: 15px;
-  
-    background: linear-gradient(180deg, rgb(220, 140, 10) 0%, rgb(43, 68, 117) 75%, rgb(23, 90, 86) 89%, rgb(175, 100, 66) 100%);
+    border: 1px solid #a8ec41;
+    background-color: #111111
 }
 
-.general-post-container{
+.general-post-container {
     padding: 15px;
+    
 }
 
-.help-image{
+.help-image {
     border-radius: 10px;
     width: 80vw;
     height: 30vh;
@@ -25,12 +26,12 @@
 }
 
 .help-container {
-    
+
     background-position: center;
     background-size: cover;
-   
+
     width: 100%;
-    
+
 
 }
 
@@ -39,58 +40,74 @@
     margin-left: 20px;
     margin-top: 10px;
     color: rgb(250, 242, 242);
-    
-    
-    text-shadow: 2px 2px 2px rgba(40, 40, 40, 0.3); ;
+
+
+    text-shadow: 2px 2px 2px rgba(40, 40, 40, 0.3);
+    ;
     width: 220px;
 }
 
-.info-post-container{
+.info-post-container {
     padding: 20px;
 }
 
-.details-location{
+.details-location {
     font-size: 20px;
     margin-bottom: 15px;
+    border-top: 1px solid whitesmoke;
+    padding-top: 10px;
+    
 }
-.description-title{
+
+.description-title {
     font-size: 20px;
+    margin-bottom: 3px;
 }
 
-.info-title{
-    margin-bottom: 30px;
-    border-bottom: 1px solid whitesmoke;
+.info-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1px;
+    
+    font-size: 24px;
 }
 
-.name-creator{
+.post-creator-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.name-creator {
     font-size: 18px;
 }
 
-.creator-title{
+.creator-title {
     margin-top: 10px;
     font: 20px;
 }
 
-.volunteer{
+.volunteer {
     font-size: 30px;
 }
 
-.info-description{
+.info-description {
     font-size: 16px;
 }
 
-.creator-picture{
+.creator-picture {
     width: 40px;
     height: 40px;
     border-radius: 25px;
     object-fit: cover;
+    margin-top: 5px;
 }
 
-.details-volunteer{
+.details-volunteer {
     margin-top: 10px;
 }
 
-.I-can-help{
+.I-can-help {
     color: rgb(240, 243, 247);
     outline: 1px solid whitesmoke;
     padding: 2px;
@@ -103,13 +120,13 @@
     margin-left: 0 auto;
 }
 
-.edit-help-buttons{
+.edit-help-buttons {
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
 }
 
-.edit-button{
+.edit-button {
     color: rgb(240, 243, 247);
     outline: 1px solid whitesmoke;
     padding: 2px;
@@ -122,6 +139,13 @@
     margin-left: 0 auto;
 }
 
+.edit-button:hover{
+    background-color: #a8ec41;
+    color: #111111;
+    outline: 1px solid #111111;
+
+}
+
 .volunteers-wrapper {
     display: flex;
     flex-direction: row;
@@ -131,7 +155,7 @@
 }
 
 @media (min-width: 1000px) {
-    .help-image{
+    .help-image {
         border-radius: 10px;
         width: 50vw;
         height: 30vh;

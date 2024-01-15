@@ -22,7 +22,7 @@ function Navbar() {
     console.log(userData.tokens)
     if (userData.tokens < 1) {
       navigate("/myprofile");
-      console.log("navigate called")
+      
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
         const banner = document.querySelector(".no-tokens-banner")
@@ -70,7 +70,7 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-logo-round-green.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
             <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
 
@@ -115,9 +115,9 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                        {"  "} <i class="fa fa-plus" style={{ color: "#111111" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
 
-                        <i class="fa fa-plus" style={{ color: "#a8ec41" }}></i>
+                        <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
                       </p>
                     </Link>
                   </li>
