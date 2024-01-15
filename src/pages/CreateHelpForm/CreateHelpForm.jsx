@@ -15,14 +15,16 @@ function CreateHelpForm() {
     const [creator, setCreator] = useState('')
     const [volunteers, setVolunteers] = useState('')
     const [isCompleted, setIsCompleted] = useState('')
+    const [helpImageUrl, setHelpImageUrl] = useState("");
+
     const navigate = useNavigate();
 
     const handleFileUpload = (e) => {
-        //console.log("The file to be uploaded is: ", e.target.files);
+        console.log("The file to be uploaded is: ", e.target.files);
     
         const uploadData = new FormData();
     
-        uploadData.append('helpPostImage', e.target.files[0]);
+        uploadData.append('helpImageUrl', e.target.files[0]);
     
         console.log("UploadData", uploadData);
         service
@@ -30,7 +32,7 @@ function CreateHelpForm() {
           .then(response => {
             console.log("response is: ", response);
             // response carries "fileUrl" which we can use to update the state
-            setHelpPostImage(response.fileUrl);
+            setHelpImageUrl(response.fileUrl);
           })
           .catch(err => console.log("Error while uploading the file: ", err));
       };
@@ -38,14 +40,14 @@ function CreateHelpForm() {
     const postHelp = async (event) => {
         event.preventDefault();
         let imageUrl = "/images/help-default.jpg";
-        if (helpPostImage) {
-            imageUrl = helpPostImage;
+        if (helpImageUrl) {
+            imageUrl = helpImageUrl;
         }
         const helpPosts = {
             title,
             location,
             description,
-            helpPostImage: helpPostImage,
+            helpImageUrl,
             creator: user._id,
             volunteers,
             isCompleted
@@ -84,13 +86,13 @@ function CreateHelpForm() {
                     <textarea value={description} onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description" />
 
                     <br />
-                    <label htmlFor="helpPostImage">Help Image: </label>
+                    <label htmlFor="helpImageUrl">Help Image: </label>
                     <input type="file" accept="image/*" className="image-input"
 
                         onChange={(event) => handleFileUpload(event)}
-                        name="helpPostImage"
-                        id="helpPostImage" />
-                    {helpPostImage && <img className="img-preview" src={helpPostImage} alt="Help Post Image" />}
+                        name="helpImageUrl"
+                        id="helpImageUrl" />
+                    {helpImageUrl && <img className="img-preview" src={helpImageUrl} alt="Help Post Image" />}
 
                     <br />
 
