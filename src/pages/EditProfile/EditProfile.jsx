@@ -18,7 +18,7 @@ function EditProfile() {
   const navigate = useNavigate()
 
   const handleFileUpload = (e) => {
-    //console.log("The file to be uploaded is: ", e.target.files);
+    console.log("The file to be uploaded is: ", e.target.files);
 
     const uploadData = new FormData();
 
@@ -37,6 +37,7 @@ function EditProfile() {
   useEffect(() => {
     fetch(`${BACKEND_ROOT}/user/${userIdFromAuth}`)
       .then((response) => {
+        console.log(userIdFromAuth)
         return response.json();
       })
       .then((responsejson) => {
