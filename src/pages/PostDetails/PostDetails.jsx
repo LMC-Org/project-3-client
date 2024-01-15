@@ -151,8 +151,10 @@ function PostDetails() {
                     <img className="help-image" src={helpData.foundHelpPost.helpImageUrl} alt={helpData.foundHelpPost.title} />
                     <h3 className="info-title">{helpData.foundHelpPost.title}</h3>
                     <p className="details-location">{helpData.foundHelpPost.location}      <i className="fa fa-map-marker"></i></p>
+                   <div className="description-container">
                     <p className="description-title">Description:</p>
                     <p className="info-description"> {helpData.foundHelpPost.description}</p>
+                    </div>
                     <p className="creator-title">Creator: </p>
                     <div className="post-creator-container">
                         <img className="creator-picture" src={helpData.foundHelpPost.creator.profilePicture} alt="" />

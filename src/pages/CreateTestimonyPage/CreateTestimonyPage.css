@@ -17,3 +17,22 @@
 .form-page .submitbutton, .form-page label{
     margin-top: 20px;
 }
+
+.testimony-box-label{
+    margin-bottom: 10px;
+}
+
+textarea{
+    background-color: #111111;
+    outline: 1px solid #a8ec41;
+    margin-bottom: 10px;
+}
+
+.submitbutton{
+    margin-left: 0 auto;
+}
+
+h1 .testimony-page-title {
+color: #a8ec41;
+outline: 0px;
+}
