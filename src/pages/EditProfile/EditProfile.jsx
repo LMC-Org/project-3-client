@@ -62,7 +62,7 @@ function EditProfile() {
     const updatedUser = {
       location,
       profilePicture,
-      skills: skills.join(', '),
+      skills: Array.isArray(skills) ? skills.join(', ') : skills,
       description,
       id: user._id
     };
