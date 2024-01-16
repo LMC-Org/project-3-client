@@ -73,7 +73,7 @@ function Navbar() {
               <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
             <div className="nav-right">
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
 stat_0
 </span>
               <p>{userData.tokens}</p>

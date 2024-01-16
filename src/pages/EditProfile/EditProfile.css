@@ -1,5 +1,5 @@
 form textarea{
-    color: black;
+    color: whitesmoke;
 }
 form button{
     color: black;
@@ -16,4 +16,19 @@ form button{
     gap: 5px;
     
     
+}
+
+.edit-send{
+    background-color: black;
+    color: aliceblue;
+    outline: 1px solid whitesmoke;
+    padding: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.img-preview{
+    max-width: 30vw;
+    border-radius: 10px;
 }
