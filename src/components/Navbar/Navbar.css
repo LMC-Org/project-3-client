@@ -161,8 +161,14 @@ nav .home {
 .nav-right{
     display: flex;
     align-items:center;
-    gap: 15px;
+    gap: 18px;
     color:#a8ec41
+}
+
+.tokens-state{
+    display: flex;
+    align-items:center;
+    gap: 2px;
 }
 
 .right-button {
@@ -211,6 +217,8 @@ nav .home {
 .center:hover div {
     transform: scale(0);
 }
+
+
 
 
 @media (min-width: 1000px) {
