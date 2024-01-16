@@ -19,6 +19,15 @@
     align-items: center;
 }
 
+form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
 .submitbutton {
     margin-top: 20px;
     color: aliceblue;

@@ -74,10 +74,12 @@ function Navbar() {
               <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
             <div className="nav-right">
+              <div className="tokens-state">
               <span className="material-symbols-outlined">
                 stat_0
               </span>
               <p>{userData.tokens}</p>
+              </div>
               <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
             </div>
             <div className="sidebar hidden">
