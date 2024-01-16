@@ -1,8 +1,8 @@
 import "./Testimony.css";
 
 const Testimony = (props) => {
-    const {text, rating, creator} = props;
-    
+    const { text, rating, creator } = props;
+
     const setStars = (rating) => {
         let stars = "";
         for (let i = 0; i < rating; i++) {
@@ -17,12 +17,12 @@ const Testimony = (props) => {
     return (
         <article className="testimony">
             <p className="quote">{text}</p>
-                
-                <div className="testimony-creator">
+
+            <div className="testimony-creator">
                 <img src={creator.profilePicture} alt={creator.name} />
                 <p>{creator.name}</p>
+            </div>
                 <p className="testimony-rating">{setStars(rating)}</p>
-                </div>
         </article>
     );
 };
