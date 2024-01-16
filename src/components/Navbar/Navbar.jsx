@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/auth.context";
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const [userData, setUserData] = useState('')
+
   const { userId } = useParams()
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
   const navigate = useNavigate();
@@ -73,9 +74,9 @@ function Navbar() {
               <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
             <div className="nav-right">
-            <span class="material-symbols-outlined">
-stat_0
-</span>
+              <span className="material-symbols-outlined">
+                stat_0
+              </span>
               <p>{userData.tokens}</p>
               <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
             </div>
@@ -97,15 +98,8 @@ stat_0
                   </li>
                   <li >
                     <Link to="/createhelp">
-                      <p onClick={(event) => {
-                        handleSidebar(event);
-                        if (userData.tokens < 1) {
-                          event.preventDefault(); // prevent the default action
-
-                          hasTokens();
-                          hideBanner();
-                        }
-                      }} className="side-element">
+                      <p onClick={() => { handleSidebar(); hasTokens(); hideBanner(); }}
+                        className="side-element">
                         Create Help request
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
                         {"  "} <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>

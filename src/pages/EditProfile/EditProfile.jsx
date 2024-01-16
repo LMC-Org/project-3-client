@@ -3,7 +3,6 @@ import { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from '../../context/auth.context';
 import service from "../../services/file-upload.service";
-import service from "../../services/file-upload.service";
 
 function EditProfile() {
   const [userPut, setUserPut] = useState('')
