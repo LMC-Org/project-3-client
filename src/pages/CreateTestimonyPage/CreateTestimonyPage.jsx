@@ -41,9 +41,9 @@ function CreateTestimonyPage() {
     }
     return (
         <div className="form-page">
-            <h1>Create Testimony</h1>
+            <h1 className="testimony-page-title" >Create Testimony</h1>
             <form onSubmit={(event) => postData(event)}>
-                <label htmlFor="text">Do you like our app?</label>
+                <label className="testimony-box-label" htmlFor="text">Feel free to share your experience</label>
                 <textarea placeholder="Your text here" value={text} onChange={(event) => setText(event.target.value)} name="text" id="text" rows="5"></textarea>
                 <Rating onClick={handleRating} />
                 <button className="submitbutton" type="submit">Send</button>

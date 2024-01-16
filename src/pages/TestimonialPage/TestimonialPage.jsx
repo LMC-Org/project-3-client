@@ -19,7 +19,7 @@ function TestimonialPage() {
 
     return (
         <div>
-            <h1>Testimonial Page</h1>
+            <h1>TESTIMONIAL PAGE</h1>
             {
                 testimoniesArray.map((eachTestimony, index) => {
                     console.log("post ", eachTestimony);

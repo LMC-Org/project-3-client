@@ -3,6 +3,7 @@ import { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from '../../context/auth.context';
 import service from "../../services/file-upload.service";
+import service from "../../services/file-upload.service";
 
 function EditProfile() {
   const [userPut, setUserPut] = useState('')
@@ -18,7 +19,7 @@ function EditProfile() {
   const navigate = useNavigate()
 
   const handleFileUpload = (e) => {
-    //console.log("The file to be uploaded is: ", e.target.files);
+    console.log("The file to be uploaded is: ", e.target.files);
 
     const uploadData = new FormData();
 
@@ -34,6 +35,7 @@ function EditProfile() {
       })
       .catch(err => console.log("Error while uploading the file: ", err));
   };
+
   useEffect(() => {
     fetch(`${BACKEND_ROOT}/user/${userIdFromAuth}`)
       .then((response) => {
@@ -47,6 +49,7 @@ function EditProfile() {
       })
       .catch((err) => console.log(err))
   }, [])
+  
   const putData = (event) => {
     event.preventDefault();
     const updatedUser = {
@@ -57,8 +60,6 @@ function EditProfile() {
       id: user._id
     };
     setUserPut(updatedUser)
-
-
 
 
     fetch(`${BACKEND_ROOT}/user/edituser`, {
