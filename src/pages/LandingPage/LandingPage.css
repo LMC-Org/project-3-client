@@ -81,7 +81,7 @@ justify-content: space-around;
     padding-left: 10px;
     border-radius: 10px;
     width: 200px;
-    margin: 0 auto 20px auto ;
+    margin: 0 auto;
 }
 .get-help-button:hover {
     background-color: #a8ec41;
