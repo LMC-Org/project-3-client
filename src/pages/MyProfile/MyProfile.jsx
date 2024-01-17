@@ -5,7 +5,6 @@ import { useContext } from "react";
 import Loading from "../../components/Loading/Loading";
 import PostCard from "../../components/PostCard/PostCard";
 
-
 function MyProfile() {
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
     const userIdFromAuth = user._id
@@ -24,7 +23,7 @@ function MyProfile() {
                 setUserData(jsonData);
                 setHelpPostsArray(jsonData.helpPosts)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => console.error(err))
     }, []);
 
     useEffect(() => {
@@ -36,7 +35,7 @@ function MyProfile() {
                 setHelpPostIVolunteered(jsonData2.allHelpPostsIVolunteered)
                 setHelpPostIHaveBeenChosen(jsonData2.allHelpPostsIWasChosen)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => console.error(err))
     }, []);
 
     return (
@@ -85,6 +84,7 @@ function MyProfile() {
                                         }
                                     </div>
                                 </div> : <p>You have no posts yet</p>}
+
                             {/* show all post that you have been chosen as volunteer */}
                             {HelpPostIHaveBeenChosen.length > 0 ?
                                 <div >
@@ -99,6 +99,7 @@ function MyProfile() {
                                         }
                                     </div>
                                 </div> : <p>You have not been selected to volunteer yet</p>}
+								
                             {/* show all post you have volunteered to do */}
                             {HelpPostIVolunteered.length > 0 ?
                                 <div>

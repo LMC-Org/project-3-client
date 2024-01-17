@@ -18,21 +18,15 @@ function EditProfile() {
   const navigate = useNavigate()
 
   const handleFileUpload = (e) => {
-    //console.log("The file to be uploaded is: ", e.target.files);
-
     const uploadData = new FormData();
-
     uploadData.append('profilePicture', e.target.files[0]);
-
-    console.log("UploadData", uploadData);
     service
       .uploadImageProfile(uploadData)
       .then(response => {
-        console.log("response is: ", response);
         // response carries "fileUrl" which we can use to update the state
         setProfilePicture(response.fileUrl);
       })
-      .catch(err => console.log("Error while uploading the file: ", err));
+      .catch(err => console.error("Error while uploading the file: ", err));
   };
   useEffect(() => {
     fetch(`${BACKEND_ROOT}/user/${userIdFromAuth}`)
@@ -45,8 +39,9 @@ function EditProfile() {
         setSkills(responsejson.skills)
         setDescription(responsejson.description)
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.error(err))
   }, [])
+  
   const putData = (event) => {
     event.preventDefault();
     const updatedUser = {
@@ -56,11 +51,7 @@ function EditProfile() {
       description,
       id: user._id
     };
-    setUserPut(updatedUser)
-
-
-
-
+    setUserPut(updatedUser);
     fetch(`${BACKEND_ROOT}/user/edituser`, {
       method: "PUT",
       headers: {
@@ -74,12 +65,10 @@ function EditProfile() {
         { mode: 'cors' })
       .then((editedUser) => {
         setUserPut(editedUser)
-        console.log(editedUser)
         navigate("/myprofile")
       })
-      .catch((err) => (console.log(err)));
+      .catch((err) => (console.error(err)));
   }
-
 
   return (
     <div>
@@ -91,12 +80,10 @@ function EditProfile() {
           <br />
           <label htmlFor="profilePicture">Profile Picture: </label>
           <input type="file" accept="image/*" className="image-input"
-
             onChange={(event) => handleFileUpload(event)}
             name="profilePicture"
             id="profilePicture" />
           {profilePicture && <img className="img-preview" src={profilePicture} alt="User Profile Image" />}
-
           <br />
           <label htmlFor="skills">Skills: </label>
           <textarea type="textarea" name="skills" value={skills} onChange={(event) => setSkills(event.target.value)} />

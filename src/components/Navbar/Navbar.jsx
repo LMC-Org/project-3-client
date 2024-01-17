@@ -19,10 +19,8 @@ function Navbar() {
   };
 
   const hasTokens = async () => {
-    console.log(userData.tokens)
     if (userData.tokens < 1) {
       navigate("/myprofile");
-      console.log("navigate called")
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
         const banner = document.querySelector(".no-tokens-banner")
@@ -30,14 +28,10 @@ function Navbar() {
 
         if (banner.style.top === "0px") {
           banner.style.top = "-300px"
-
-
         }
-
       } catch (error) {
         console.log("There was an error:", error)
       }
-
     }
   }
   const hideBanner = () => {
@@ -54,10 +48,9 @@ function Navbar() {
       fetch(`${BACKEND_ROOT}/user/${user._id}`)
         .then((response) => response.json())
         .then((responseJson) => {
-
           setUserData(responseJson);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.error(err));
     }
   }, [user]);
 

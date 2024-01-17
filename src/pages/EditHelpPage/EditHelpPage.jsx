@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from 'react'
 import { AuthContext } from "../../context/auth.context";
 
-
 function EditHelpForm() {
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
     const [helpPut, setHelpPut] = useState('')
@@ -16,10 +15,8 @@ function EditHelpForm() {
     const navigate = useNavigate();
 
     useEffect(() => {
-
         const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
         fetch(`${BACKEND_ROOT}/help-post/${helpId}`, { mode: 'cors' })
-
             .then((response) => {
                 return response.json();
             })
@@ -29,11 +26,9 @@ function EditHelpForm() {
                 setHelpImage(helpImageUrl)
                 setTitle(title)
                 setDescription(description)
-                //console.log("este es el responseJson", responseJson.foundHelpPost)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => console.error(err))
     }, [])
-
 
     const putHelp = async (event) => {
         event.preventDefault();
@@ -44,8 +39,6 @@ function EditHelpForm() {
             helpImageUrl,
             isCompleted
         };
-        //console.log(helpPut);
-
         try {
             const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
             const response = await fetch(`${BACKEND_ROOT}/help-post/edithelp/${helpId}`, {
@@ -56,25 +49,17 @@ function EditHelpForm() {
                 body: JSON.stringify(newHelpPut),
             }
                 , { mode: 'cors' });
-
             const responseJson = await response.json();
             setHelpPut(responseJson)
             navigate(`/help-post/${helpId}`)
-            console.log("helpPutjson", responseJson);
-
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
     }
-
-
 
     return (
         <div>
             <h1>Edit Help Request</h1>
-
-
-
             <div className="edit-help-container">
                 <form className="create-help-container" onSubmit={(event) => putHelp(event)}>
 
@@ -96,6 +81,5 @@ function EditHelpForm() {
         </div>
     );
 }
-
 
 export default EditHelpForm;

@@ -14,46 +14,35 @@ function PostDetails() {
     const [message, setMessage] = useState();
     const [volunteersArray, setVolunteersArray] = useState([])
     const [selectedVolunteer, setSelectedVolunteer] = useState(null)
-    console.log(selectedVolunteer)
 
     const isCreator = () => {
-        // console.log ("isCreator: ", user._id === helpData.foundHelpPost.creator._id, user._id, helpData.foundHelpPost.creator._id);
         if (user._id === helpData.foundHelpPost.creator._id) {
-            //console.log("is creator");
             return true;
         }
         else {
-            //console.log("is NOT creator");
             return false;
         }
     }
 
     const isVolunteer = () => {
-		//console.log("VOLUNTEERS: ", helpData.foundHelpPost.volunteers, "USERID: ", user._id );
         if (helpData.foundHelpPost.volunteers.find( element => element._id === user._id)) {
-            //console.log("is volunteer");
             return true;
         }
         else {
-			//console.log("is NOT volunteer");
             return false;
         }
     };
 
 	const isSelectedVolunteer = () => {
-		console.log("SELECTEDVOLUNTEER\nuser._id: ", user._id, "helpData.foundHelpPost.volunteers: ", helpData.foundHelpPost.selectedVolunteer);
         if (helpData.foundHelpPost.selectedVolunteer && user._id === helpData.foundHelpPost.selectedVolunteer._id) {
-            console.log("is selectedVolunteer");
             return true;
         }
 		else {
-			console.log("is NOT selectedVolunteer");
 			return false;
 		}
 	}
 
 	const isCompleted = () => {
-		console.log("ISCOMPLETED: ", helpData.foundHelpPost.isCompleted);
 		return helpData.foundHelpPost.isCompleted;
 	}
 
@@ -63,17 +52,13 @@ function PostDetails() {
 					return response.json();
 				})
 				.then((jsonData) => {
-					console.log("jsondata",jsonData);
 					setHelpData(jsonData);
 					setVolunteersArray(jsonData.foundHelpPost.volunteers)
 					setSelectedVolunteer(jsonData.foundHelpPost.selectedVolunteer)
-					//console.log("jsonData", jsonData);
-					//console.log("datahelp", helpData)
 				})
 				.then(() => {
-					//console.log("IS VOLUNTEER?: ", isVolunteer());
 				})
-				.catch((err) => console.log(err))
+				.catch((err) => console.error(err))
 	}
 
     const onIcanHelp = () => {
@@ -95,7 +80,6 @@ function PostDetails() {
             .then((resJson) => {
                 setMessage(resJson.message);
 				setStuff();
-                //console.log("MESSAGE: ", resJson.message);
             })
     }
 
@@ -118,7 +102,7 @@ function PostDetails() {
                     navigate("/home")
                 }
             })
-            .catch((err) => console.log(err))
+            .catch((err) => console.error(err))
     }
 
     const complete = () => {
@@ -126,7 +110,6 @@ function PostDetails() {
 			volunteerId: helpData.foundHelpPost.selectedVolunteer._id,
             postId: helpData.foundHelpPost._id
         };
-		console.log("COMPLETE BTN", user._id, helpData.foundHelpPost._id);
         fetch(`${BACKEND_ROOT}/help-post/setcompleted`, {
             method: "PUT",
             mode: "cors",
@@ -175,8 +158,6 @@ function PostDetails() {
 						<p className="details-volunteer">  Volunteers: </p>
 						<div className="volunteers-wrapper">
                             {volunteersArray.map((eachVolunteer, index) => {
-                                //console.log(eachVolunteer);
-                                //console.log(helpId)
                                 return (<VolunteerCard key={index} volunteer={eachVolunteer} postId={helpId} setStuff={setStuff} />)
                             })}
                         </div></> : <p></p>

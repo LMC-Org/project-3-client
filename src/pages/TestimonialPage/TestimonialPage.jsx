@@ -14,7 +14,7 @@ function TestimonialPage() {
                 setTestimoniesArray(resJson);
                 console.log("resJson", resJson);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.error(err));
     }, []);
 
     return (
@@ -22,7 +22,6 @@ function TestimonialPage() {
             <h1>Testimonial Page</h1>
             {
                 testimoniesArray.map((eachTestimony, index) => {
-                    console.log("post ", eachTestimony);
                     const { text, rating, creator } = eachTestimony;
                     return (
                         <div key={index} id="alltestimonies-testimonies-container" >

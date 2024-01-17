@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-
 import "./VolunteerCard.css";
 import { useState } from "react";
 
@@ -8,10 +7,6 @@ const VolunteerCard = (props) => {
     const { _id, location, email, phone, name, profilePicture } = props.volunteer;
     const postId = props.postId;
     const setStuff = props.setStuff
-    console.log(props);
-    //const setReload = props.setReload;
-    //console.log(_id);
-
 
     const chooseVolunteer = () => {
         navigate(`/help-post/${postId}`);
@@ -19,7 +14,6 @@ const VolunteerCard = (props) => {
             volunteerId: _id,
             postId
         }
-        console.log(reqBody);
         const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
         fetch(`${BACKEND_ROOT}/help-post/selectvolunteer`, {
             method: "POST",
@@ -28,19 +22,12 @@ const VolunteerCard = (props) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(reqBody),
-
         })
             .then(response => response.json())
-            .then((data) => {
-                console.log(data);
+            .then(() => {
                 setStuff();
             })
             .catch((error) => (console.error(error)));
-
-        
-
-
-
     }
 
     return (

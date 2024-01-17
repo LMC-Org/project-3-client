@@ -16,7 +16,6 @@ const TestimonyTestimonialPage = (props) => {
 
     return (
         <article className="testimony-testimonial">
-
             <div className="testimony-creator-testimonial">
                 <img src={creator.profilePicture} alt={creator.name} />
                 <p className="creator-name">{creator.name}</p>

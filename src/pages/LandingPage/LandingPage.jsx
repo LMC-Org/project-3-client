@@ -15,7 +15,7 @@ const LandingPage = () => {
                 setTestimoniesArray(responseJson);
                 console.log(responseJson);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.error(err));
     }, []);
 
     return (
@@ -25,7 +25,6 @@ const LandingPage = () => {
                     <video autoPlay muted loop>
                         <source className="landing-video" src="./images/3d-hug-video.mp4" type="video/mp4"></source>
                     </video>
-
                 </div>
                 <h2 className="first-title">Do you need help with anything? </h2>
                 <div id="landing-cta">
@@ -41,7 +40,6 @@ const LandingPage = () => {
                 <p>Earn more tokens by helping others</p>
             </section>
             {/* In backend I need to populate creator and send it populated to frontend */}
-            
             <div className="testimonies-container-landing">
                 <section id="landing-testimonies">
                 {
@@ -52,7 +50,7 @@ const LandingPage = () => {
                         )
                     })
                 }
-            </section>
+            	</section>
             </div>
         </div>
     );

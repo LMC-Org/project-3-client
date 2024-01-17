@@ -18,7 +18,7 @@ function IsAnon({ children }) {
   }
 
   // If the user is not logged in, allow to see the page ✅
-  console.log("is anonymous => display children (LandingPage)");
+  // console.log("is anonymous => display children (LandingPage)");
   return children;
 }
 

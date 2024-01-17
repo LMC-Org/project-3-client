@@ -1,14 +1,3 @@
-/* .volunteerCard-link {
-	
-    background-color: antiquewhite;
-    border-radius: 8px;
-    padding: 14px;
-	display: flex;
-    flex-direction: column;
-	margin-bottom: 20px;
-	text-decoration: none;
-	color: black;
-} */
 .volunteerCard-link {
 	display: flex;
     flex-direction: column;
@@ -53,13 +42,11 @@
 }
 
 .name-volunteerCard{
-
 	margin-bottom: 10px;
 }
 
 .email-volunteerCard {
 	font-style: italic;
-
 }
 
 .image-volunteerCard{
