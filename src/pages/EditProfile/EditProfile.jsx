@@ -48,13 +48,13 @@ function EditProfile() {
         setDescription(responsejson.description)
       })
       .catch((err) => console.log(err))
-  },[])
+  }, [])
 
   const handleSkillsChange = (event) => {
     const selectedSkills = Array.from(event.target.selectedOptions, option => option.value);
     console.log(selectedSkills)
     setSkills(selectedSkills);
-;
+    ;
   };
 
   const putData = (event) => {
@@ -67,15 +67,15 @@ function EditProfile() {
       id: user._id
     };
     setUserPut(updatedUser)
-  
+
     fetch(`${BACKEND_ROOT}/user/edituser`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(updatedUser),
-      mode: 'cors'
-    })
+
+    }, { mode: 'cors' })
       .then((response) => {
         return response.json();
       })
@@ -86,8 +86,8 @@ function EditProfile() {
       })
       .catch((err) => (console.log(err)));
   }
-  
-  
+
+
 
   return (
     <div>
@@ -107,7 +107,7 @@ function EditProfile() {
 
           <br />
           <label htmlFor="skills">Skills: </label>
-        
+
           <select name="skills" id='skills' multiple size="4" value={skills} onChange={handleSkillsChange}>
             <option value="">--Please choose up to 4 skills--</option>
             <option value="Languages">Languages</option>
