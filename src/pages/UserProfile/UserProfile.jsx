@@ -58,10 +58,7 @@ function UserProfile() {
                                         <h4 className="skills-title">Skills:</h4>
                                         <p> {userData.skills}</p>
                                     </div>
-									<div className="skills-container">
-                                        <h4 className="skills-title">Skills:</h4>
-                                        <p> {userData.skills}</p>
-                                    </div>
+									
 									<div className="skills-container">
                                         <h4 className="skills-title">Contact:</h4>
                                         <p>E-Mail: {userData.email}</p>

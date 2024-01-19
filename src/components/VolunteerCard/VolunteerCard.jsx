@@ -48,14 +48,18 @@ const VolunteerCard = (props) => {
             <div className="volunteerCard-link">
                 <Link to={`/user/${_id}`} >
                     <div className="volunteerCard-card" >
+                        <div className="v-card-name-img">
                         <img className="image-volunteerCard" src={profilePicture} alt="" />
-                        {phone ? (<p className="email-volunteerCard">Tel.: {phone}</p>) : <></>}
+                        <p className="name-volunteerCard">{name}</p>
+                        </div>
+                        {location === undefined ? <p></p> : <p className="location-volunteerCard">{location}
+                        <i className="fa fa-map-marker"></i>
+                        <span>{" "}</span>  </p>}
+                        {phone ? (<p className="email-volunteerCard"> {phone}</p>) : <></>}
                         <p className="email-volunteerCard">Email: {email}</p>
-                        {location === undefined ? <p></p> : <p className="location-volunteerCard">Location: {location}</p>}
-                        <p className="name-volunteerCard">Name: {name}</p>
                     </div>
                 </Link>
-                <button className="btn-custom-style" onClick={chooseVolunteer}>Choose this volunteer!!</button>
+                <button className="btn-custom-style" onClick={chooseVolunteer}>Select volunteer</button>
             </div>
         </>
     );

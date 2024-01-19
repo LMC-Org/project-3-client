@@ -10,7 +10,7 @@ function EditHelpForm() {
     const [title, setTitle] = useState('')
     const [location, setLocation] = useState('')
     const [description, setDescription] = useState('')
-    const [helpImageUrl, setHelpImage] = useState('')
+    const [helpImageUrl, setHelpImageUrl] = useState('')
     const [isCompleted, setIsCompleted] = useState('')
     const { helpId } = useParams()
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ function EditHelpForm() {
             .then(response => {
                 // console.log("response is: ", response);
                 // response carries "fileUrl" which we can use to update the state
-                setHelpImage(response.fileUrl);
+                setHelpImageUrl(response.fileUrl);
             })
             .catch(err => console.log("Error while uploading the file: ", err));
     };
@@ -44,10 +44,9 @@ function EditHelpForm() {
             .then((responseJson) => {
                 const { location, helpImageUrl, title, description } = responseJson.foundHelpPost
                 setLocation(location)
-                setHelpImage(helpImageUrl)
+                setHelpImageUrl(helpImageUrl)
                 setTitle(title)
                 setDescription(description)
-                //console.log("este es el responseJson", responseJson.foundHelpPost)
             })
             .catch((err) => console.log(err))
     }, [])
@@ -62,7 +61,7 @@ function EditHelpForm() {
             helpImageUrl,
             isCompleted
         };
-        //console.log(helpPut);
+        console.log(helpImageUrl);
 
         try {
             const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
@@ -105,7 +104,7 @@ function EditHelpForm() {
                     <label htmlFor="Description">Description</label>
                     <textarea value={description} onChange={(event) => setDescription(event.target.value)} type="textarea" name="description" />
 
-                    <label htmlFor="helpImageUrl">Image</label>
+                    <label htmlFor="helpImageUrl">Help Image</label>
                     <input type="file" accept="image/*" className="image-input"
                         
                         onChange={(event) => handleFileUpload(event)}

@@ -153,9 +153,22 @@ nav .home {
     width: 30px;
     margin-left: 10px;
     margin-bottom: 5px;
-    margin-top: 8px;
+    margin-top: 10px;
 
 
+}
+
+.nav-right{
+    display: flex;
+    align-items:center;
+    gap: 18px;
+    color:#a8ec41
+}
+
+.tokens-state{
+    display: flex;
+    align-items:center;
+    gap: 2px;
 }
 
 .right-button {
@@ -180,36 +193,6 @@ nav .home {
     color: #a8e4c1;
 }
 
-/* Hamburguer menu */
-/* .center:before,
-.center:after,
-.center div {
-    background: #fff;
-    content: "";
-    display: block;
-    height: 2px;
-    border-radius: 3px;
-    margin: 7px 0;
-    transition: 0.5s;
-    transition-delay: 500ms;
-}
-
-.center:before {
-    transform: translateY(9px) rotate(138deg);
-    transition-delay: 500ms;
-}
-
-.center:after {
-    transition-delay: 500ms;
-    transform: translateY(-9px) rotate(-138deg);
-    color: #a8e4c1;
-
-}
-
-.center div {
-    transform: scale(0);
-
-} */
 .center:before,
 .center:after,
 .center div {
@@ -234,6 +217,8 @@ nav .home {
 .center:hover div {
     transform: scale(0);
 }
+
+
 
 
 @media (min-width: 1000px) {

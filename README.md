@@ -19,8 +19,8 @@
 ## Highlights:
 
 - Users can post help requests.
-- Another users can offer to help you with it.
-- For each help to others, you earn one app-token.
+- Other users can volunteer to help out.
+- For each completed help request, you earn one app-token.
 - Each token allows the user to post one help request.
 - First-time users get 3 tokens to start with.
 - Users can browse and volunteer for posts (help requests) that align with their skills and availability.  
@@ -38,6 +38,20 @@
 
 &nbsp;  
 &nbsp;
+
+If you are a new user, welcome to the place where you can find the help you need.
+You get 3 free tokens. 
+Tokens are used to create and post help requests.
+Once you are out of tokens you won't be able
+You can earn more tokens by helping others.
+For each completed help request you will earn one token.
+
+As this is a community based site, there is also a Testimonial page where users share their experience
+If you would like to share yours, you can go to the Create Testimony page and submit it there, we'll really appreciate it.
+We value honesty and privacy, so feel free to share as much as you like, but beware of sensitive information.
+Thank you for taking the time.
+Finding the help that you need is just a matter of time.
+The bigger the community the faster it will be!
 
 
 ### Frontend Routes

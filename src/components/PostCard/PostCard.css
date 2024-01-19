@@ -1,22 +1,20 @@
-
-
-.post-card-container{
+.post-card-container {
 	display: flex;
 	flex-direction: row;
 	gap: 15px;
 	margin-top: 10px;
-	
+
 }
 
-.help-post-card-small{
+.help-post-card-small {
 	background-color: #a8ec41;
 	color: #111111;
 	width: 150px;
 	gap: 10px;
-	
+	min-height: 13vh;
 	border-radius: 8px;
 	padding: 10px;
-	
+
 	box-shadow: 2px 2px 3px rgba(45, 45, 45);
 	line-height: 25px;
 	font-size: 10px;
@@ -27,14 +25,19 @@
 
 }
 
-.help-post-card-small .location{
+.help-post-card-small .location {
 	border-top: 1px solid #111111;
 
 }
-.help-post-card-small .title{
-	border: 0;
-	
 
+.help-post-card-small .title {
+	border: 0;
+
+
+}
+
+.btn-custom-style:hover{
+	color: #111111
 }
 
 
@@ -63,9 +66,13 @@
 
 }
 
-@media (min-width: 1000px) {
-	.help-post-card-small{
+.fa-map-marker{
+	margin-left: 5px;
+}
 
+@media (min-width: 1000px) {
+	.help-post-card-small {
+		min-height: 15vh;
 		width: 300px;
 	}
 }

@@ -3,6 +3,7 @@ import Testimony from "../../components/Testimony/Testimony";
 import "./LandingPage.css";
 import { useContext, useEffect, useState } from "react";
 
+
 const LandingPage = () => {
     const [testimoniesArray, setTestimoniesArray] = useState([]);
 
@@ -34,12 +35,14 @@ const LandingPage = () => {
                 </div>
             </section>
             <section className="features-section">
-                <p >Share what you need one token at a time</p>
+                <p>Share what you need one token at a time</p>
                 <p>Sign in and get your first 3 tokens for free</p>
                 <p>Earn more tokens by helping others</p>
             </section>
             {/* In backend I need to populate creator and send it populated to frontend */}
-            <section id="landing-testimonies">
+            
+            <div className="testimonies-container-landing">
+                <section id="landing-testimonies">
                 {
                     testimoniesArray.map((eachTestimony, index) => {
                         const { text, rating, creator } = eachTestimony;
@@ -49,6 +52,7 @@ const LandingPage = () => {
                     })
                 }
             </section>
+            </div>
         </div>
     );
 }
