@@ -11,7 +11,7 @@ function EditProfile() {
   let [skills, setSkills] = useState([])
   const [description, setDescription] = useState('')
   const [helpImageUrl, setHelpImageUrl] = useState("");
-
+  const [loading, setLoading] = useState(true)
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
   const userIdFromAuth = user._id
@@ -46,28 +46,33 @@ function EditProfile() {
         setLocation(responsejson.location)
         setProfilePicture(responsejson.profilePicture)
         setSkills(responsejson.skills)
+        console.log("SKILLS:", skills)
         setDescription(responsejson.description)
+        setLoading(false)
       })
       .catch((err) => console.log(err))
   }, [])
 
   const handleSkillsChange = (event) => {
-    const selectedSkills = Array.from(event.target.selectedOptions, option => option.value);
-    console.log(selectedSkills)
-    setSkills(selectedSkills);
-    ;
+    if (event.target.checked) {
+      setSkills(prevSkills => [...prevSkills, event.target.value]);
+    } else {
+      setSkills(prevSkills => prevSkills.filter(skill => skill !== event.target.value));
+    }
   };
 
   const putData = (event) => {
     event.preventDefault();
+    const skillsArray = typeof skills === 'string' ? [skills] : skills;
     const updatedUser = {
       location,
       profilePicture,
-      skills: Array.isArray(skills) ? skills.join(', ') : skills,
+      skills: skillsArray,
       description,
       id: user._id
     };
     setUserPut(updatedUser)
+    console.log(updatedUser)
 
     fetch(`${BACKEND_ROOT}/user/edituser`, {
       method: "PUT",
@@ -106,17 +111,17 @@ function EditProfile() {
             id="profilePicture" />
           {profilePicture && <img className="img-preview" src={profilePicture} alt="User Profile Image" />}
           <br />
-          <label htmlFor="skills" className='custom-select' >Skills: </label>
+          <label htmlFor="skills" className='custom-select'  >Skills: </label>
           <div id='skills'>
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Languages" /> <span className="checkboxLabel">Languages</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Tech" /> <span className="checkboxLabel">Tech</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Strength" />  <span className="checkboxLabel">Strength</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Dancing" />  <span className="checkboxLabel">Dancing</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Active listening" /> <span className="checkboxLabel">Active listening</span> </label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Body disciplines" /> <span className="checkboxLabel">Body disciplines</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Coaching" />  <span className="checkboxLabel">Coaching</span> </label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Humor" />  <span className="checkboxLabel">Humor</span></label><br />
-            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Sports" />  <span className="checkboxLabel">Sports</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Languages')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Languages" /> <span className="checkboxLabel">Languages</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Tech')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Tech" /> <span className="checkboxLabel">Tech</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Strength')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Strength" />  <span className="checkboxLabel">Strength</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Dancing')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Dancing" />  <span className="checkboxLabel">Dancing</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Active listening')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Active listening" /> <span className="checkboxLabel">Active listening</span> </label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Body disciplines')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Body disciplines" /> <span className="checkboxLabel">Body disciplines</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Coaching')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Coaching" />  <span className="checkboxLabel">Coaching</span> </label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Humor')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Humor" />  <span className="checkboxLabel">Humor</span></label><br />
+            <label><input onChange={handleSkillsChange} checked={skills.includes('Sports')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Sports" />  <span className="checkboxLabel">Sports</span></label><br />
           </div>
           <br />
           <label htmlFor="description">Description: </label>

@@ -13,6 +13,10 @@ function MyProfile() {
     const [helpPostsArray, setHelpPostsArray] = useState([])
     const [HelpPostIVolunteered, setHelpPostIVolunteered] = useState([])
     const [HelpPostIHaveBeenChosen, setHelpPostIHaveBeenChosen] = useState([])
+    const [skills, setSkills] = useState([])
+    const skillsString = userData.skills ? userData.skills.join(', ') : ''
+   
+    
     const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
 
     useEffect(() => {
@@ -23,6 +27,8 @@ function MyProfile() {
             .then((jsonData) => {
                 setUserData(jsonData);
                 setHelpPostsArray(jsonData.helpPosts)
+                setSkills(jsonData.skills.join(', '))
+                
             })
             .catch((err) => console.log(err))
     }, []);
@@ -60,7 +66,7 @@ function MyProfile() {
                                     </div>
                                     <div className="skills-container">
                                         <h4 className="skills-title">Skills:</h4>
-                                        <p className="skills-profile" >{userData.skills}</p>
+                                        <p className="skills-profile" >{skillsString}</p>
                                     </div>
                                     <div className="tokens-container">
                                         <p>TOKENS LEFT: </p>

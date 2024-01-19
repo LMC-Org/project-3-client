@@ -82,12 +82,7 @@ form button {
 
 }
 
-.checkboxLabel:hover {
-    background-color: #a8e41c;
-    color: black;
-}
-
-.hiddenCheckbox:checked+.checkboxLabel {
+.hiddenCheckbox:checked +.checkboxLabel {
     background-color: #a8e41c;
     color: black;
 }
@@ -101,21 +96,3 @@ form button {
     gap: 5px;
 }
 
-/* input[type="file" i] {
-    display: block;
-    color: white;
-    padding: 5px 15px 5px 15px;
-    background-color: #323232;
-    margin-bottom: 0px;
-    cursor: pointer;
-    border-radius: 20px;
-    border: none;
-}
-
-.edit-profile-container #profilePicture input{
-    background-color: #323232;
-}
-
-input#profilePicture .image-input input[type="file" i]{
-    background-color: #323232;
-} */
