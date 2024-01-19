@@ -55,24 +55,6 @@ function CreateHelpForm() {
         }
     }, [user]);
 
-    const handleFileUpload = (e) => {
-        //console.log("The file to be uploaded is: ", e.target.files);
-    
-        const uploadData = new FormData();
-    
-        uploadData.append('helpPostImage', e.target.files[0]);
-    
-        console.log("UploadData", uploadData);
-        service
-          .uploadImage(uploadData)
-          .then(response => {
-            console.log("response is: ", response);
-            // response carries "fileUrl" which we can use to update the state
-            setHelpPostImage(response.fileUrl);
-          })
-          .catch(err => console.log("Error while uploading the file: ", err));
-      };
-
     const postHelp = async (event) => {
         event.preventDefault();
         let imageUrl = "/images/help-default.jpg";
