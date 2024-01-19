@@ -116,7 +116,7 @@ function MyProfile() {
                                             })
                                         }
                                     </div>
-                                </div> : <p>You have no pending volunteers </p>}
+                                </div> : <p>You have no active volunteer offers</p>}
                         </div>
                     </div>
                 </div>

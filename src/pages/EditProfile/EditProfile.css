@@ -1,11 +1,12 @@
-form textarea{
+form textarea {
     color: whitesmoke;
 }
-form button{
+
+form button {
     color: black;
 }
 
-.edit-profile-container{
+.edit-profile-container {
     display: flex;
     flex-direction: column;
     max-width: 70vw;
@@ -14,11 +15,11 @@ form button{
     z-index: 0;
     margin: 0 auto;
     gap: 5px;
-    
-    
+
+
 }
 
-.edit-send{
+.edit-send {
     background-color: black;
     color: aliceblue;
     outline: 1px solid whitesmoke;
@@ -28,12 +29,12 @@ form button{
     border-radius: 10px;
 }
 
-.img-preview{
+.img-preview {
     max-width: 30vw;
     border-radius: 10px;
 }
 
-.edit-send{
+.edit-send {
     background-color: black;
     color: aliceblue;
     outline: 1px solid whitesmoke;
@@ -43,12 +44,12 @@ form button{
     border-radius: 10px;
 }
 
-.img-preview{
+.img-preview {
     max-width: 30vw;
     border-radius: 10px;
 }
 
-.edit-send{
+.edit-send {
     background-color: black;
     color: aliceblue;
     outline: 1px solid whitesmoke;
@@ -58,7 +59,63 @@ form button{
     border-radius: 10px;
 }
 
-.img-preview{
+.img-preview {
     max-width: 30vw;
     border-radius: 10px;
 }
+
+.hiddenCheckbox {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkboxLabel {
+    display: block;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    background-color: #323232;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.checkboxLabel:hover {
+    background-color: #a8e41c;
+    color: black;
+}
+
+.hiddenCheckbox:checked+.checkboxLabel {
+    background-color: #a8e41c;
+    color: black;
+}
+
+#skills {
+    display: flex;
+    width: 350px;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* input[type="file" i] {
+    display: block;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    background-color: #323232;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+}
+
+.edit-profile-container #profilePicture input{
+    background-color: #323232;
+}
+
+input#profilePicture .image-input input[type="file" i]{
+    background-color: #323232;
+} */
