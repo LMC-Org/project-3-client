@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/auth.context";
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const [userData, setUserData] = useState('')
+
   const { userId } = useParams()
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ function Navbar() {
   const hasTokens = async () => {
     console.log(userData.tokens)
     if (userData.tokens < 1) {
-      navigate("/myprofile");
-      console.log("navigate called")
+
+
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
         const banner = document.querySelector(".no-tokens-banner")
@@ -70,10 +71,17 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
-            <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
-
+            <div className="nav-right">
+              <div className="tokens-state">
+              <span className="material-symbols-outlined">
+                stat_0
+              </span>
+              <p>{userData.tokens}</p>
+              </div>
+              <img className="right-button" onClick={handleSidebar} src={userData.profilePicture} alt="profile picture" />
+            </div>
             <div className="sidebar hidden">
               <div onClick={handleSidebar} className="center">
                 <div></div>
@@ -92,17 +100,11 @@ function Navbar() {
                   </li>
                   <li >
                     <Link to="/createhelp">
-                      <p onClick={(event) => {
-                        handleSidebar(event);
-                        if (userData.tokens < 1) {
-                          event.preventDefault(); // prevent the default action
-                          navigate("/myprofile");
-                          hasTokens();
-                          hideBanner();
-                        }
-                      }} className="side-element">
+                      <p onClick={() => { handleSidebar(); hasTokens(); hideBanner(); }}
+                        className="side-element">
                         Create Help request
-                    {"  "} <i class="fa fa-plus" style={{color: "white"}}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -114,7 +116,9 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                      <i class="fa fa-plus" style={{color: "white"}}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
+
+                        <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -133,7 +137,7 @@ function Navbar() {
         {!isLoggedIn && (
           <>
             <Link to="/">
-              <img className="logo" src="/images/4H-2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
             </Link>
             <div className="nav-landing-left">
               <Link to="/signup">

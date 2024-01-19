@@ -6,7 +6,6 @@ import service from '../../services/file-upload.service'
 function HomePage() {
 	const [helpPostsArr, setHelpPostsArr] = useState([]);
 
-
 	const handleSearch = (searchValue) => {
 		const helpPostsUpdated = helpPostsArr.filter((eachHelpPost) => {
 			

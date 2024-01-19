@@ -3,7 +3,6 @@
 import axios from "axios";
 
 const FRONT_URL = import.meta.env.VITE_SERVER_URL;
-
 const api = axios.create({
   // make sure you use PORT = 5005 (the port where our server is running)
   baseURL: FRONT_URL

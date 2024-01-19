@@ -45,28 +45,22 @@ function UserProfile() {
                                 <div className="profile-picture-container">
                                     <img className="user-profilepicture" src={userData.profilePicture} alt={userData.name} />
                                 </div>
-
                                 <div className="user-details-container">
                                     <div className="user-details-responsive">
-
-                                        <h2 className="user-name">{userData.name}</h2>
-                                        <div className="location-container">
-                                            <h4>Location:</h4>
-                                            <p>{userData.location}    <i className="fa fa-map-marker"></i></p>
-                                        </div>
-                                        <div className="skills-container">
-                                            <h4 className="skills-title">Skills:</h4>
-                                            <p> {userData.skills}</p>
-                                        </div>
-                                        <div className="skills-container">
-                                            <h4 className="skills-title">Skills:</h4>
-                                            <p> {userData.skills}</p>
-                                        </div>
-                                        <div className="skills-container">
-                                            <h4 className="skills-title">Contact:</h4>
-                                            <p>E-Mail: {userData.email}</p>
-                                            {userData.phone ? (<p>Tel.: {userData.phone}</p>) : (<></>)}
-                                        </div>
+                                    <h2 className="user-name">{userData.name}</h2>
+                                    <div className="location-container">
+                                        <h4>Location:</h4>
+                                        <p>{userData.location}    <i className="fa fa-map-marker"></i></p>
+                                    </div>
+                                    <div className="skills-container">
+                                        <h4 className="skills-title">Skills:</h4>
+                                        <p> {userData.skills}</p>
+                                    </div>
+							
+									<div className="skills-container">
+                                        <h4 className="skills-title">Contact:</h4>
+                                        <p>E-Mail: {userData.email}</p>
+										{userData.phone ? (<p>Tel.: {userData.phone}</p>) : (<></>)}
                                     </div>
                                 </div>
                             </div>

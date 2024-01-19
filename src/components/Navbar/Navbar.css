@@ -25,7 +25,7 @@
     height: 100%;
     width: 300px;
     padding: 20px 30px;
-    background-color: rgb(21, 48, 116);
+    background-color: #111111;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     transition: 500ms ease;
     z-index: 2;
@@ -48,14 +48,14 @@
 
 }
 
-.sidebar-stroke{
+.sidebar-stroke {
     background-color: aliceblue;
     height: 2px;
     width: 150px;
     margin-bottom: 20px;
     margin-left: 5px;
 
-    
+
 }
 
 .side-element {
@@ -70,7 +70,7 @@
 }
 
 .side-element:hover {
-    color: rgb(255, 166, 70)
+    color: #a8ec41;
 }
 
 
@@ -100,8 +100,9 @@
 }
 
 .nav-b-left:hover {
-    background-color: rgb(255, 166, 70);
+    background-color: #a8ec41;
     text-decoration: none;
+    color: #111111;
 
 
 }
@@ -152,9 +153,22 @@ nav .home {
     width: 30px;
     margin-left: 10px;
     margin-bottom: 5px;
-    margin-top: 8px;
+    margin-top: 10px;
 
 
+}
+
+.nav-right{
+    display: flex;
+    align-items:center;
+    gap: 18px;
+    color:#a8ec41
+}
+
+.tokens-state{
+    display: flex;
+    align-items:center;
+    gap: 2px;
 }
 
 .right-button {
@@ -175,7 +189,10 @@ nav .home {
     width: 20px;
 }
 
-/* Hamburguer menu */
+.center:hover {
+    color: #a8e4c1;
+}
+
 .center:before,
 .center:after,
 .center div {
@@ -184,25 +201,25 @@ nav .home {
     display: block;
     height: 2px;
     border-radius: 3px;
-    margin: 7px 0;
+    margin: 5px 0;
     transition: 0.5s;
     transition-delay: 500ms;
 }
 
-.center:before {
-    transform: translateY(9px) rotate(138deg);
-    transition-delay: 500ms;
+.center:hover:before {
+    transform: translateY(7px) rotate(140deg);
 }
 
-.center:after {
-    transition-delay: 500ms;
-    transform: translateY(-9px) rotate(-138deg);
+.center:hover:after {
+    transform: translateY(-7px) rotate(-140deg);
 }
 
-.center div {
+.center:hover div {
     transform: scale(0);
-
 }
+
+
+
 
 @media (min-width: 1000px) {
 
@@ -210,30 +227,36 @@ nav .home {
         border-radius: 30px;
         width: 50px;
         height: 50px;
-
-
     }
 
     .logo {
         height: 50px;
         width: 50px;
-
-
     }
 
     .nav-b-left {
         height: 35px;
         width: 100px;
         text-align: center;
-
         font-size: 20px;
     }
 
     .navbar {
+        padding: 5px;
+    }
+}
 
+@media (min-width: 1100px) {
+    .nav-b-left {
+        height: 35px;
+        width: 120px;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+    }
 
-        padding: 15px;
-
+    .navbar {
+        margin-bottom: 10px;
 
     }
 }

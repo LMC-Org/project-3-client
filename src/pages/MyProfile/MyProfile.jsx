@@ -60,11 +60,15 @@ function MyProfile() {
                                     </div>
                                     <div className="skills-container">
                                         <h4 className="skills-title">Skills:</h4>
-                                        <p> {userData.skills}</p>
+                                        <p className="skills-profile" >{userData.skills}</p>
                                     </div>
                                     <div className="tokens-container">
-                                        <p>Number of tokens: </p>
-                                        <p className="tokens-number">{userData.tokens}</p>
+                                        <p>TOKENS LEFT: </p>
+                                        <p className="tokens-number">
+                                            <span className="material-symbols-outlined">
+                                                stat_0
+                                            </span>
+                                            {userData.tokens}</p>
                                     </div>
                                 </div>
                             </div>
@@ -78,9 +82,9 @@ function MyProfile() {
                                     <div className="cards-container">
                                         {
                                             helpPostsArray.map((eachPost, index) => {
-												if (!eachPost.isCompleted) {
-													return (<PostCard key={index} post={eachPost} />)
-												}
+                                                if (!eachPost.isCompleted) {
+                                                    return (<PostCard key={index} post={eachPost} />)
+                                                }
                                             })
                                         }
                                     </div>
@@ -92,13 +96,13 @@ function MyProfile() {
                                     <div className="cards-container">
                                         {
                                             HelpPostIHaveBeenChosen.map((eachPost, index) => {
-												if (!eachPost.isCompleted) {
-													return (<PostCard key={index} post={eachPost} />)
-												}
+                                                if (!eachPost.isCompleted) {
+                                                    return (<PostCard key={index} post={eachPost} />)
+                                                }
                                             })
                                         }
                                     </div>
-                                </div> : <p>You have not been selected to volunteer yet</p>}
+                                </div> : <p className="not-v-yet">You have not been selected to volunteer yet</p>}
                             {/* show all post you have volunteered to do */}
                             {HelpPostIVolunteered.length > 0 ?
                                 <div>
@@ -107,8 +111,8 @@ function MyProfile() {
                                         {
                                             HelpPostIVolunteered.map((eachPost, index) => {
                                                 if (!eachPost.isCompleted) {
-													return (<PostCard key={index} post={eachPost} />)
-												}
+                                                    return (<PostCard key={index} post={eachPost} />)
+                                                }
                                             })
                                         }
                                     </div>

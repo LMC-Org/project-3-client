@@ -13,7 +13,6 @@ const LandingPage = () => {
             .then((response) => response.json())
             .then((responseJson) => {
                 setTestimoniesArray(responseJson);
-                console.log(responseJson);
             })
             .catch((err) => console.log(err));
     }, []);
@@ -29,7 +28,7 @@ const LandingPage = () => {
                 </div>
                 <h2 className="first-title">Do you need help with anything? </h2>
                 <div id="landing-cta">
-                    <h3>Your first 3 help requests are on the house.</h3>
+                    <h3>First 3 help requests are on the house</h3>
                     <Link to="/signup">
                         <p className="get-help-button">Get my free helps!</p>
                     </Link>
