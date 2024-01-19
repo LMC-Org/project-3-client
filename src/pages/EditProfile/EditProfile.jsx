@@ -98,29 +98,26 @@ function EditProfile() {
           <label htmlFor="location">Location: </label>
           <textarea type="textarea" name="location" id='location' value={location} onChange={(event) => setLocation(event.target.value)} />
           <br />
-          <label htmlFor="profilePicture">Profile Picture: </label>
+          <label htmlFor="profilePicture" className="fileInputLabel">Profile Picture: </label>
           <input type="file" accept="image/*" className="image-input"
 
             onChange={(event) => handleFileUpload(event)}
             name="profilePicture"
             id="profilePicture" />
           {profilePicture && <img className="img-preview" src={profilePicture} alt="User Profile Image" />}
-
           <br />
-          <label htmlFor="skills">Skills: </label>
-
-          <select name="skills" id='skills' multiple size="4" value={skills} onChange={handleSkillsChange}>
-            <option value="">--Please choose up to 4 skills--</option>
-            <option value="Languages">Languages</option>
-            <option value="Tech">Tech</option>
-            <option value="Strength">Strength</option>
-            <option value="Dancing">Dancing</option>
-            <option value="Active listening">Active listening</option>
-            <option value="Body disciplines">Body disciplines</option>
-            <option value="Coaching">Coaching </option>
-            <option value="Humor">Humor</option>
-            <option value="Sports">Sports</option>
-          </select>
+          <label htmlFor="skills" className='custom-select' >Skills: </label>
+          <div id='skills'>
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Languages" /> <span className="checkboxLabel">Languages</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Tech" /> <span className="checkboxLabel">Tech</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Strength" />  <span className="checkboxLabel">Strength</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Dancing" />  <span className="checkboxLabel">Dancing</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Active listening" /> <span className="checkboxLabel">Active listening</span> </label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Body disciplines" /> <span className="checkboxLabel">Body disciplines</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Coaching" />  <span className="checkboxLabel">Coaching</span> </label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Humor" />  <span className="checkboxLabel">Humor</span></label><br />
+            <label><input type="checkbox" className="hiddenCheckbox" name="skills" value="Sports" />  <span className="checkboxLabel">Sports</span></label><br />
+          </div>
           <br />
           <label htmlFor="description">Description: </label>
           <textarea type="textarea" name="description" id='description' value={description} onChange={(event) => setDescription(event.target.value)} />
