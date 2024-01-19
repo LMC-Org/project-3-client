@@ -38,17 +38,15 @@ function UserProfile() {
         <>
             {userData && !isMe() ? navigate("/myprofile") : (
                 <div>
-					<div className="profile-container">
-                    <div className="profile-card">
+                    <div className="profile-container">
+                        <div className="profile-card">
 
-                        <div className="user-details-picture-responsive">
-                            <div className="profile-picture-container">
-                                <img className="user-profilepicture" src={userData.profilePicture} alt={userData.name} />
-                            </div>
-
-                            <div className="user-details-container">
-                                <div className="user-details-responsive">
-
+                            <div className="user-details-picture-responsive">
+                                <div className="profile-picture-container">
+                                    <img className="user-profilepicture" src={userData.profilePicture} alt={userData.name} />
+                                </div>
+                                <div className="user-details-container">
+                                    <div className="user-details-responsive">
                                     <h2 className="user-name">{userData.name}</h2>
                                     <div className="location-container">
                                         <h4>Location:</h4>
@@ -58,7 +56,7 @@ function UserProfile() {
                                         <h4 className="skills-title">Skills:</h4>
                                         <p> {userData.skills}</p>
                                     </div>
-									
+							
 									<div className="skills-container">
                                         <h4 className="skills-title">Contact:</h4>
                                         <p>E-Mail: {userData.email}</p>
@@ -68,7 +66,6 @@ function UserProfile() {
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>)}
         </>);
 }

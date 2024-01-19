@@ -39,6 +39,7 @@ function EditProfile() {
   useEffect(() => {
     fetch(`${BACKEND_ROOT}/user/${userIdFromAuth}`)
       .then((response) => {
+        console.log(userIdFromAuth)
         return response.json();
       })
       .then((responsejson) => {
