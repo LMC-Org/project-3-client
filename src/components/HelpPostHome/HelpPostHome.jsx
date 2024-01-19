@@ -4,12 +4,8 @@ import "./HelpPostHome.css";
 
 const HelpPostHome = (props) => {
 	const {_id, title, location, description, creator} = props.post;
-	console.log("creator",creator)
 
 	return (
-		
-		
-		
 		<Link to={`/help-post/${_id}`} >
 		<div  className="help-post-home">
 			<p className="title">{title}</p>
@@ -21,8 +17,6 @@ const HelpPostHome = (props) => {
 			<p className="description">{description}</p>
 		</div>
 		</Link>
-		
-		
 	);
 };
 

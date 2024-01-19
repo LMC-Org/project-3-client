@@ -47,7 +47,6 @@ function EditHelpForm() {
                 setHelpImageUrl(helpImageUrl)
                 setTitle(title)
                 setDescription(description)
-                //console.log("este es el responseJson", responseJson.foundHelpPost)
             })
             .catch((err) => console.log(err))
     }, [])

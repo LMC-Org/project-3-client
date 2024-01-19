@@ -13,7 +13,6 @@ const LandingPage = () => {
             .then((response) => response.json())
             .then((responseJson) => {
                 setTestimoniesArray(responseJson);
-                console.log(responseJson);
             })
             .catch((err) => console.log(err));
     }, []);
