@@ -24,7 +24,6 @@ const LandingPage = () => {
                     <video autoPlay muted loop>
                         <source className="landing-video" src="./images/3d-hug-video.mp4" type="video/mp4"></source>
                     </video>
-
                 </div>
                 <h2 className="first-title">Do you need help with anything? </h2>
                 <div id="landing-cta">
@@ -40,18 +39,18 @@ const LandingPage = () => {
                 <p>Earn more tokens by helping others</p>
             </section>
             {/* In backend I need to populate creator and send it populated to frontend */}
-            
+            <p className="about-landing"><Link to="/about">HOW IT WORKS</Link></p>
             <div className="testimonies-container-landing">
                 <section id="landing-testimonies">
-                {
-                    testimoniesArray.map((eachTestimony, index) => {
-                        const { text, rating, creator } = eachTestimony;
-                        return (
-                            <Testimony key={index} text={text} rating={rating} creator={creator} />
-                        )
-                    })
-                }
-            </section>
+                    {
+                        testimoniesArray.map((eachTestimony, index) => {
+                            const { text, rating, creator } = eachTestimony;
+                            return (
+                                <Testimony key={index} text={text} rating={rating} creator={creator} />
+                            )
+                        })
+                    }
+                </section>
             </div>
         </div>
     );

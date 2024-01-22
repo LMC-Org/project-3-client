@@ -46,7 +46,7 @@ Once you are out of tokens you won't be able
 You can earn more tokens by helping others.
 For each completed help request you will earn one token.
 
-As this is a community based site, there is also a Testimonial page where users share their experience
+As this is a community based site, there is also a Testimonial page where users share their experience.
 If you would like to share yours, you can go to the Create Testimony page and submit it there, we'll really appreciate it.
 We value honesty and privacy, so feel free to share as much as you like, but beware of sensitive information.
 Thank you for taking the time.
