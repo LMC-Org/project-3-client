@@ -56,10 +56,32 @@
     border-radius: 15px;
 }
 
+.about-landing {
+    text-align: center;
+    outline: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+.about-landing:hover a{
+    background-color: #a8ec41;
+    color: #111111;
+
+}
+.about-landing:hover {
+    background-color: #a8ec41;
+    color: #111111;
+    cursor: pointer;
+
+}
 
 .features-section {
-    margin-top: 0px;
     text-align: center;
+    margin-top: 0px;
     background-color: rgb(8, 8, 8);
     padding: 15px;
 }

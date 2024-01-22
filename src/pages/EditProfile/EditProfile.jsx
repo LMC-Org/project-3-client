@@ -46,7 +46,6 @@ function EditProfile() {
         setLocation(responsejson.location)
         setProfilePicture(responsejson.profilePicture)
         setSkills(responsejson.skills)
-        console.log("SKILLS:", skills)
         setDescription(responsejson.description)
         setLoading(false)
       })

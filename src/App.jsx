@@ -18,6 +18,7 @@ import { AuthContext } from "./context/auth.context";
 import EditProfile from "./pages/EditProfile/EditProfile";
 import PostDetails from "./pages/PostDetails/PostDetails";
 import EditHelpForm from "./pages/EditHelpPage/EditHelpPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 import TestimonialPage from "./pages/TestimonialPage/TestimonialPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
@@ -116,6 +117,14 @@ function App() {
             <IsPrivate>
               <EditHelpForm />
             </IsPrivate>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            
+              <AboutPage />
+           
           }
         />
         <Route
