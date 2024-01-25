@@ -3,6 +3,8 @@ import { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from '../../context/auth.context';
 import service from "../../services/file-upload.service";
+import Loading from "../../components/Loading/Loading";
+
 
 function EditProfile() {
   const [userPut, setUserPut] = useState('')
@@ -95,6 +97,8 @@ function EditProfile() {
 
 
   return (
+    <>
+    {userIdFromAuth ?
     <div>
       <h1>Edit my profile</h1>
       <form encType="multipart/form-data" onSubmit={(event) => putData(event)}>
@@ -130,6 +134,8 @@ function EditProfile() {
         </div>
       </form>
     </div >
+    : <Loading />}
+    </>
   );
 }
 
