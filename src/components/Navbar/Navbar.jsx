@@ -5,9 +5,8 @@ import { AuthContext } from "../../context/auth.context";
 
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
-  const [userData, setUserData] = useState('')
-
-  const { userId } = useParams()
+  const [userData, setUserData] = useState('');
+  const { userId } = useParams();
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
   const navigate = useNavigate();
 
@@ -15,30 +14,24 @@ function Navbar() {
     const sideBar = document.querySelector(".navbar .sidebar");
     sideBar.classList.toggle("hidden");
     if (sideBar.style.right === "0px") {
-      sideBar.style.right = "-400px"
+      sideBar.style.right = "-400px";
     }
   };
 
   const hasTokens = async () => {
-    console.log(userData.tokens)
+    console.log(userData.tokens);
     if (userData.tokens < 1) {
-
-
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
-        const banner = document.querySelector(".no-tokens-banner")
+        const banner = document.querySelector(".no-tokens-banner");
         banner.classList.toggle("hidden");
 
-        if (banner.style.top === "0px") {
-          banner.style.top = "-300px"
-
-
+		if (banner.style.top === "0px") {
+          banner.style.top = "-300px";
         }
-
       } catch (error) {
-        console.log("There was an error:", error)
+        console.log("There was an error:", error);
       }
-
     }
   }
   const hideBanner = () => {
@@ -55,7 +48,6 @@ function Navbar() {
       fetch(`${BACKEND_ROOT}/user/${user._id}`)
         .then((response) => response.json())
         .then((responseJson) => {
-
           setUserData(responseJson);
         })
         .catch((err) => console.log(err));
