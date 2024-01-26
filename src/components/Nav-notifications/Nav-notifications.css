@@ -1,0 +1,16 @@
+#notifications {
+    margin-top: 4px;
+    fill: var(--no-notif-color);
+}
+#notifications.new{
+	animation-name: notif-alert;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes notif-alert {
+	0% {fill: var(--no-notif-color);}
+	50% {fill: var(--our-green-color);}
+	100% {fill: var(--no-notif-color);}
+}

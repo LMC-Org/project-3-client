@@ -1,4 +1,9 @@
-* {
+:root {
+	--our-green-color: #a8ec41;
+	--no-notif-color: #404040;
+  }
+  
+  * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -14,8 +19,6 @@
     justify-content: space-between;
     padding: 5px;
     margin-top: 0px;
-
-
 }
 
 .navbar .sidebar {
@@ -35,7 +38,6 @@
 .navbar .sidebar.hidden {
     right: -100% !important;
     transition: 500ms ease-in-out;
-
 }
 
 .sidebar .sidebar-content {
@@ -45,7 +47,6 @@
 
 .side-list {
     list-style-type: none;
-
 }
 
 .sidebar-stroke {
@@ -66,17 +67,13 @@
     border-radius: 30px;
     cursor: pointer;
     min-width: 100px;
-
 }
 
 .side-element:hover {
-    color: #a8ec41;
+   color: var(--our-green-color);
 }
 
-
-
 .sidebar-content .side-element button {
-
     list-style-type: none;
     margin-bottom: 30px;
 }
@@ -87,7 +84,6 @@
     align-items: center;
     gap: 10px;
     margin-right: 10px;
-
 }
 
 .nav-b-left {
@@ -100,16 +96,13 @@
 }
 
 .nav-b-left:hover {
-    background-color: #a8ec41;
+    background-color: var(--our-green-color);
     text-decoration: none;
     color: #111111;
-
-
 }
 
 a:hover {
     text-decoration: none;
-
 }
 
 .sidebar-profile {
@@ -141,7 +134,6 @@ nav .home {
 .no-tokens-banner.hidden {
     top: -100% !important;
     transition: 400ms ease-in-out;
-
 }
 
 .no-tokens-banner p {
@@ -154,8 +146,6 @@ nav .home {
     margin-left: 10px;
     margin-bottom: 5px;
     margin-top: 10px;
-
-
 }
 
 .nav-right{
@@ -181,11 +171,9 @@ nav .home {
     height: 30px;
     margin-top: 5px;
     object-fit: cover;
-
 }
 
 .center {
-
     width: 20px;
 }
 
@@ -217,9 +205,6 @@ nav .home {
 .center:hover div {
     transform: scale(0);
 }
-
-
-
 
 @media (min-width: 1000px) {
 
@@ -257,6 +242,5 @@ nav .home {
 
     .navbar {
         margin-bottom: 10px;
-
     }
 }
