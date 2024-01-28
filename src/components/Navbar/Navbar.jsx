@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../context/auth.context";
 
 function Navbar() {
-	let newNotifications = false;
+  let newNotifications = false;
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const [userData, setUserData] = useState('')
   const { userId } = useParams()
@@ -59,28 +59,26 @@ function Navbar() {
 	notificationsElement.classList.add("new");
   };
 
-  //check if there are new notifications
-  	console.log("call seetInterval");
-	const checkNotificationsLoop = setInterval(() => {
-		console.log("Interval execution");
+  	//check if there are new notifications
+  	const checkNotificationsLoop = () => {
 		if (user && !newNotifications) {
 			fetch(`${BACKEND_ROOT}/user/check-notifications/${user._id}`)
 				.then((response) => response.json())
-				.then((responseJson) => {console.log("checknotif response: ", responseJson); newNotifications = responseJson.hasNewNotifications
-				if (newNotifications) {
-					addClassNewToNotifIcon();
-					clearInterval(checkNotificationsLoop);
-					console.log("addClass & clearinterval INSIDE");
-				}
+				.then((responseJson) => {
+					newNotifications = responseJson.hasNewNotifications
+					if (newNotifications) {
+						addClassNewToNotifIcon();
+					}
+					else {
+						setTimeout(checkNotificationsLoop, 10000);
+					}
 			});
-				
 		}
 		else if (newNotifications) {
 			addClassNewToNotifIcon();
-			clearInterval(checkNotificationsLoop);
-			console.log("addClass & clearinterval OUTSIDE");
 		}
-	}, 15000);
+	};
+	checkNotificationsLoop();
 
   return (
     <div className="navbar-container">
