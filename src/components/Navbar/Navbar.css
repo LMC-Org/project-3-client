@@ -206,6 +206,23 @@ nav .home {
     transform: scale(0);
 }
 
+#notifications-icon {
+    margin-top: 4px;
+    fill: var(--no-notif-color);
+}
+#notifications-icon.new{
+	animation-name: notif-alert;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes notif-alert {
+	0% {fill: var(--no-notif-color);}
+	50% {fill: var(--our-green-color);}
+	100% {fill: var(--no-notif-color);}
+}
+
 @media (min-width: 1000px) {
 
     .right-button {
