@@ -2,6 +2,7 @@ import "./TestimonialPage.css";
 import { useEffect, useState } from "react";
 import Testimony from "../../components/Testimony/Testimony";
 import TestimonyTestimonialPage from "../../components/TestimonyTestimonialPage/TestimonyTestimonialPage";
+import Loading from "../../components/Loading/Loading";
 
 function TestimonialPage() {
     const [testimoniesArray, setTestimoniesArray] = useState([])
@@ -18,20 +19,24 @@ function TestimonialPage() {
     }, []);
 
     return (
-        <div>
-            <h1>TESTIMONIAL PAGE</h1>
-            {
-                testimoniesArray.map((eachTestimony, index) => {
-                    console.log("post ", eachTestimony);
-                    const { text, rating, creator } = eachTestimony;
-                    return (
-                        <div key={index} id="alltestimonies-testimonies-container" >
-                            <TestimonyTestimonialPage id="alltestimonies-testimonies" text={text} rating={rating} creator={creator} />
-                        </div>
-                    );
-                })
-            }
-        </div>
+        <>
+            {testimoniesArray ?
+                <div>
+                    <h1>TESTIMONIAL PAGE</h1>
+                    {
+                        testimoniesArray.map((eachTestimony, index) => {
+                            console.log("post ", eachTestimony);
+                            const { text, rating, creator } = eachTestimony;
+                            return (
+                                <div key={index} id="alltestimonies-testimonies-container" >
+                                    <TestimonyTestimonialPage id="alltestimonies-testimonies" text={text} rating={rating} creator={creator} />
+                                </div>
+                            );
+                        })
+                    }
+                </div>
+                : <Loading />}
+        </>
     );
 }
 

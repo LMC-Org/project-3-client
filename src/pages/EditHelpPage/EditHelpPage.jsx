@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from 'react'
 import { AuthContext } from "../../context/auth.context";
 import service from "../../services/file-upload.service";
+import Loading from "../../components/Loading/Loading";
+
 
 function EditHelpForm() {
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -87,6 +89,8 @@ function EditHelpForm() {
 
 
     return (
+        <>
+        {user ? 
         <div>
             <h1>Edit Help Request</h1>
 
@@ -116,6 +120,8 @@ function EditHelpForm() {
                 </form>
             </div>
         </div>
+        : <Loading/>}
+        </>
     );
 }
 

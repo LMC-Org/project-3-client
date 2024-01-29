@@ -53,6 +53,7 @@
     height: 2px;
     width: 150px;
     margin-bottom: 20px;
+    margin-top: 20px;
     margin-left: 5px;
 
 
@@ -72,7 +73,6 @@
 .side-element:hover {
     color: #a8ec41;
 }
-
 
 
 .sidebar-content .side-element button {

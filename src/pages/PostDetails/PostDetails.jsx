@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import { useContext } from "react";
 import VolunteerCard from "../../components/VolunteerCard/VolunteerCard";
+import Loading from "../../components/Loading/Loading";
+
 
 function PostDetails() {
     const { user } = useContext(AuthContext);
@@ -141,6 +143,8 @@ function PostDetails() {
     }
 
     return (
+        <>
+        {user ? 
         <div className="general-post-container">
             <div className="post-details-container">
                 <div className="help-container">
@@ -215,6 +219,8 @@ function PostDetails() {
                 </div>}
             </div>
         </div>
+       : <Loading/>}
+        </>
     );
 }
 

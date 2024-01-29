@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 10px;
+    margin-top: 20px;
     padding-top: 3px;
 }
 
@@ -36,6 +37,7 @@
     margin-top: 10px;
     font-size: 12px;
     line-height: 18px;
+    min-height: 70px;
 }
 
 .testimony .quote::before {
@@ -49,4 +51,5 @@
 .testimony-rating {
     color: rgb(29, 55, 30);
     font-size: 14px;
+    margin-bottom: 3px;
 }

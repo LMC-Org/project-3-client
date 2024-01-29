@@ -33,13 +33,14 @@ const LandingPage = () => {
                     </Link>
                 </div>
             </section>
+            <div className="middle-bottom">
             <section className="features-section">
                 <p>Share what you need one token at a time</p>
                 <p>Sign in and get your first 3 tokens for free</p>
                 <p>Earn more tokens by helping others</p>
             </section>
-            {/* In backend I need to populate creator and send it populated to frontend */}
             <p className="about-landing"><Link to="/about">HOW IT WORKS</Link></p>
+            {/* In backend I need to populate creator and send it populated to frontend */}
             <div className="testimonies-container-landing">
                 <section id="landing-testimonies">
                     {
@@ -51,6 +52,7 @@ const LandingPage = () => {
                         })
                     }
                 </section>
+                </div>
             </div>
         </div>
     );

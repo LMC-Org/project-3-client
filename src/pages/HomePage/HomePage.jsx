@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import HelpPostHome from "../../components/HelpPostHome/HelpPostHome";
 import "./HomePage.css";
+import { AuthContext } from "../../context/auth.context";
+import { useContext } from "react";
 import service from '../../services/file-upload.service'
+import Loading from "../../components/Loading/Loading";
+
 
 function HomePage() {
 	const [helpPostsArr, setHelpPostsArr] = useState([]);
+	const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
 	const handleSearch = (searchValue) => {
 		const helpPostsUpdated = helpPostsArr.filter((eachHelpPost) => {
@@ -35,6 +40,8 @@ function HomePage() {
 	}, []);
 
 	return (
+		<>
+		{helpPostsArr && user ? 
 		<div className="home-page-container">
 
 			<div id="home-content-wrapper">
@@ -45,9 +52,6 @@ function HomePage() {
 					<div className="search-bar">
 						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" />
 						<span>{''}    {''}<i className="fa fa-search"></i></span>
-
-
-
 					</div>
 				</div>
 				{
@@ -63,6 +67,8 @@ function HomePage() {
 				}
 			</div>
 		</div>
+		: <Loading/>}
+		</>
 	);
 }
 
