@@ -2,14 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /* .profile-container{
     width: 100%;
 } */
 
-.profile-card {
+.profile-container{
+display: flex;
+justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.profile-card {
+margin-left: auto;
+margin-right: auto;
     padding: 10px;
     border-radius: 15px;
     margin: 15px;
@@ -21,31 +30,31 @@
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-
     max-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-
 }
 
 .user-profilepicture {
-    border-radius: 10px;
-    width: 80vw;
-    height: 30vh;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
     object-fit: cover;
     background-color: aliceblue;
-
 
 }
 
 .user-name {
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .user-details-container {
     padding: 15px 15px 0 15px;
+    
     line-height: 30px;
     font-size: 14px;
 }
@@ -115,16 +124,21 @@ h3 {
     font-size: 14px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
+    .user-details-container {
+        width: 700px;
+    }
+    .profile-card{
+        width: 900px;
+    }
+
     .user-profilepicture {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
         border-radius: 100%;
         margin-top: 20px;
         margin-left: 30px;
-
-
     }
 
     .user-details-picture-responsive {
@@ -136,16 +150,13 @@ h3 {
     }
 
     .user-details-responsive {
-        width: 50vw;
-
-
+        width: 500px;
 
     }
 
     .user-details-container {
-        margin-left: 10px;
+        margin-left: 50px;
+        width: 780px;
     }
-
-
 
 }

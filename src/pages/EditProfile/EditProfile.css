@@ -96,3 +96,8 @@ form button {
     gap: 5px;
 }
 
+@media (min-width: 1024px) {
+    .img-preview{
+        width: 300px;
+    }
+}

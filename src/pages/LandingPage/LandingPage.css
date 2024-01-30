@@ -150,7 +150,7 @@
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     #landing-cta {
         background-color: rgba(202, 202, 202, 0.2);
         width: 40%;
@@ -179,9 +179,7 @@
 
     }
 
-
     #video-container {
-        /* position: absolute; */
         display: flex;
         flex-direction: column;
 
@@ -210,8 +208,6 @@
         margin-bottom: 20px;
     }
 
-
-
     .features-section {
         margin-bottom: 40px;
     }
@@ -231,12 +227,9 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
     #landing-upper {
-
         height: 600px;
-
-
     }
 
     .features-section {

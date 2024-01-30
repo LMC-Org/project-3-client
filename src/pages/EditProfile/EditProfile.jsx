@@ -100,8 +100,8 @@ function EditProfile() {
     <>
     {userIdFromAuth ?
     <div>
-      <h1>Edit my profile</h1>
       <form encType="multipart/form-data" onSubmit={(event) => putData(event)}>
+      <h1>Edit my profile</h1>
         <div className='edit-profile-container'>
           <label htmlFor="location">Location: </label>
           <textarea type="textarea" name="location" id='location' value={location} onChange={(event) => setLocation(event.target.value)} />
