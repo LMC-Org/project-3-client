@@ -2,27 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 /* .profile-container{
     width: 100%;
 } */
 
-.profile-container{
-display: flex;
-justify-content: center;
+.user-details-picture-responsive {
+    display: flex;
+    padding: 15px 15px 0 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    width: 80vw;
 }
 
 .profile-card {
-margin-left: auto;
-margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
     padding: 10px;
     border-radius: 15px;
     margin: 15px;
     background-color: #111111;
+    width: 80vw;
+
 }
 
 
@@ -38,7 +52,6 @@ margin-right: auto;
 }
 
 .user-profilepicture {
-    margin-top: 10px;
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -53,17 +66,19 @@ margin-right: auto;
 }
 
 .user-details-container {
-    padding: 15px 15px 0 15px;
-    
+    padding: 0px 15px 0 15px;
+    width: 75vw;
+    margin-bottom: 15px;
     line-height: 30px;
     font-size: 14px;
 }
 
 .location-container {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    align-items: baseline;
 }
 
 .skills-container {
@@ -77,9 +92,9 @@ margin-right: auto;
 
 .tokens-container {
     border-top: 1px solid whitesmoke;
-
+    padding-top: 5px;
     display: flex;
-
+    font-weight: 700;
     justify-content: space-between;
 }
 
@@ -128,7 +143,8 @@ h3 {
     .user-details-container {
         width: 700px;
     }
-    .profile-card{
+
+    .profile-card {
         width: 900px;
     }
 
