@@ -21,9 +21,10 @@ const LandingPage = () => {
         <div className="landing-wrapper">
             <section id="landing-upper">
                 <div id="video-container">
-                    <video autoPlay muted loop>
+                    {/* <video autoPlay muted loop>
                         <source className="landing-video" src="./images/3d-hug-video.mp4" type="video/mp4"></source>
-                    </video>
+                    </video> */}
+                    <img src="" alt="" />
                 </div>
                 <h2 className="first-title">Do you need help with anything? </h2>
                 <div id="landing-cta">

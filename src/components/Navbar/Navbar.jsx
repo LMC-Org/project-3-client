@@ -123,8 +123,8 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="side-element about-sidebar">
-                      <p onClick={handleSidebar} >About</p>
+                    <Link to="/about" >
+                      <p className="side-element about-sidebar" onClick={handleSidebar} >About</p>
                       </Link>
                   </li>
                   <li>
