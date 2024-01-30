@@ -209,6 +209,7 @@ nav .home {
 #notifications-icon {
     margin-top: 4px;
     fill: var(--no-notif-color);
+	cursor: pointer;
 }
 #notifications-icon.new{
 	animation-name: notif-alert;
