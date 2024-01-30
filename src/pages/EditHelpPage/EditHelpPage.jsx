@@ -103,10 +103,10 @@ function EditHelpForm() {
                     <textarea value={title} onChange={(event) => setTitle(event.target.value)} type="text" name="title" />
 
                     <label htmlFor="Location">Location</label>
-                    <textarea value={location} onChange={(event) => setLocation(event.target.value)} type="text" name="location" />
+                    <textarea className="edit-location" value={location} onChange={(event) => setLocation(event.target.value)} type="text" name="location" />
 
                     <label htmlFor="Description">Description</label>
-                    <textarea value={description} onChange={(event) => setDescription(event.target.value)} type="textarea" name="description" />
+                    <textarea className="edit-description" value={description} onChange={(event) => setDescription(event.target.value)} type="textarea" name="description" />
 
                     <label htmlFor="helpImageUrl">Help Image</label>
                     <input type="file" accept="image/*" className="image-input"
@@ -116,7 +116,7 @@ function EditHelpForm() {
                         id="helpImageUrl" />
                     {helpImageUrl && <img className="img-preview" src={helpImageUrl} alt="Help Image" />}
 
-                    <p onClick={(event) => putHelp(event)} className="create-help-button" type="submit">SAVE CHANGES</p>
+                    <p onClick={(event) => putHelp(event)} className="create-help-button save-changes" type="submit">SAVE CHANGES</p>
                 </form>
             </div>
         </div>

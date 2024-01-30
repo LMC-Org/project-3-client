@@ -51,7 +51,7 @@ span i {
 	justify-content: center;
 }
 .search-bar{
-	margin-top: 15px;
+	margin-top:20px;
 }
 
 .search-bar input {
@@ -62,7 +62,7 @@ span i {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
 
 	#home-content-wrapper {
 		flex-direction: row;
@@ -83,12 +83,14 @@ span i {
 
 	.search-bar {
 		display: flex;
-		width: 90vw;
 		justify-content: center;
 		gap: 15px;
 		padding-left: 20px;
+		margin-top: 30px;
 
-
+	}
+	.search-bar input{
+		width: 200px;
 	}
 
 

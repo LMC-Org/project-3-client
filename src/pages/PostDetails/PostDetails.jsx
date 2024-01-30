@@ -152,7 +152,10 @@ function PostDetails() {
                 </div>
 
                 {helpData && <div className="info-post-container">
+                    <div className="help-img-container">
+
                     <img className="help-image" src={helpData.foundHelpPost.helpImageUrl} alt={helpData.foundHelpPost.title} />
+                    </div>
                     <h3 className="info-title">{helpData.foundHelpPost.title}</h3>
                     <p className="details-location">{helpData.foundHelpPost.location}      <i className="fa fa-map-marker"></i></p>
                    <div className="description-container">
