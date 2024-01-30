@@ -9,7 +9,7 @@ const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
 
 function NotificationsPage() {
 	const { user } = useContext(AuthContext);
-	const [notificationsArray, setNotificationsArray] = useState([]);
+	const [notificationsArray, setNotificationsArray] = useState(["not-loaded"]);
 	let text;
 	let linkUrl;
 
@@ -78,9 +78,9 @@ function NotificationsPage() {
 	return (
 		<>
 			<h1>NOTIFICATIONS PAGE</h1>
-			{notificationsArray[0] ?
-				renderNotifications(notificationsArray)
-				: <Loading />
+			{notificationsArray[0] === "not-loaded" ?
+				<Loading />
+				: renderNotifications(notificationsArray)
 			}
 		</>
 
