@@ -1,19 +1,38 @@
-.edit-help-container textarea{
-    color: black
-
+.edit-help-container textarea {
+    color: rgb(247, 247, 247);
+    width: 200px;
 }
 
-.edit-help-container select{
+.edit-help-container select {
     color: black
-
 }
 
-.img-preview{
-    max-width: 50vw;
+.img-preview {
+    max-width: 150px;
     border-radius: 10px;
 }
 
-textarea{
-    color: aliceblue;
+.edit-location textarea  {
+    width: 90px;
 }
 
+.edit-description {
+    height: 100px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+.create-help-button.save-changes{
+    margin-top: 40px;
+}
+
+@media (min-width: 1024px) {
+    .edit-help-container textarea {
+        width: 300px;
+
+    }
+
+
+}
