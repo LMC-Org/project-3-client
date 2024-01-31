@@ -1,7 +1,7 @@
 .title-about {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
-    color: #a8ec41;
+    color: #E88706;
     font-weight: 300;
     margin-bottom: 1px;
     text-align: center;
@@ -21,13 +21,13 @@
 
 a {
     text-decoration: none;
-    color: #a8ec41;
+    color: #E88706;
     cursor: pointer;
 
 }
 
 .subtitle-highlight {
-    color: #a8ec41;
+    color: #E88706;
 }
 
 .intro {
@@ -62,7 +62,7 @@ a {
 }
 
 .token-icon {
-    color: #a8ec41;
+    color: #E88706;
 
 }
 
@@ -79,7 +79,7 @@ a {
 }
 
 .material-symbols-outlined {
-    color: #a8ec41;
+    color: #E88706;
     display: flex;
     align-items: center;
     justify-content: center;

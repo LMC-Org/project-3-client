@@ -11,12 +11,10 @@
     position: absolute;
     overflow-x: hidden;
     object-fit: cover;
-    top: 60px;
+    top: 0px;
     left: 0;
     width: 100%;
-    height: 70%;
     z-index: -100;
-
 }
 
 .first-title {
@@ -24,49 +22,54 @@
     font-weight: 300;
     padding: 20px;
     text-align: center;
-    color: rgb(221, 221, 221);
-    text-shadow: 2px 2px 10px #41414199;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px #41414199;
+    margin-top: 150px;
+    
 }
 
-.landing-subtitle{
+.landing-subtitle {
     text-align: center;
+    margin-top: 150px;
     font-weight: 300;
     padding: 0 25px 0 25px;
+    text-shadow: 2px 2px 10px #181818;
+
+}
+
+.first-3{
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
 #landing-upper {
     width: 100%;
     height: 500px;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    
     overflow-x: hidden;
 
 }
 
 #landing-cta {
-/*     background-color: rgba(202, 202, 202, 0.5);
- */    
     width: 65%;
     max-width: 400px;
     padding: 20px;
     height: 130px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     border-radius: 15px;
 }
 
-#landing-cta h3{
+#landing-cta h3 {
     font-weight: 400;
-    text-shadow: 2px 2px 5px #5e5e5e;
+    text-shadow: 2px 2px 5px #333333;
+    margin-bottom: 15px;
 }
 
 .about-landing {
-    color: rgb(244,208,97);
+    color: #E88706;
     text-align: center;
     outline: 1px solid white;
     margin-left: auto;
@@ -74,17 +77,16 @@
     width: 150px;
     padding: 5px;
     border-radius: 20px;
-
 }
 
 .about-landing:hover a {
     background-color: #111111;
-    color: rgb(244,208,97);
+    color: #E88706;
 
 }
 
 .about-landing:hover {
-    background-color: rgb(244,208,97);
+    background-color: #E88706;
     color: #111111;
     cursor: pointer;
 
@@ -92,6 +94,7 @@
 
 .features-section {
     text-align: center;
+    font-weight: 600;
     margin-top: 0px;
     background-color: rgb(8, 8, 8);
     padding: 15px;
@@ -108,7 +111,7 @@
 
 .get-help-button {
     color: rgb(35, 35, 35);
-    background-color: rgb(244, 208, 97);
+    background-color: #E88706;
     font-size: 18px;
     padding: 2px;
     padding-right: 10px;
@@ -118,30 +121,34 @@
     line-height: 25px;
     height: 30px;
     margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .get-help-button:hover {
-    background-color: rgb(244, 208, 97);
-        color: #111111;
-
+    background-color: #E88706;
+    color: #111111;
 }
 
 .middle-bottom {
     background-color: rgb(8, 8, 8);
 }
 
-
 .features-section p {
-    font-size: 20px;
+    font-size: 24px;
     padding: 25px;
+    line-height: 30px;
 
 }
 
-#landing-cta h2 {
-    text-align: center;
-
+.landing-illustration{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-bottom: 15px;
 }
-
 .testimonies-container-landing {
     height: 400px;
     background-color: rgb(8, 8, 8);
@@ -155,14 +162,14 @@
     gap: 15px;
     padding: 30px 15px 0 15px;
     margin-bottom: 30px;
-
-
 }
 
 @media (min-width: 1024px) {
     #landing-cta {
-/*         background-color: rgba(202, 202, 202, 0.2);
- */        width: 50%;
+        /*         background-color: rgba(202, 202, 202, 0.2);
+ */
+        width: 50%;
+        gap: -10px;
         max-width: 600px;
         font-size: 18px;
         height: 180px;
@@ -208,9 +215,12 @@
         padding: 10px;
         line-height: 10px;
     }
-.landing-subtitle{
-    font-size: 18px;
-}
+
+    .landing-subtitle {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
     #landing-cta h3 {
         margin-top: 60px;
         font-weight: 200;
@@ -234,7 +244,7 @@
         border: 1px solid white;
         width: 260px;
         word-spacing: 3px;
-        line-height:40px;
+        line-height: 40px;
         height: 50px;
         font-size: 25px;
         text-align: center;
@@ -242,7 +252,7 @@
         border-radius: 30px;
     }
 
-    .about-landing p{
+    .about-landing p {
         padding-top: 5px;
     }
 
