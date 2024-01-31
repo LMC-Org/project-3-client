@@ -29,15 +29,16 @@ const LandingPage = () => {
                 <h2 className="first-title">HELP IS ALL AROUND</h2>
                 <h3 className="landing-subtitle">Get the help you need in exhange for helping others</h3>
                 <div id="landing-cta">
-                    <h3>First 3 help requests are on the house</h3>
-                    <Link to="/signup">
-                        <p className="get-help-button">Join now</p>
-                    </Link>
                 </div>
             </section>
             <div className="middle-bottom">
+                    <h3 className="first-3">First 3 help requests are on the house</h3>
+                    <Link to="/signup">
+                        <p className="get-help-button">Join now</p>
+                    </Link>
             <section className="features-section">
                 <p>Share the kind of help you need</p>
+                <img className="landing-illustration" src="/images/illustrations/undraw_uploading_re_okvh.svg" alt="" />
                 <p>Connect with caring people</p>
                 <p>Sign in and get your first 3 tokens for free</p>
                 <p>Earn more tokens by helping others</p>

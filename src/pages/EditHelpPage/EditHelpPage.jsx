@@ -94,8 +94,6 @@ function EditHelpForm() {
         <div>
             <h1>Edit Help Request</h1>
 
-
-
             <div className="edit-help-container">
                 <form className="create-help-container" encType="multipart/form-data" onSubmit={(event) => putHelp(event)}>
 
