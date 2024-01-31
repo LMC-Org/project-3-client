@@ -58,28 +58,21 @@ function Navbar() {
   };
 
   const notificationsClickHandle = () => {
+  	  removeClassNewFromNotifIcon();
 	  gotoNotifications();
-	  removeClassNewFromNotifIcon();
   };
 
   //check if there are new notifications
   const checkNotificationsLoop = () => {
-	if (user && !newNotifications) {
+	if (user) {
 		fetch(`${BACKEND_ROOT}/user/check-notifications/${user._id}`)
-			.then((response) => response.json())
-			.then((responseJson) => {
-				newNotifications = responseJson.hasNewNotifications
-				if (newNotifications) {
-					addClassNewToNotifIcon();
-				}
-				else {
-					setTimeout(checkNotificationsLoop, 10000);
-				}
+		.then((response) => response.json())
+		.then((responseJson) => {
+			newNotifications = responseJson.hasNewNotifications;
+			newNotifications ? addClassNewToNotifIcon() : removeClassNewFromNotifIcon();
 		});
 	}
-	else if (newNotifications) {
-		addClassNewToNotifIcon();
-	}
+	setTimeout(checkNotificationsLoop, 10000);
 };
 
 useEffect(() => {

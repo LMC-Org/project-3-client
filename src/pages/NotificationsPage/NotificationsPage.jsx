@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
 
-
 function NotificationsPage() {
 	const { user } = useContext(AuthContext);
 	const [notificationsArray, setNotificationsArray] = useState(["not-loaded"]);
@@ -71,7 +70,8 @@ function NotificationsPage() {
 			.then((response) => response.json())
 			.then((jsonData) => {
 				console.log("fetch get-notifications, response: ", jsonData);
-				setNotificationsArray(jsonData);})
+				setNotificationsArray(jsonData);
+			})
 			.catch( error => console.error(error));
 	}, []);
 
