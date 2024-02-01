@@ -83,8 +83,10 @@ function PostDetails() {
         // put the user into the post volunteers[]
         const reqBody = {
             volunteerId: user._id,
-            postId: helpData.foundHelpPost._id
+            postId: helpData.foundHelpPost._id,
+			creatorId: helpData.foundHelpPost.creator._id
         }
+		console.log("reqbody: ", reqBody);
 
         fetch(`${BACKEND_ROOT}/help-post/addvolunteer`, {
             method: "POST",

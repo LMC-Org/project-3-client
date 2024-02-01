@@ -21,6 +21,7 @@ import EditHelpForm from "./pages/EditHelpPage/EditHelpPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import TestimonialPage from "./pages/TestimonialPage/TestimonialPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import NotificationsPage from "./pages/NotificationsPage/NotificationsPage";
 
 function App() {
   const { isLoggedIn, isLoading } = useContext(AuthContext);
@@ -127,6 +128,14 @@ function App() {
            
           }
         />
+		<Route
+			path="/notifications"
+			element={
+				<IsPrivate>
+					<NotificationsPage />
+				</IsPrivate>
+			}
+		/>
         <Route
           path="/*"
           element={
