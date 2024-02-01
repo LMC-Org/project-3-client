@@ -151,6 +151,11 @@ useEffect(() => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/about" >
+                      <p className="side-element about-sidebar" onClick={handleSidebar} >About</p>
+                      </Link>
+                  </li>
+                  <li>
                     <div className="sidebar-stroke">{''}</div>
                   </li>
                   <li >

@@ -28,6 +28,7 @@ function MyProfile() {
                 setUserData(jsonData);
                 setHelpPostsArray(jsonData.helpPosts)
                 setSkills(jsonData.skills.join(', '))
+                console.log("USERDATA", userData)
                 
             })
             .catch((err) => console.log(err))

@@ -1,42 +1,42 @@
 .title-about {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
-	color: #a8ec41;
-	font-weight: 300;
-	margin-bottom: 1px;
-	text-align: center;
-	width: 100vw;
-	padding: 15px;
+    color: #E88706;
+    font-weight: 300;
+    margin-bottom: 1px;
+    text-align: center;
+    width: 100vw;
+    padding: 15px;
 }
 
-.about-main-container{
+.about-main-container {
     padding: 20px;
 }
 
-.subtitle{
+.subtitle {
     font-size: large;
     text-align: center;
-    padding:  0 30px;
+    padding: 0 30px;
 }
 
-a{
+a {
     text-decoration: none;
-    color: #a8ec41;
+    color: #E88706;
     cursor: pointer;
 
 }
 
-.subtitle-highlight{
-    color: #a8ec41;
+.subtitle-highlight {
+    color: #E88706;
 }
 
-.intro{
+.intro {
     text-align: center;
     padding: 10px;
     line-height: 25px;
 }
 
-.main-steps-container{
+.main-steps-container {
     padding: 20px 30px 0 30px;
     text-align: center;
     list-style-type: none;
@@ -45,53 +45,99 @@ a{
     align-items: center;
 }
 
-.main-steps-container li{
-    margin-bottom:20px;
+.main-steps-container li {
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
 }
 
-.completed-token-img{
+.completed-token-img {
+    margin-top: 15px;
+    max-width: 300px;
+}
+
+.minus-token {
     margin-top: 20px;
     max-width: 300px;
 }
 
-.minus-token{
-    margin-top: 20px;
-    max-width: 300px;
-}
-
-.token-icon{
-    color: #a8ec41;
+.token-icon {
+    color: #E88706;
 
 }
 
-.about-thankyou{
+.about-thankyou {
     margin-top: 15px;
     padding: 15px;
     text-align: center;
 }
 
-.policy-about{
+.policy-about {
     padding: 20px;
     margin-top: 0px;
+    text-align: left;
 }
 
-.material-symbols-outlined{
-    color: #a8ec41;
+.material-symbols-outlined {
+    color: #E88706;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.privacy-icon{
+.privacy-icon {
     margin-top: 40px;
     margin-bottom: 20px;
-    
+
 }
 
-.thankyou-line{
+.thankyou-line {
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+p{
+    line-height: 20px;
+}
+
+@media (min-width: 1024px) {
+    .about-main-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title-about {
+        font-size: 50px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+    }
+
+    .material-symbols-outlined {
+        margin-bottom: 10px;
+
+    }
+
+    .privacy-icon {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    .hope-about{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .thankyou-line{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+
 }

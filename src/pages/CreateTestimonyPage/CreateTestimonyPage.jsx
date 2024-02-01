@@ -4,6 +4,8 @@ import { AuthContext } from "../../context/auth.context";
 import { useContext } from "react";
 import { Rating } from 'react-simple-star-rating';
 import { useNavigate } from "react-router-dom";
+import Loading from "../../components/Loading/Loading";
+
 
 function CreateTestimonyPage() {
     const navigate = useNavigate();
@@ -40,6 +42,8 @@ function CreateTestimonyPage() {
         }
     }
     return (
+        <>
+        {user ? 
         <div className="form-page">
             <h1 className="testimony-page-title" >Create Testimony</h1>
             <form onSubmit={(event) => postData(event)}>
@@ -49,6 +53,8 @@ function CreateTestimonyPage() {
                 <button className="submitbutton" type="submit">Send</button>
             </form>
         </div>
+        : <Loading/>}
+        </>
     );
 }
 export default CreateTestimonyPage;

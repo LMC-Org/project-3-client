@@ -11,7 +11,7 @@
 	color: #111111;
 	width: 150px;
 	gap: 10px;
-	min-height: 13vh;
+	min-height: 100px;
 	border-radius: 8px;
 	padding: 10px;
 
@@ -70,9 +70,9 @@
 	margin-left: 5px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
 	.help-post-card-small {
 		min-height: 15vh;
-		width: 300px;
+		width: 200px;
 	}
 }

@@ -3,6 +3,8 @@ import { useEffect, useState, useContext } from 'react'
 import { AuthContext } from "../../context/auth.context";
 import { Navigate, useNavigate } from "react-router-dom";
 import service from "../../services/file-upload.service";
+import Loading from "../../components/Loading/Loading";
+
 
 
 function CreateHelpForm() {
@@ -90,6 +92,8 @@ function CreateHelpForm() {
     }
 
     return (
+        <>
+        {userData ? 
         <div>
             <h1>Create Help Request</h1>
             <div >
@@ -115,6 +119,8 @@ function CreateHelpForm() {
                 </form>
             </div>
         </div>
+        : <Loading/>}
+        </>
     );
 }
 

@@ -15,22 +15,27 @@
 }
 
 .general-post-container {
-    padding: 15px;
-    
+    padding: 30px;
+
+}
+
+.help-img-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .help-image {
     border-radius: 10px;
-    width: 80vw;
-    height: 30vh;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
+    margin-left: 0 auto;
 }
 
 .help-container {
-
     background-position: center;
     background-size: cover;
-
     width: 100%;
 
 
@@ -44,7 +49,7 @@
 
 
     text-shadow: 2px 2px 2px rgba(40, 40, 40, 0.3);
-    
+
     width: 220px;
 }
 
@@ -57,7 +62,6 @@
     margin-bottom: 15px;
     border-top: 1px solid #a8e41c;
     padding-top: 10px;
-    
 }
 
 .description-title {
@@ -66,14 +70,13 @@
 }
 
 .info-title {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding: 1px;
-    
-    font-size: 24px;
+    font-size: 30px;
 }
 
-.post-creator-container{
+.post-creator-container {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -90,12 +93,10 @@
 
 .volunteer {
     font-size: 30px;
-    
-
-
 }
-.description-container{
-    
+
+.description-container {
+
     color: #f3f3f3;
     border-radius: 15px;
     padding: 10px;
@@ -149,7 +150,7 @@
     margin-left: 0 auto;
 }
 
-.edit-button:hover{
+.edit-button:hover {
     background-color: #a8ec41;
     color: #111111;
     outline: 1px solid #111111;
@@ -164,13 +165,21 @@
     overflow: scroll;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .help-image {
         border-radius: 10px;
-        width: 50vw;
-        height: 30vh;
+        width: 300px;
+        height: 300px;
         object-fit: cover;
         margin: 0 auto;
+    }
+
+    .post-details-container {
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 10px;
     }
 
 }

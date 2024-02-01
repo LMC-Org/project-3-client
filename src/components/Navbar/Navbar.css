@@ -54,6 +54,7 @@
     height: 2px;
     width: 150px;
     margin-bottom: 20px;
+    margin-top: 20px;
     margin-left: 5px;
 
 
@@ -71,6 +72,9 @@
 
 .side-element:hover {
    color: var(--our-green-color);
+}
+.about-sidebar{
+    margin-left: 3px;
 }
 
 .sidebar-content .side-element button {

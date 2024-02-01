@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { useNavigate, Navigate, redirect, useParams } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import { useContext } from "react";
-
+import Loading from "../../components/Loading/Loading";
 
 
 function UserProfile() {
     const navigate = useNavigate();
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
     const { userId } = useParams();
+    const {isLoading, setLoading} = useState(true)
     const userIdFromAuth = user._id
     const [userData, setUserData] = useState('')
     const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
@@ -30,13 +31,17 @@ function UserProfile() {
             })
             .then((jsonData) => {
                 setUserData(jsonData);
+                setLoading(false)
             })
             .catch((err) => console.log(err))
     }, [])
 
     return (
         <>
-            {userData && !isMe() ? navigate("/myprofile") : (
+        {isLoading ? (
+            <Loading/> ) :
+        
+            userData && !isMe() ? navigate("/myprofile") : (
                 <div>
                     <div className="profile-container">
                         <div className="profile-card">
@@ -68,6 +73,7 @@ function UserProfile() {
                     </div>
                 </div>
                 </div>)}
+                
         </>);
 }
 
