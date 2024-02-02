@@ -11,13 +11,14 @@ function NotificationsPage() {
 	const [notificationsArray, setNotificationsArray] = useState(["not-loaded"]);
 	let text;
 	let linkUrl;
+	let isUnread;
 
-	const setTextAndUrl = (category, reference) => {
+	const setTextAndUrl = (category, reference, isUnread) => {
 		const TEXTCAT1 = "A person offers you help.";
 		const TEXTCAT2 = "You were chosen to help.";
 		const TEXTCAT3 = "You have earned 1 help token.";
-		const UNKNOWNTEXT = "Unknown notification."
-		let BASEURL = "/help-post";
+		const TEXT_UNKNOWN = "Unknown notification."
+		const BASEURL = "/help-post";
 
 		switch (category) {
 			case 1:
@@ -33,9 +34,15 @@ function NotificationsPage() {
 				linkUrl = "/myprofile";				
 				break;		
 			default:
-				text = UNKNOWNTEXT;
+				text = TEXT_UNKNOWN;
 				linkUrl = "/myprofile";
 				break;
+		}
+		if (isUnread) {
+			isUnread = "unread";
+		}
+		else {
+			isUnread = "";
 		}
 	};
 
@@ -44,18 +51,20 @@ function NotificationsPage() {
 
 		if(array[0]) {
 			return (
-				<ul>
-					{array.map((element, index) => {
-						setTextAndUrl(element.category, element.reference);
-						console.log("RenderNoficiations fn. Element, text, url:\n\t",index, element, text, linkUrl);
+				<div id="notifications-container">
+					<ul>
+						{array.map((element, index) => {
+							setTextAndUrl(element.category, element.reference, element.isUnread);
+							console.log("RenderNoficiations fn. Element, text, url:\n\t",index, element, text, linkUrl);
 
-						return (
-							<Link to={linkUrl} key={index}>
-								<li>{text}</li>
-							</Link>
-						)
-					})}
-				</ul>
+							return (
+								<Link to={linkUrl} key={index}>
+									<li className={isUnread} >{text}</li>
+								</Link>
+							)
+						})}
+					</ul>
+				</div>
 			);
 		}
 		else {
