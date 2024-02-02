@@ -37,17 +37,20 @@ const LandingPage = () => {
                         <p className="get-help-button">Join now</p>
                     </Link>
             <section className="features-section">
-                <p>You are not alone</p>
+                <div className="humans-img-container">
+
                 <div className="landing-img-container">
+                <p>You are not alone</p>
                 <img className="landing-img" src="/images/granpa-door.jpg" alt="man-door-pleased-to-see-you" />
                 </div>
-                <p>Connect with caring people</p>
                 <div className="landing-img-container">
+                <p>Connect with caring people</p>
                 <img className="landing-img-kitchen" src="/images/kitchen.jpg" alt="kitchen-women-convo" />
                 </div>
-                <p>Where Needs Meet Deeds</p>
                 <div className="landing-img-container">
+                <p>Where Needs Meet Deeds</p>
                 <img className="landing-img-kitchen" src="/images/fitness.jpg" alt="kitchen-women-convo" />
+                </div>
                 </div>
             </section>
             <Link to="/about"><p className="about-landing">HOW IT WORKS</p></Link>
@@ -64,6 +67,7 @@ const LandingPage = () => {
                     }
                 </section>
                 </div>
+                <div className="phantom-footer"></div>
             </div>
         </div>
     );
