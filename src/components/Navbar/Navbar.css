@@ -73,9 +73,6 @@
 .side-element:hover {
    color: var(--our-green-color);
 }
-.about-sidebar{
-    margin-left: 3px;
-}
 
 .sidebar-content .side-element button {
     list-style-type: none;

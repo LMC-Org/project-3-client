@@ -28,8 +28,8 @@ const LandingPage = () => {
                 </div>
                 <h2 className="first-title">HELP IS ALL AROUND</h2>
                 <h3 className="landing-subtitle">Get the help you need in exhange for helping others</h3>
-                <div id="landing-cta">
-                </div>
+                {/* <div id="landing-cta">
+                </div> */}
             </section>
             <div className="middle-bottom">
                     <h3 className="first-3">First 3 help requests are on the house</h3>
@@ -37,11 +37,18 @@ const LandingPage = () => {
                         <p className="get-help-button">Join now</p>
                     </Link>
             <section className="features-section">
-                <p>Share the kind of help you need</p>
-                <img className="landing-illustration" src="/images/illustrations/undraw_uploading_re_okvh.svg" alt="" />
+                <p>You are not alone</p>
+                <div className="landing-img-container">
+                <img className="landing-img" src="/images/granpa-door.jpg" alt="man-door-pleased-to-see-you" />
+                </div>
                 <p>Connect with caring people</p>
-                <p>Sign in and get your first 3 tokens for free</p>
-                <p>Earn more tokens by helping others</p>
+                <div className="landing-img-container">
+                <img className="landing-img-kitchen" src="/images/kitchen.jpg" alt="kitchen-women-convo" />
+                </div>
+                <p>Where Needs Meet Deeds</p>
+                <div className="landing-img-container">
+                <img className="landing-img-kitchen" src="/images/fitness.jpg" alt="kitchen-women-convo" />
+                </div>
             </section>
             <Link to="/about"><p className="about-landing">HOW IT WORKS</p></Link>
             {/* In backend I need to populate creator and send it populated to frontend */}
