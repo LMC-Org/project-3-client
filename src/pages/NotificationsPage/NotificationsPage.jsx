@@ -42,17 +42,22 @@ function NotificationsPage() {
 		unreadClass = isUnread ? "unread" : "";
 	};
 
-	const notifClickHandle = (userId, notifIndex, linkUrl) => {
+	const notifClickHandle = (userId, notifIndex, url) => {
 		const requestBody = JSON.stringify({ userId, notifIndex });
-		console.log("notifclickhandle userId and nnotifIndex ", userId, notifIndex);
+		// console.log("notifclickhandle userId and nnotifIndex ", requestBody);
 		fetch(`${BACKEND_ROOT}/user/notification-set-as-read`,
 		{
 			method: "PATCH",
-			body: {"userId" : `${userId}`, "notifIndex" : `${notifIndex}`}
+			mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+			body: requestBody
 		})
 		.then((res) => {
-			console.log("notifclickHandle response: ", res);
-			navigate(linkUrl);
+			//console.log("notifclickHandle response: ", res);
+			console.log("clicked URL: ", url);
+			navigate(url);
 		})
 		.catch(err => console.error("notifClickHandle error: ", err));
 		
@@ -67,13 +72,15 @@ function NotificationsPage() {
 					<ul>
 						{array.map((element, index) => {
 							setTextAndUrl(element.category, element.reference._id, element.reference.title, element.reference.creator.name, element.isUnread );
-							// console.log("RenderNoficiations fn. Element, text, url:\n\t",index, element, text, linkUrl);
+							console.log("RenderNoficiations fn. Element, text, url:\n\t",index, element, text, linkUrl);
 
 							return (
 								<li className={`message-block ${unreadClass}`} key={index} onClick={() => {
-									console.log("onclick attributes: ", user._id, index);
-																		
-									notifClickHandle(user._id, index, linkUrl)
+									const idx = index;
+									const url = linkUrl;
+
+									console.log("onclick attributes: ", user._id, idx, url);																		
+									notifClickHandle(user._id, idx, url)
 								}}>{text}</li>
 							)
 						})}
