@@ -1,9 +1,9 @@
 :root {
-	--our-green-color: #a8ec41;
+	--identity-color: #E88706;
 	--no-notif-color: #404040;
-  }
+}
   
-  * {
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -56,8 +56,6 @@
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 5px;
-
-
 }
 
 .side-element {
@@ -71,7 +69,7 @@
 }
 
 .side-element:hover {
-   color: var(--our-green-color);
+   color: var(--identity-color);
 }
 
 .sidebar-content .side-element button {
@@ -91,13 +89,13 @@
     color: rgb(240, 243, 247);
     outline: 1px solid whitesmoke;
     padding: 3px;
-  padding-right: 10px;
+    padding-right: 10px;
     padding-left: 10px;
     border-radius: 15px;
 }
 
 .nav-b-left:hover {
-    background-color: var(--our-green-color);
+    background-color: var(--identity-color);
     text-decoration: none;
     color: #111111;
 }
@@ -153,7 +151,7 @@ nav .home {
     display: flex;
     align-items:center;
     gap: 18px;
-    color:#a8ec41
+    color: var(--identity-color);
 }
 
 .tokens-state{
@@ -221,7 +219,7 @@ nav .home {
 
 @keyframes notif-alert {
 	0% {fill: var(--no-notif-color);}
-	50% {fill: var(--our-green-color);}
+	50% {fill: var(--identity-color);}
 	100% {fill: var(--no-notif-color);}
 }
 
