@@ -2,24 +2,31 @@ import "./NotificationsPage.css";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 import Loading from "../../components/Loading/Loading";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
+const 		BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
 
 function NotificationsPage() {
-	const { user } = useContext(AuthContext);
-	const navigate = useNavigate();
-	const [notificationsArray, setNotificationsArray] = useState(["not-loaded"]);
-	let text;
-	let linkUrl;
-	let unreadClass;
+	const	{ user } = useContext(AuthContext);
+	const	navigate = useNavigate();
+	const	[notificationsArray, setNotificationsArray] = useState(["not-loaded"]);
+	let		text;
+	let		linkUrl;
+	let		unreadClass;
+	const	valuesArray = [];
+
+	const putValues = () => {
+		valuesArray.push({
+			linkUrl: linkUrl
+		});
+	};
 
 	const setTextAndUrl = (category, reference, helpTitle, ownerName, isUnread) => {
-		const TEXTCAT1 = "offers you help with";
-		const TEXTCAT2 = "You were chosen to help with";
-		const TEXTCAT3 = "You have earned 1 help token for helping with";
-		const UNKNOWNTEXT = "Unknown notification."
-		let BASEURL = "/help-post";
+		const	TEXTCAT1 = "offers you help with";
+		const	TEXTCAT2 = "You were chosen to help with";
+		const	TEXTCAT3 = "You have earned 1 help token for helping with";
+		const	TEXT_UNKNOWN = "Unknown notification."
+		let		BASEURL = "/help-post";
 
 		switch (category) {
 			case 1:
@@ -35,16 +42,18 @@ function NotificationsPage() {
 				linkUrl = "/myprofile";				
 				break;		
 			default:
-				text = UNKNOWNTEXT;
+				text = TEXT_UNKNOWN;
 				linkUrl = "/myprofile";
 				break;
 		}
-		unreadClass = isUnread ? "unread" : "";
+		unreadClass = isUnread ? "unread" : " ";
+		putValues();
 	};
 
 	const notifClickHandle = (userId, notifIndex, url) => {
-		const requestBody = JSON.stringify({ userId, notifIndex });
+		const	requestBody = JSON.stringify({ userId, notifIndex });
 		// console.log("notifclickhandle userId and nnotifIndex ", requestBody);
+		console.log("fetch: ");
 		fetch(`${BACKEND_ROOT}/user/notification-set-as-read`,
 		{
 			method: "PATCH",
@@ -57,7 +66,7 @@ function NotificationsPage() {
 		.then((res) => {
 			//console.log("notifclickHandle response: ", res);
 			console.log("clicked URL: ", url);
-			navigate(url);
+			return navigate(url);
 		})
 		.catch(err => console.error("notifClickHandle error: ", err));
 		
@@ -76,11 +85,9 @@ function NotificationsPage() {
 
 							return (
 								<li className={`message-block ${unreadClass}`} key={index} onClick={() => {
-									const idx = index;
-									const url = linkUrl;
 
-									console.log("onclick attributes: ", user._id, idx, url);																		
-									notifClickHandle(user._id, idx, url)
+									console.log("onclick attributes: ", user._id, index, valuesArray[index].linkUrl);																		
+									notifClickHandle(user._id, index, valuesArray[index].linkUrl);
 								}}>{text}</li>
 							)
 						})}
