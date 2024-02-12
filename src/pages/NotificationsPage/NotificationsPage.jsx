@@ -17,7 +17,7 @@ function NotificationsPage() {
 
 	const putValues = () => {
 		valuesArray.push({
-			linkUrl: linkUrl
+			linkUrl
 		});
 	};
 
@@ -30,15 +30,15 @@ function NotificationsPage() {
 
 		switch (category) {
 			case 1:
-				text = `${ownerName} ${TEXTCAT1} ${helpTitle}`;
+				text = `${ownerName} ${TEXTCAT1} \"${helpTitle}\"`;
 				linkUrl = `${BASEURL}/${reference}`;				
 				break;
 			case 2:
-				text = `${TEXTCAT2} ${helpTitle}`;
+				text = `${TEXTCAT2} \"${helpTitle}\"`;
 				linkUrl = `${BASEURL}/${reference}`;				
 				break;
 			case 3:
-				text = `${TEXTCAT3} ${helpTitle}`;
+				text = `${TEXTCAT3} \"${helpTitle}\"`;
 				linkUrl = "/myprofile";				
 				break;		
 			default:
@@ -52,8 +52,6 @@ function NotificationsPage() {
 
 	const notifClickHandle = (userId, notifIndex, url) => {
 		const	requestBody = JSON.stringify({ userId, notifIndex });
-		// console.log("notifclickhandle userId and nnotifIndex ", requestBody);
-		console.log("fetch: ");
 		fetch(`${BACKEND_ROOT}/user/notification-set-as-read`,
 		{
 			method: "PATCH",
@@ -63,30 +61,19 @@ function NotificationsPage() {
             },
 			body: requestBody
 		})
-		.then((res) => {
-			//console.log("notifclickHandle response: ", res);
-			console.log("clicked URL: ", url);
-			return navigate(url);
-		})
+		.then((res) => navigate(url))
 		.catch(err => console.error("notifClickHandle error: ", err));
-		
 	};
 
 	const renderNotifications = (array) => {
-		console.log("notificationsArray: ", array);
-
 		if(array[0]) {
 			return (
 				<div id="notifications-container">
 					<ul>
 						{array.map((element, index) => {
 							setTextAndUrl(element.category, element.reference._id, element.reference.title, element.reference.creator.name, element.isUnread );
-							console.log("RenderNoficiations fn. Element, text, url:\n\t",index, element, text, linkUrl);
-
 							return (
 								<li className={`message-block ${unreadClass}`} key={index} onClick={() => {
-
-									console.log("onclick attributes: ", user._id, index, valuesArray[index].linkUrl);																		
 									notifClickHandle(user._id, index, valuesArray[index].linkUrl);
 								}}>{text}</li>
 							)
@@ -100,16 +87,13 @@ function NotificationsPage() {
 		}
 	};
 
-	//FETCH: get all notifications of the user. NEW AND OLD
-	// in this fetch, Backend resets the hasNewNotifications flag.
+	// FETCH: get all notifications of the user. NEW AND OLD
+	// in this fetch, Backend resets the hasNewNotifications flag to false.
 	useEffect(() => {
 		fetch(`${BACKEND_ROOT}/user/get-notifications/${user._id}`)
-			.then((response) => response.json())
-			.then((jsonData) => {
-				console.log("fetch get-notifications, response: ", jsonData);
-				setNotificationsArray(jsonData);
-			})
-			.catch( error => console.error(error));
+			.then(response => response.json())
+			.then(jsonData => setNotificationsArray(jsonData))
+			.catch(error => console.error(error));
 	}, []);
 
 	return (
@@ -120,7 +104,6 @@ function NotificationsPage() {
 				: renderNotifications(notificationsArray)
 			}
 		</>
-
 	)
 }
 

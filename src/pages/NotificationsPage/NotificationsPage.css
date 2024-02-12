@@ -1,37 +1,11 @@
-/* #E88706 */
-
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:wght@300&family=Poppins:wght@200;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-#alltestimonies-testimonies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 30px 15px 0 15px;
+:root {
+	--identity-color: #E88706;
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-	color: #E88706;
-	font-weight: 300;
-	margin-bottom: 1px;
-	
-	width: 100vw;
-	padding: 15px;	
-}
-
-/* 1 TESTIMONIO - BLOQUE */
-.testimony-testimonial {
-    width: 75%;
-    background-color: #111111;
-    border-radius: 8px;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 1px solid #E88706;
-	margin-left: auto;
-	margin-right: auto;
+.App h1 {
+	color: var(--identity-color);
 }
 
 #notifications-container {
@@ -42,7 +16,6 @@ h1 {
     padding: 30px 15px 0 15px;
 }
 
-/* bloque - container 1 elemento */
 .message-block {
 	/* opacity: 0.5; */
     width: 80vw;
@@ -58,11 +31,10 @@ h1 {
     font-size: 12px;
 }
 
-/* contenido - texto */
 .unread {
 	opacity: 1;
 	color: black;
-	background-color: #E88706;
+	background-color: var(--identity-color);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;

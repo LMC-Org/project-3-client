@@ -11,6 +11,6 @@
 
 @keyframes notif-alert {
 	0% {fill: var(--no-notif-color);}
-	50% {fill: var(--our-green-color);}
+	50% {fill: var(--identity-color);}
 	100% {fill: var(--no-notif-color);}
 }
