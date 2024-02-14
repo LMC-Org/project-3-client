@@ -37,16 +37,16 @@ const LandingPage = () => {
                 <div className="humans-img-container">
 
                 <div className="landing-img-container">
-                <p>You are not alone</p>
-                <img className="landing-img" src="/images/granpa-door.jpg" alt="man-door-pleased-to-see-you" />
+                <p id="img-title-landing">You are not alone</p>
+                <img className="landing-img" src="\images\elder-landing.jpg" alt="man-door-pleased-to-see-you" />
                 </div>
                 <div className="landing-img-container">
-                <p>Connect with caring people</p>
-                <img className="landing-img-kitchen" src="/images/kitchen.jpg" alt="kitchen-women-convo" />
+                <p id="img-title-landing">Connect with caring people</p>
+                <img className="landing-img" src="\images\kitchen-landing.jpg" alt="kitchen-women-convo" />
                 </div>
                 <div className="landing-img-container">
-                <p>Where Needs Meet Deeds</p>
-                <img className="landing-img-kitchen" src="/images/fitness.jpg" alt="kitchen-women-convo" />
+                <p id="img-title-landing">Where Needs Meet Deeds</p>
+                <img className="landing-img" src="\images\fitness-landing.jpg" alt="kitchen-women-convo" />
                 </div>
                 </div>
             </section>
