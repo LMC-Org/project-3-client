@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Testimony from "../../components/Testimony/Testimony";
 import "./LandingPage.css";
-import { useContext, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 
 
 const LandingPage = () => {
@@ -21,9 +21,6 @@ const LandingPage = () => {
         <div className="landing-wrapper">
             <section id="landing-upper">
                 <div id="main-image-container">
-                    {/* <video autoPlay muted loop>
-                        <source className="landing-video" src="./images/3d-hug-video.mp4" type="video/mp4"></source>
-                    </video> */}
                     <img className="landing-main-image" src="/images/approaching-hands.jpg" alt="" />
                 </div>
                 <h2 className="first-title">HELP IS ALL AROUND</h2>
