@@ -99,7 +99,7 @@ function MyProfile() {
                             {/* show all post that you have been chosen as volunteer */}
                             {HelpPostIHaveBeenChosen.length > 0 ?
                                 <div >
-                                    <h3>I have've been chosen as volunteered:</h3>
+                                    <h3>I've been chosen as volunteer:</h3>
                                     <div className="cards-container">
                                         {
                                             HelpPostIHaveBeenChosen.map((eachPost, index) => {
@@ -109,7 +109,7 @@ function MyProfile() {
                                             })
                                         }
                                     </div>
-                                </div> : <p className="not-v-yet">You have not been selected to volunteer yet</p>}
+                                </div> : <p className="not-v-yet">You have not been selected as volunteer yet</p>}
                             {/* show all post you have volunteered to do */}
                             {HelpPostIVolunteered.length > 0 ?
                                 <div>
