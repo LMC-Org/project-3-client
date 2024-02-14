@@ -47,7 +47,7 @@ function About() {
                         <Link to="/createtestimony" > Create Testimony </Link>
                         page and submit it there, we'll really appreciate it.</p>
                     <p>(You will have to be logged in)</p>
-                    <span class="material-symbols-outlined privacy-icon">
+                    <span className="material-symbols-outlined privacy-icon">
                         verified_user
                     </span>
                     <p>We value honesty and privacy, so feel free to share as much as you like, but beware of sensitive information.</p>

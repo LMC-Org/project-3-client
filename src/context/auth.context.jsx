@@ -9,7 +9,7 @@ function AuthProviderWrapper(props) {
   const [user, setUser] = useState(null);
 
   const storeToken = (token) => {
-    localStorage.setItem("authToken", token);
+    localStorage.setItem("authToken", token); //de dónde sale este token
   };
 
   const authenticateUser = () => {
@@ -52,7 +52,7 @@ function AuthProviderWrapper(props) {
   const logOutUser = () => {
     // Upon logout, remove the token from the localStorage
     removeToken();
-    authenticateUser();
+    authenticateUser();  //porqué llamamos a authenticateUser cuando se hace logout
   };
 
   useEffect(() => {
