@@ -3,15 +3,15 @@
     font-size: 20px;
     color: #E88706;
     font-weight: 300;
-    margin-bottom: 1px;
-    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-top: 35px;
     text-align: center;
     width: 100vw;
     padding: 15px;
 }
 
 .about-main-container {
-    padding: 20px;
+    padding: 25px;
 }
 
 .subtitle {
@@ -38,7 +38,7 @@ a {
     line-height: 25px;
 }
 .about-illustration{
-    margin-top: 15px;
+    margin-top: 45px;
     width: 170px;
     display: block;
     margin-left: auto;

@@ -12,7 +12,7 @@ function About() {
                 <br />
                 <p className="intro">
                     With <Link to="/">4HANDS</Link>  you can connect with caring people whose skills or tangible advantages suit your needs.
-                    There is no payment, we use tokens to keep a fair help exhange. <br />
+                    <br /> There is no payment, <br /> we use tokens to keep a fair help exhange. <br />
                     <img className="about-illustration" src="/images/illustrations/undraw_high_five_re_jy71.svg" alt="fair-trade-img" />
                     {/* On the
                     <Link to="/home"> Home Page</Link> ,
@@ -24,7 +24,7 @@ function About() {
                         stat_0 </span></li>
                     <li> New users get 3 free tokens.</li>
                     <li>Tokens are redeemed to create and post help requests.</li>
-                    <li>Once you are out of tokens you won't be able to create posts.
+                    <li>Once you are out of tokens you won't be able to create posts. <br />
                         <img className="minus-token" src="/images/about-tokens-2.png" alt="" />
                     </li>
                     <li><span className="material-symbols-outlined token-icon">
