@@ -35,14 +35,14 @@ span i {
 
 .home-title {
 	font-size: 30px;
-	color: #a8ec41;
 	font-weight: 300;
 	margin-bottom: 1px;
-	outline: 2px solid #a8ec41;
+	outline: 2px solid #e89425;
 	width: 100vw;
+	line-height: 40px;
 	padding: 15px;
-	
-	background-color: #111111
+	color: #E88706;
+	background-color: #111111;
 /* 	background: linear-gradient(100deg, rgba(255, 187, 78, 0.7) 0%, rgba(58, 83, 132, 0.7) 25%, rgba(45, 134, 128, 0.7) 79%, rgba(255, 109, 104, 0.7) 100%);*/
 }
 
@@ -58,7 +58,7 @@ span i {
 	color: aliceblue;
 	background-color: #111111;
 	border-radius: 10px;
-	border: 1px solid #a8ec41;
+	border: 1px solid #e89425;
 }
 
 
