@@ -6,6 +6,13 @@ form button {
     color: black;
 }
 
+.image-input {
+	background-color: #292929;
+    border-radius: 20px;
+	margin-bottom: 5px;
+}
+
+
 .edit-profile-container {
     display: flex;
     flex-direction: column;
@@ -83,14 +90,14 @@ form button {
 }
 
 .hiddenCheckbox:checked +.checkboxLabel {
-    background-color: #a8e41c;
+    background-color: var(--identity-color);
     color: black;
 }
 
 #skills {
     display: flex;
     width: 350px;
-    padding: 15px;
+    padding: 0px 15px 15px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;

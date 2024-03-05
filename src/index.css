@@ -1,6 +1,23 @@
+:root {
+	--identity-color: #E88706;
+	--no-notif-color: #404040;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   
+}
+
+input, textarea {
+	padding: 6px 14px;
+}
+
+body {
+	padding-bottom: 50px;
+}
+
+input, textarea {
+	border: none;
 }

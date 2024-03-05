@@ -181,7 +181,7 @@ function PostDetails() {
                         </div>
                     }
 
-                    <p className="volunteer"></p>
+                    {/* <p className="volunteer"></p> */}
                     {(volunteersArray.length > 0 && isCreator() && selectedVolunteer === null) ?
                         <>
 						<p className="details-volunteer">  Volunteers: </p>
@@ -211,7 +211,7 @@ function PostDetails() {
 
 					{
 						isCompleted() && 
-						<p>THIS HELP IS ALREADY COMPLETED</p>
+						<p>THIS HELP IS ALREADY COMPLETED ✅</p>
 					}
 
                     {(!isCreator() && !isVolunteer() && !isSelectedVolunteer()) &&

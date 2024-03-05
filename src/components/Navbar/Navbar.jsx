@@ -49,12 +49,16 @@ function Navbar() {
 
   const addClassNewToNotifIcon = () => {
 	const notificationsElement = document.querySelector("#notifications-icon");
+	console.log("addClass");
 	notificationsElement.classList.add("new");
   };
 
   const removeClassNewFromNotifIcon = () => {
 	const notificationsElement = document.querySelector("#notifications-icon");
-	notificationsElement.classList.remove("new");
+	if (notificationsElement && notificationsElement.classList.contains("new")) {
+		console.log("removeClass");
+		notificationsElement.classList.remove("new");
+	}
   };
 
   const notificationsClickHandle = () => {
@@ -69,6 +73,7 @@ function Navbar() {
 		.then((response) => response.json())
 		.then((responseJson) => {
 			newNotifications = responseJson.hasNewNotifications;
+			console.log("NewNotifications: ", responseJson, newNotifications);
 			newNotifications ? addClassNewToNotifIcon() : removeClassNewFromNotifIcon();
 		});
 	}
@@ -80,6 +85,7 @@ useEffect(() => {
       fetch(`${BACKEND_ROOT}/user/${user._id}`)
         .then((response) => response.json())
         .then((responseJson) => {
+			console.log("responseNotifications", responseJson, );
           setUserData(responseJson);
 		  checkNotificationsLoop();
         })
@@ -96,7 +102,7 @@ useEffect(() => {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-peach-transparentv1.svg" alt="" />
             </Link>
             <div className="nav-right">
 			  <svg id="notifications-icon" className="" onClick={notificationsClickHandle} width="24" height="24" viewBox="0 0 24 24">
@@ -133,7 +139,7 @@ useEffect(() => {
                         className="side-element">
                         Create Help request
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
-                        {"  "} <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "var(--identity-color)" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -146,7 +152,7 @@ useEffect(() => {
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
-                        <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
+                        <i className="fa fa-plus" style={{ color: "var(--identity-color)" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -170,7 +176,7 @@ useEffect(() => {
         {!isLoggedIn && (
           <>
             <Link to="/">
-              <img className="logo" src="/images/4H-logo-round-green2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-peach-transparentv1.svg" alt="" />
             </Link>
             <div className="nav-landing-left">
               <Link to="/signup">

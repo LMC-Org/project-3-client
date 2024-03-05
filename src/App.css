@@ -37,5 +37,5 @@ body{
 }
 
 .btn-custom-style:hover {
-background-color: #a8ec41;
+background-color: var(--identity-color);
 }

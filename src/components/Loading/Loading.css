@@ -1,6 +1,6 @@
 .loader {
   border: 16px solid #111111; /* Light grey */
-  border-top: 16px solid #a8e41c; /* Blue */
+  border-top: 16px solid var(--identity-color); /* Blue */
   border-radius: 50%;
   width: 80px;
   height: 80px;

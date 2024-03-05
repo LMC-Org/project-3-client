@@ -16,7 +16,7 @@
 	gap: 10px;
 	border-radius: 8px;
 	text-decoration: none;
-    border: 0.7px solid #a8ec41;
+    border: 0.7px solid var(--identity-color);
 	padding: 10px;
 }
 

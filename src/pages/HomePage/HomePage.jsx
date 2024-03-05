@@ -50,7 +50,7 @@ function HomePage() {
 					<p className="home-title">HOW CAN YOU HELP TODAY?</p>
 					<br />
 					<div className="search-bar">
-						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" />
+						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" size="28" />
 						<span>{''}    {''}<i className="fa fa-search"></i></span>
 					</div>
 				</div>

@@ -46,7 +46,7 @@ h1 {
 
  #title{
     background-color: #111111;
-    outline: 1px solid #a8ec41;
+    outline: 1px solid var(--identity-color);
     margin-bottom: 10px;
 }
 

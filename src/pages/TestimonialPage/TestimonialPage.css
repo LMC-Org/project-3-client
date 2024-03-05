@@ -11,7 +11,7 @@
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
-	color: #a8ec41;
+	color: var(--identity-color);
 	font-weight: 300;
 	margin-bottom: 1px;
 	
