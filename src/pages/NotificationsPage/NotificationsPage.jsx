@@ -30,7 +30,8 @@ function NotificationsPage() {
 
 		switch (category) {
 			case 1:
-				text = `${ownerName} ${TEXTCAT1} \"${helpTitle}\"`;
+				// text = `${ownerName} ${TEXTCAT1} \"${helpTitle}\"`;
+				text = `New person ${TEXTCAT1} \"${helpTitle}\"`;
 				linkUrl = `${BASEURL}/${reference}`;				
 				break;
 			case 2:
@@ -70,13 +71,19 @@ function NotificationsPage() {
 			return (
 				<div id="notifications-container">
 					<ul>
-						{array.map((element, index) => {
-							setTextAndUrl(element.category, element.reference._id, element.reference.title, element.reference.creator.name, element.isUnread );
-							return (
-								<li className={`message-block ${unreadClass}`} key={index} onClick={() => {
-									notifClickHandle(user._id, index, valuesArray[index].linkUrl);
-								}}>{text}</li>
-							)
+						{ array.map((element, index) => {
+							if (element.reference) {
+								setTextAndUrl(element.category, element.reference._id, element.reference.title, element.reference.creator.name, element.isUnread );
+								console.log("reference: ", element.reference._id, element.reference.title, element.reference.creator.name);
+								return (
+									<li className={`message-block ${unreadClass}`} key={index} onClick={() => {
+										notifClickHandle(user._id, index, valuesArray[index].linkUrl);
+									}}>{text}</li>
+								)
+							}
+							else {
+								return (<></>)
+							}
 						})}
 					</ul>
 				</div>
