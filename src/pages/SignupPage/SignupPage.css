@@ -4,6 +4,8 @@
 
 .SignupPage input{
     color: black;
+    border-radius: 5px;
+    width: 200px;margin-bottom: 15px;
 }
 
 .SignupPage {
@@ -21,6 +23,7 @@
     display:flex;
     flex-direction: column;  
     align-items: center;
+    margin-top: 20px;
 }
 
 form label {
@@ -28,12 +31,13 @@ form label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin-top: 15px;
+    
+    
     
 }
 
 .submitbutton {
     margin-top: 20px;
+    font-size: 20px;
     
 }
