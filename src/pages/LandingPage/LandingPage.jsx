@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Testimony from "../../components/Testimony/Testimony";
 import "./LandingPage.css";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const LandingPage = () => {
@@ -29,40 +29,40 @@ const LandingPage = () => {
                 </div> */}
             </section>
             <div className="middle-bottom">
-                    <h3 className="first-3">First 3 help requests are on the house</h3>
-                    <Link to="/signup">
-                        <p className="get-help-button">Join now</p>
-                    </Link>
-            <section className="features-section">
-                <div className="humans-img-container">
+                <h3 className="first-3">First 3 help requests are on the house</h3>
+                <Link to="/signup">
+                    <p className="get-help-button">Join now</p>
+                </Link>
+                <section className="features-section">
+                    <div className="humans-img-container">
 
-                <div className="landing-img-container">
-                <p id="img-title-landing">You are not alone</p>
-                <img className="landing-img" src="\images\elder-landing.jpg" alt="man-door-pleased-to-see-you" />
-                </div>
-                <div className="landing-img-container">
-                <p id="img-title-landing">Connect with caring people</p>
-                <img className="landing-img" src="\images\kitchen-landing.jpg" alt="kitchen-women-convo" />
-                </div>
-                <div className="landing-img-container">
-                <p id="img-title-landing">Where Needs Meet Deeds</p>
-                <img className="landing-img" src="\images\fitness-landing.jpg" alt="kitchen-women-convo" />
-                </div>
-                </div>
-            </section>
-            <Link to="/about"><p className="about-landing">HOW IT WORKS</p></Link>
-            {/* In backend I need to populate creator and send it populated to frontend */}
-            <div className="testimonies-container-landing">
-                <section id="landing-testimonies">
-                    {
-                        testimoniesArray.map((eachTestimony, index) => {
-                            const { text, rating, creator } = eachTestimony;
-                            return (
-                                <Testimony key={index} text={text} rating={rating} creator={creator} />
-                            )
-                        })
-                    }
+                        <div className="landing-img-container">
+                            <p id="img-title-landing">You are not alone</p>
+                            <img className="landing-img" src="\images\elder-landing.jpg" alt="man-door-pleased-to-see-you" />
+                        </div>
+                        <div className="landing-img-container">
+                            <p id="img-title-landing">Connect with caring people</p>
+                            <img className="landing-img" src="\images\kitchen-landing.jpg" alt="kitchen-women-convo" />
+                        </div>
+                        <div className="landing-img-container">
+                            <p id="img-title-landing">Where Needs Meet Deeds</p>
+                            <img className="landing-img" src="\images\fitness-landing.jpg" alt="kitchen-women-convo" />
+                        </div>
+                    </div>
                 </section>
+                <Link to="/about"><p className="about-landing">HOW IT WORKS</p></Link>
+                {/* In backend I need to populate creator and send it populated to frontend */}
+                <div className="testimonies-container-landing">
+                    <section id="landing-testimonies">
+                        {
+                            testimoniesArray.map((eachTestimony, index) => {
+                                const { text, rating, creator } = eachTestimony;
+                                return (
+                                    <Testimony key={index} text={text} rating={rating} creator={creator} />
+                                )
+                            })
+                        }
+                    </section>
                 </div>
                 <div className="phantom-footer"></div>
             </div>
