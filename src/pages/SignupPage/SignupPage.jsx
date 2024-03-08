@@ -37,7 +37,7 @@ function SignupPage() {
 
       <form onSubmit={handleSignupSubmit}>
         <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+        <input type="email" name="email" value={email} onChange={handleEmail} placeholder="example@gmail.com" />
 
         <label>Password:</label>
         <input
@@ -45,21 +45,22 @@ function SignupPage() {
           name="password"
           value={password}
           onChange={handlePassword}
+          placeholder="Enter your password"
         />
 
         <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
+        <input type="text" name="name" value={name} onChange={handleName} placeholder="Your name" />
 
         <label>Phone:</label>
-        <input type="text" name="phone" value={phone} onChange={handlePhone} />
+        <input type="text" name="phone" value={phone} onChange={handlePhone} placeholder="+34 xxxxxxxxx"/>
 
-        <button className="btn-custom-style submitbutton" type="submit">Sign Up</button>
+        <button className="submitbutton" type="submit">Sign Up</button>
       </form>
 
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {errorMessage && <p >{errorMessage}</p>}
 
-      <p>Already have account?</p>
-      <Link className="btn-custom-style" to={"/login"}> Login</Link>
+      <p className="error-message">Already have account?</p>
+      <Link className="submitbutton" to={"/login"}> Login</Link>
     </div>
   );
 }
