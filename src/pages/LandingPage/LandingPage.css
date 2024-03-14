@@ -17,6 +17,7 @@
     z-index: -100;
 }
 
+
 .first-title {
     font-size: 40px;
     font-weight: 300;
@@ -84,6 +85,7 @@
 .about-landing:hover a {
     background-color: #111111;
     color: #E88706;
+    outline: none;
 
 }
 
@@ -91,7 +93,7 @@
     background-color: #E88706;
     color: #111111;
     cursor: pointer;
-
+outline: none;
 }
 
 .landing-subtitle {
@@ -106,7 +108,7 @@
     padding: 100px 15px 15px 15px;
     display: flex;
     flex-direction: column;
-    height: 1300px;
+    height: 1000px;
 }
 
 .features-text {
@@ -137,7 +139,7 @@
 
 .get-help-button:hover {
     background-color: #E88706;
-    color: #111111;
+    color: whitesmokezz;
 }
 
 .middle-bottom {
@@ -145,16 +147,15 @@
 }
 
 #img-title-landing {
-    margin-top: -350px;
-    line-height: 30px;
-    font-size: 26px;
+    margin-top: -200px;
+    font-size: 20px;
     font-weight: 200;
 }
 
 .landing-img-container {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -164,14 +165,12 @@
 
 .landing-img {
     position: absolute;
-    width: 120%;
-    height: 70%;
+    width: 110%;
+    height: 60%;
     object-fit: cover;
-    bottom: 20px;
+    margin-top: 80px;
 
 }
-
-
 
 .testimonies-container-landing {
     background-color: rgb(8, 8, 8);
@@ -202,7 +201,7 @@
 
 }
 
-@media (min-width: 750px) {
+@media (min-width: 481px) {
 
     .get-help-button {
         margin-top: 40px;
@@ -211,6 +210,81 @@
         border-radius: 30px;
         line-height: 35px;
         font-size: 24px;
+    }
+
+    .landing-img-container {
+        width: 100%;
+
+    }
+
+    .features-section {
+
+        height: 900px;
+    }
+
+    .humans-img-container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+
+    }
+
+
+    #img-title-landing {
+        margin-top: -100px;
+
+    }
+
+    .landing-img {
+        margin-top: 150px;
+        width: 110%;
+        height: 80%;
+
+    }
+
+    .landing-img.fitness {
+        object-position: 50% 95%;
+    }
+
+
+    .about-landing {
+        margin-bottom: 90px;
+        width: 400px;
+        height: 40px;
+        letter-spacing: 4px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #landing-testimonies {
+        gap: 15px;
+        padding: 30px 15px 15px 15px;
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+
+    .landing-img-container {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .get-help-button {
+        margin-top: 40px;
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        line-height: 35px;
+        font-size: 24px;
+    }
+
+    .features-section {
+
+        height: 600px;
     }
 
     .landing-img-container {
@@ -228,21 +302,10 @@
 
 
     #img-title-landing {
-        margin-top: -380px;
+        margin-top: -70px;
 
     }
 
-    .landing-img {
-        position: absolute;
-        top: -10;
-        width: 130%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 15%;
-        transform: scale(0.7) translate(0%, 30%);
-        border-radius: 20px;
-        margin-bottom: 30px;
-    }
 
     .about-landing {
         margin-bottom: 90px;
@@ -259,10 +322,32 @@
         margin-bottom: 0px;
         margin-top: 30px;
     }
+
+    .landing-img-container {
+        margin-bottom: 10px;
+    }
+
+    .landing-img {
+        position: absolute;
+        width: 200%;
+        height: 120%;
+        object-fit: cover;
+        position: absolute;
+        object-fit: cover;
+        object-position: 50% 15%;
+        transform: scale(0.4) translate(0%, 20%);
+
+    }
+
+    .humans-img-container {
+        flex-direction: row;
+        padding: 0;
+        margin-bottom: 20px;
+    }
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     #landing-cta {
         width: 50%;
         gap: -10px;
@@ -324,14 +409,14 @@
     }
 
     .features-section {
-        
-        height: 600px;
-        margin-top: 50px;
+
+        height: 500px;
+        margin-top: 90px;
     }
 
     .features-section p {
         font-size: 34px;
-        padding: 20px;
+        padding: 15px;
 
     }
 
@@ -354,20 +439,21 @@
         padding-top: 5px;
     }
 
-    .landing-img-container{
+    .landing-img-container {
         margin-bottom: 10px;
     }
 
     .landing-img {
         position: absolute;
         width: 130%;
-        height: 100%;
+        height: 120%;
         object-fit: cover;
         position: absolute;
         top: -20;
         object-fit: cover;
         object-position: 60% 15%;
         transform: scale(0.6) translate(0%, 20%);
+        border-radius: 20px;
 
     }
 
@@ -379,6 +465,8 @@
 
     #img-title-landing {
         font-size: 30px;
+        line-height: 35px;
+
     }
 
     #landing-testimonies {

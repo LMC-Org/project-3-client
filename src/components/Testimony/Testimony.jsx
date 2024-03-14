@@ -16,13 +16,14 @@ const Testimony = (props) => {
 
     return (
         <article className="testimony">
-            <p className="quote">{text}</p>
-
-            <div className="testimony-creator">
-                <img src={creator.profilePicture} alt={creator.name} />
-                <p>{creator.name}</p>
-            </div>
+            <div className="creator-rating">
+                <div className="testimony-creator">
+                    <img src={creator.profilePicture} alt={creator.name} />
+                    <p>{creator.name}</p>
+                </div>
                 <p className="testimony-rating">{setStars(rating)}</p>
+            </div>
+            <p className="quote">{text}</p>
         </article>
     );
 };
