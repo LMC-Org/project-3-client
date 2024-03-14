@@ -15,8 +15,8 @@
 
 .testimony-creator {
     display: flex;
-    align-items: baseline;
-    gap: 5px;
+    align-items: center;
+    gap: 10px;
     margin-top: 10px;
     font-size: 12px;
     margin-bottom: 3px;
@@ -32,12 +32,18 @@
     border-radius: 50%;
 }
 
+.creator-rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .testimony .quote {
-/*     padding: 5px 5px 5px 5px;
- */    margin-top: 5px;
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 12px;
     line-height: 18px;
     min-height: 70px;
+    padding: 5px;
 }
 
 .testimony .quote::before {
@@ -54,8 +60,8 @@
     margin-bottom: 3px;
 }
 
-@media (min-width: 750px){
-    .testimony{
-margin-top: 0px;
+@media (min-width: 750px) {
+    .testimony {
+        margin-top: 0px;
     }
 }
