@@ -98,6 +98,7 @@
     background-color: var(--identity-color);
     text-decoration: none;
     color: #111111;
+    outline: none;
 }
 
 a:hover {
@@ -145,7 +146,6 @@ nav .home {
     margin-left: 10px;
     margin-bottom: 5px;
     margin-top: 10px;
-    background-color: #5353538d;
     border-radius: 50%;
 }
 
