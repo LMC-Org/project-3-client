@@ -2,9 +2,9 @@
 	width: 250px;
 	height: 210px;
 	margin-bottom: 20px;
-	border-radius: 15px;
+	border-radius: 10px;
 	padding: 18px;
-	background-color: #e89425;
+	background-color: #A4CACE;
 	box-shadow: 1px 1px 10px rgba(171, 171, 217, 0.3);
 	color: #111111;
 	overflow: hidden;
@@ -27,11 +27,10 @@
 	font-style: italic;
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	/* number of lines to show */
-	line-clamp: 3;
-	-webkit-box-orient: vertical;
-
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+	padding-bottom: 15px;
+	line-height: 15px;
 
 }
 

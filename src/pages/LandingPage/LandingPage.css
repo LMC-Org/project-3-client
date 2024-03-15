@@ -121,20 +121,17 @@
 }
 
 .get-help-button {
-    color: rgb(35, 35, 35);
+    color: #111111;
     background-color: #E88706;
-    font-size: 18px;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
-    width: 120px;
-    line-height: 25px;
-    height: 30px;
-    margin: 0 auto;
     text-align: center;
-    font-weight: 600;
-    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 .get-help-button:hover {
@@ -148,7 +145,7 @@
 }
 
 #img-title-landing {
-    margin-top: -200px;
+    margin-top: -220px;
     font-size: 20px;
     font-weight: 200;
 }
@@ -173,6 +170,12 @@
 
 }
 
+.landing-img.fitness {
+    object-position: 50% 95%;
+}
+
+
+
 .testimonies-container-landing {
     background-color: rgb(8, 8, 8);
     margin-bottom: 20px;
@@ -186,6 +189,8 @@
     padding: 30px 15px 15px 15px;
     margin-bottom: 20px;
 }
+
+
 
 
 @media (min-width: 449px) {
@@ -286,7 +291,7 @@
 
     .features-section {
 
-        height: 600px;
+        height: 500px;
     }
 
     .landing-img-container {
