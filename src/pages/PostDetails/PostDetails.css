@@ -10,7 +10,7 @@
     padding: 5px;
 
     border-radius: 15px;
-    border: 1px solid #a8ec41;
+    border: 1px solid #E88706;
     background-color: #111111
 }
 
@@ -22,15 +22,18 @@
 .help-img-container{
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    padding: 0;
+    height: 300px;
+    
+    
 }
 
 .help-image {
-    border-radius: 10px;
-    width: 300px;
+    width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     margin-left: 0 auto;
+    padding: 0;
 }
 
 .help-container {
@@ -58,22 +61,23 @@
 }
 
 .details-location {
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 15px;
-    border-top: 1px solid #a8e41c;
+    border-top: 1px solid #E88706;
     padding-top: 10px;
+    text-align: right;
 }
 
 .description-title {
-    font-size: 20px;
-    margin-bottom: 3px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .info-title {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
     padding: 1px;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .post-creator-container {
@@ -88,7 +92,8 @@
 
 .creator-title {
     margin-top: 10px;
-    font: 20px;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
 .volunteer {
@@ -96,14 +101,13 @@
 }
 
 .description-container {
-
     color: #f3f3f3;
     border-radius: 15px;
-    padding: 10px;
+    margin-bottom: 25px;
 }
 
 .info-description {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .creator-picture {
@@ -120,15 +124,14 @@
 
 .I-can-help {
     color: rgb(240, 243, 247);
-    outline: 1px solid whitesmoke;
+    outline: 1px solid #E88706;
     padding: 2px;
-    width: 120px;
+    width: 150px;
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 0 auto;
+    margin-top: 30px;
 }
 
 .edit-help-buttons {
@@ -151,9 +154,9 @@
 }
 
 .edit-button:hover {
-    background-color: #a8ec41;
+    background-color: #E88706;
     color: #111111;
-    outline: 1px solid #111111;
+    outline: none;
 
 }
 

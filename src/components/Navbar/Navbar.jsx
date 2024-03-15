@@ -133,7 +133,7 @@ useEffect(() => {
                         className="side-element">
                         Create Help request
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
-                        {"  "} <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#E88706" }}></i>
                       </p>
                     </Link>
                   </li>
@@ -146,7 +146,7 @@ useEffect(() => {
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
-                        <i className="fa fa-plus" style={{ color: "#a8ec41" }}></i>
+                        <i className="fa fa-plus" style={{ color: "#E88706" }}></i>
                       </p>
                     </Link>
                   </li>
