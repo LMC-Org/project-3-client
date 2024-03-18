@@ -286,7 +286,7 @@
         width: 200px;
         height: 40px;
         border-radius: 30px;
-        line-height: 35px;
+        line-height: 30px;
         font-size: 24px;
     }
 
@@ -322,7 +322,7 @@
         height: 40px;
         letter-spacing: 4px;
         font-size: 20px;
-        line-height: 28px;
+        line-height: 30px;
     }
 
     #landing-testimonies {
@@ -475,6 +475,7 @@
     #img-title-landing {
         font-size: 30px;
         line-height: 35px;
+        margin-bottom: 100px;
 
     }
 

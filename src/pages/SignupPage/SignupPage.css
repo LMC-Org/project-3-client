@@ -5,7 +5,10 @@
 .SignupPage input{
     color: black;
     border-radius: 5px;
-    width: 200px;margin-bottom: 15px;
+    width: 200px;
+    margin-bottom: 15px;
+    padding: 5px;
+
 }
 
 .SignupPage {

@@ -12,6 +12,7 @@
     margin-bottom: 15px;
     align-items: center;
 }
+
 .profile-container {
     display: flex;
     justify-content: center;
@@ -125,21 +126,39 @@
 
 h3 {
     margin-bottom: 5px;
+    margin-top: 20px;
 
 }
 
 .not-v-yet {
-    margin-top: 5px;
+    margin-top: 25px;
     font-size: 14px;
+    color: #E88706;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+
+    .user-name{
+        margin-bottom: 30px;
+        margin-top: 20px;
+        font-size: 40px;
+        text-align: center;
+    }
     .user-details-container {
         width: 700px;
     }
 
     .profile-card {
         width: 900px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container {
+        align-items: center;
+        justify-content: center;
     }
 
     .user-profilepicture {
@@ -153,19 +172,17 @@ h3 {
 
     .user-details-picture-responsive {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 15px;
         justify-content: space-between;
         margin-bottom: 15px;
-        align-items: center;
-    }
-
-    .user-details-responsive {
-        width: 500px;
 
     }
+
+   
 
     .user-details-container {
-        margin-left: 50px;
         width: 780px;
     }
 
