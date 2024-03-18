@@ -47,10 +47,11 @@ function HomePage() {
 			<div id="home-content-wrapper">
 
 				<div className="home-head">
-					<p className="home-title">HOW CAN YOU HELP TODAY?</p>
+					<p className="home-title">HOW CAN YOU HELP TODAY ?</p>
+					<p className="home-subtitle">Browse among all posts, filter by any word.</p>
 					<br />
 					<div className="search-bar">
-						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" />
+						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" placeholder="English classes intermediate"/>
 						<span>{''}    {''}<i className="fa fa-search"></i></span>
 					</div>
 				</div>

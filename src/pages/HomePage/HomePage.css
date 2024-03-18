@@ -30,21 +30,27 @@ span i {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .home-title {
 	font-size: 30px;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: 1px;
-	outline: 2px solid #e89425;
+	text-align: center;
 	width: 100vw;
 	line-height: 40px;
-	padding: 15px;
+	padding: 20px;
 	color: #A4CACE;
-	background-color: #111111;
-/* 	background: linear-gradient(100deg, rgba(255, 187, 78, 0.7) 0%, rgba(58, 83, 132, 0.7) 25%, rgba(45, 134, 128, 0.7) 79%, rgba(255, 109, 104, 0.7) 100%);*/
-}
+/* 	background-color: #111111;
+ *//* 	background: linear-gradient(90deg, rgba(0, 0, 0, 0)5.3%, rgba(255, 187, 78, 0.497) 45.6%,  rgba(0, 0, 0, 0) 95%);
+ */}
+
+ .home-subtitle{
+	font-style: italic;
+	font-size: 14px;
+	color: #e89425;
+ }
 
 .posts-container {
 	display: flex;
@@ -59,10 +65,16 @@ span i {
 	background-color: #111111;
 	border-radius: 10px;
 	border: 1px solid #e89425;
+	width: 50vw;
+	padding: 5px;
+}
+
+.fa-search{
+	padding: 10px;
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
 	#home-content-wrapper {
 		flex-direction: row;
@@ -77,8 +89,11 @@ span i {
 	}
 
 	.home-title {
-		width: 70vw;
+		width: 100%;
 		font-size: 80px;
+		line-height: 90px;
+		text-align: center;
+		border-radius: 20px;
 	}
 
 	.search-bar {
