@@ -57,7 +57,7 @@
     margin-top: 5px;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 
 .user-details-container {
@@ -69,7 +69,6 @@
 }
 
 .location-container {
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -77,7 +76,8 @@
 }
 
 .skills-container {
-    margin-bottom: 15px;
+    padding-top: 5px;
+    margin-bottom: 25px;
     border-top: 1px solid whitesmoke;
 }
 
@@ -87,7 +87,7 @@
 
 .tokens-container {
     border-top: 1px solid whitesmoke;
-    padding-top: 5px;
+    padding-top: 10px;
     display: flex;
     font-weight: 700;
     justify-content: space-between;

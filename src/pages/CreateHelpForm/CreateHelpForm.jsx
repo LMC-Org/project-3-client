@@ -93,33 +93,33 @@ function CreateHelpForm() {
 
     return (
         <>
-        {userData ? 
-        <div>
-            <h1>Create Help Request</h1>
-            <div >
-                <form className="create-help-container">
-                    <label htmlFor="title">Title</label>
-                    <input disabled={tokens <= 0} placeholder="Name your help request" value={title} onChange={(event) => setTitle(event.target.value)} type="text" name="title" id="title" />
+            {userData ?
+                <div >
+                    <h1 id="create-help-title">Create Help Request</h1>
+                    <div >
+                        <form id="create-help-container">
+                            <label htmlFor="form-label">Title</label>
+                            <input disabled={tokens <= 0} placeholder="Name your help request" value={title} onChange={(event) => setTitle(event.target.value)} type="text" name="title" id="title" />
 
-                    <label htmlFor="location">Location</label>
-                    <textarea disabled={tokens <= 0} value={location} onChange={(event) => setLocation(event.target.value)} type="text" name="location" id="location" />
+                            <label htmlFor="description">Description</label>
+                            <textarea disabled={tokens <= 0} value={description} onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description" />
+                            <label htmlFor="location">Location</label>
+                            <textarea disabled={tokens <= 0} value={location} onChange={(event) => setLocation(event.target.value)} type="text" name="location" id="location" />
 
-                    <label htmlFor="description">Description</label>
-                    <textarea disabled={tokens <= 0} value={description} onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description" />
 
-                    <label htmlFor="helpImageUrl">Help Image</label>
-                    <input disabled={tokens <= 0} type="file" accept="image/*" className="image-input"
+                            <label htmlFor="helpImageUrl">Help Image</label>
+                            <input disabled={tokens <= 0} type="file" accept="image/*" className="image-input"
 
-                        onChange={(event) => handleFileUpload(event)}
-                        name="helpImageUrl"
-                        id="helpImageUrl" />
-                    {helpImageUrl && <img className="img-preview" src={helpImageUrl} alt="Help Image" />}
+                                onChange={(event) => handleFileUpload(event)}
+                                name="helpImageUrl"
+                                id="helpImageUrl" />
+                            {helpImageUrl && <img className="img-preview" src={helpImageUrl} alt="Help Image" />}
 
-                    <p onClick={(event) => postHelp(event)} disabled={tokens <= 0} className="create-help-button">CREATE</p>
-                </form>
-            </div>
-        </div>
-        : <Loading/>}
+                            <p onClick={(event) => postHelp(event)} disabled={tokens <= 0} className="create-help-button">CREATE</p>
+                        </form>
+                    </div>
+                </div>
+                : <Loading />}
         </>
     );
 }

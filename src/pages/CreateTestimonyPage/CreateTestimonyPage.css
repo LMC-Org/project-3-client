@@ -24,7 +24,9 @@
 
 textarea{
     background-color: #111111;
-    outline: 1px solid #a8ec41;
+    /* outline: 1px solid rgb(255, 166, 70); */
+    border-bottom: 1px solid rgb(255, 166, 70);
+
     margin-bottom: 10px;
 }
 
