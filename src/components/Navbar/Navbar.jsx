@@ -96,7 +96,7 @@ useEffect(() => {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-logo-round-peach-transparentv1.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-peach-transparentv2.svg" alt="" />
             </Link>
             <div className="nav-right">
 			  <svg id="notifications-icon" className="" onClick={notificationsClickHandle} width="24" height="24" viewBox="0 0 24 24">
