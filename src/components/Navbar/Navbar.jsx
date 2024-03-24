@@ -81,11 +81,12 @@ function Navbar() {
         .then((response) => response.json())
         .then((responseJson) => {
           setUserData(responseJson);
+          console.log("userdata",responseJson);
           checkNotificationsLoop();
         })
         .catch((err) => console.log(err));
     }
-  }, [user]);
+  }, [userData]);
 
   return (
     <div className="navbar-container">

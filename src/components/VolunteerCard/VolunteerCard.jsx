@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import "./VolunteerCard.css";
-import { useState } from "react";
 
 const VolunteerCard = (props) => {
     const navigate = useNavigate();
