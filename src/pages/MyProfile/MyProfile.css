@@ -82,7 +82,7 @@
 }
 
 .skills-profile {
-    color: #E88706;
+    color: #CA633E;
 }
 
 .tokens-container {
@@ -100,7 +100,7 @@
     width: 40px;
     gap: 3px;
     align-items: center;
-    color: #E88706;
+    color: #CA633E;
 }
 
 .material-symbols-outlined {
@@ -133,7 +133,7 @@ h3 {
 .not-v-yet {
     margin-top: 25px;
     font-size: 14px;
-    color: #E88706;
+    color: #CA633E;
 }
 
 @media (min-width: 1025px) {

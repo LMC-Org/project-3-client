@@ -14,7 +14,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	margin-top: 30px;
+	margin-top: 20px;
 	justify-content: center;
 	align-items: center;
 	width: 400px;
@@ -31,25 +31,27 @@ span i {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 25px;
+	background-color: #E1C0B5;
 }
 
 .home-title {
+	margin-top: 25px;
 	font-size: 30px;
 	font-weight: 400;
-	margin-bottom: 1px;
 	text-align: center;
 	width: 100vw;
 	line-height: 40px;
 	padding: 20px;
-	color: #A4CACE;
+	color: #111111;
 /* 	background-color: #111111;
  *//* 	background: linear-gradient(90deg, rgba(0, 0, 0, 0)5.3%, rgba(255, 187, 78, 0.497) 45.6%,  rgba(0, 0, 0, 0) 95%);
  */}
 
  .home-subtitle{
+	margin-top: 15px;
 	font-style: italic;
 	font-size: 14px;
-	color: #e89425;
+	color: #CA633E;
  }
 
 .posts-container {
@@ -57,21 +59,21 @@ span i {
 	justify-content: center;
 }
 .search-bar{
-	margin-top:20px;
+	margin-bottom: 40px;
 }
 
 .search-bar input {
 	color: aliceblue;
 	background-color: #111111;
-	border-radius: 10px;
+	border-radius: 20px;
 	border: 1px solid #A4CACE;;
-	width: 50vw;
+	width: 70vw;
 	padding: 10px;
 }
 
 .fa-search{
 	padding: 15px;
-	color: #e89425;
+	color: #CA633E;
 }
 
 

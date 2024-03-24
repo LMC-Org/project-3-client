@@ -71,7 +71,7 @@
 }
 
 .about-landing {
-    color: #E88706;
+    color: #CA633E;
     text-align: center;
     outline: 1px solid white;
     margin-left: auto;
@@ -84,13 +84,13 @@
 
 .about-landing:hover a {
     background-color: #111111;
-    color: #E88706;
+    color: #CA633E;
     outline: none;
 
 }
 
 .about-landing:hover {
-    background-color: #E88706;
+    background-color: #CA633E;
     color: #111111;
     cursor: pointer;
     outline: none;
@@ -123,7 +123,7 @@
 
 .get-help-button {
     color: #111111;
-    background-color: #E88706;
+    background-color: #CA633E;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -136,7 +136,7 @@
 }
 
 .get-help-button:hover {
-    background-color: #E88706;
+    background-color: #CA633E;
     color: whitesmoke;
     outline: none;
 }
