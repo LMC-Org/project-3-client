@@ -68,9 +68,10 @@ function PostDetails() {
             .then((jsonData) => {
                 console.log("jsondata", jsonData);
                 setHelpData(jsonData);
+                setHelpImageUrl(jsonData.helpImageUrl)
                 setVolunteersArray(jsonData.foundHelpPost.volunteers)
                 setSelectedVolunteer(jsonData.foundHelpPost.selectedVolunteer)
-                //console.log("jsonData", jsonData);
+                console.log("jsonData", jsonData);
                 //console.log("datahelp", helpData)
             })
             .then(() => {
@@ -106,7 +107,7 @@ function PostDetails() {
 
     useEffect(() => {
         setStuff()
-    }, [])
+    }, []);
 
     const deleteHelp = () => {
         fetch(`${BACKEND_ROOT}/help-post/edithelp/${helpId}`,
@@ -151,10 +152,7 @@ function PostDetails() {
                     <div className="post-details-container">
                         {helpData && <div >
 
-                            <div className="help-img-container" style={{ backgroundImage: `url(${helpData.foundHelpPost.helpImageUrl})`}}>
-
-{/*                                 <img className="help-image" src={helpData.foundHelpPost.helpImageUrl} alt={helpData.foundHelpPost.title} />
- */}                            </div>
+                            <div className="help-img-container" style={{ backgroundImage: `url(${helpData.foundHelpPost.helpImageUrl})`, backgroundSize: "cover", }}>                           </div>
                             <div className="info-post-container">
                                 <h3 className="info-title">{helpData.foundHelpPost.title}</h3>
                                 <p className="details-location">{helpData.foundHelpPost.location} <i className="fa fa-map-marker"></i></p>
@@ -168,16 +166,7 @@ function PostDetails() {
                                     <p className="name-creator">{helpData.foundHelpPost.creator.name}</p>
                                 </div>
 
-                                {(isCreator() && !isCompleted()) &&
-                                    <div className="edit-help-buttons">
-                                        <Link to={`/edithelp/${helpId}`}>
-                                            <p className="edit-button">EDIT POST</p>
-                                        </Link>
 
-                                        <p onClick={deleteHelp} className="edit-button">DELETE POST</p>
-
-                                    </div>
-                                }
 
                                 <p className="volunteer"></p>
                                 {(volunteersArray.length > 0 && isCreator() && selectedVolunteer === null) ?
@@ -205,6 +194,16 @@ function PostDetails() {
                                                 <p>You were chosen to help. Thanks!</p>
                                             }
                                         </>)
+                                }
+                                {(isCreator() && !isCompleted()) &&
+                                    <div className="edit-help-buttons">
+                                        <Link to={`/edithelp/${helpId}`}>
+                                            <p className="edit-button">EDIT POST</p>
+                                        </Link>
+
+                                        <p onClick={deleteHelp} className="edit-button">DELETE POST</p>
+
+                                    </div>
                                 }
 
                                 {

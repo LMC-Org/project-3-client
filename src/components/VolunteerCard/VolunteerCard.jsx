@@ -59,7 +59,7 @@ const VolunteerCard = (props) => {
                         <p className="email-volunteerCard">Email: {email}</p>
                     </div>
                 </Link>
-                <button className="btn-custom-style" onClick={chooseVolunteer}>Select volunteer</button>
+                <button className="btn-custom-style" onClick={chooseVolunteer}>SELECT</button>
             </div>
         </>
     );

@@ -11,12 +11,13 @@
 } */
 .volunteerCard-link {
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	flex-direction: column;
+	justify-content: space-between;
 	gap: 10px;
 	border-radius: 8px;
 	text-decoration: none;
-    border: 0.7px solid #a8ec41;
+	background-color: #A4CACE;
+	color: black;
 	padding: 10px;
 }
 
@@ -28,14 +29,14 @@
 	font-size: 0.77em;
 }
 
-.volunteerCard-card{
+.volunteerCard-card {
 	margin-top: 5px;
 	width: 150px;
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	border-radius: 8px;
 	padding: 5px;
 	line-height: 25px;
-	font-size: 14px;
+	font-size: 12px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -48,7 +49,7 @@
 	margin-bottom: 10px;
 }
 
-.name-volunteerCard{
+.name-volunteerCard {
 
 	margin-bottom: 10px;
 }
@@ -58,15 +59,19 @@
 
 }
 
-.image-volunteerCard{
-	width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    object-fit: cover;
+.image-volunteerCard {
+	width: 30px;
+	height: 30px;
+	border-radius: 25px;
+	object-fit: cover;
 	margin-bottom: 5px;
 }
 
-.v-card-name-img{
+.v-card-name-img {
 	display: flex;
 	gap: 5px;
+}
+
+.btn-custom-style{
+	background-color: #E88706;
 }
