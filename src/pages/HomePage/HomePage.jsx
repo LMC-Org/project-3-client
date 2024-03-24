@@ -3,16 +3,15 @@ import HelpPostHome from "../../components/HelpPostHome/HelpPostHome";
 import "./HomePage.css";
 import { AuthContext } from "../../context/auth.context";
 import { useContext } from "react";
-import service from '../../services/file-upload.service'
 import Loading from "../../components/Loading/Loading";
 
 
 function HomePage() {
 	const [helpPostsArr, setHelpPostsArr] = useState([]);
-	const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+	const { user} = useContext(AuthContext);
 
 	const handleSearch = (searchValue) => {
-		const helpPostsUpdated = helpPostsArr.filter((eachHelpPost) => {
+		helpPostsArr.filter((eachHelpPost) => {
 			
 			return eachHelpPost.title.includes(searchValue)
 		})

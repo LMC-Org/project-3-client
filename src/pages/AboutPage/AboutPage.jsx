@@ -25,14 +25,14 @@ function About() {
                     <li> New users get 3 free tokens.</li>
                     <li>Tokens are redeemed to create and post help requests.</li>
                     <li>Once you are out of tokens you won't be able to create posts. <br />
-                        <img className="minus-token" src="/images/about-tokens-2.png" alt="" />
+                        <img className="minus-token" src="/images/about-tokens-2v2.png" alt="" />
                     </li>
                     <li><span className="material-symbols-outlined token-icon">
                         stat_0 </span></li>
                     <li>You can earn more tokens by helping others.</li>
                     <li>For each help request from other users that you complete, you earn one token.
                     </li>
-                    <img className="completed-token-img" src="images/about-tokens-1.png" alt="completed-help-+1token" />
+                    <img className="completed-token-img" src="images/about-tokens-1v2.png" alt="completed-help-+1token" />
                     <li><span className="material-symbols-outlined token-icon">
                         stat_0 </span></li>
 
