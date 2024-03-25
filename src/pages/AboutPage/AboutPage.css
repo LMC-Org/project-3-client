@@ -1,13 +1,24 @@
-.title-about {
+p.title-about {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    color: #CA633E;
+    color: #111111;
     font-weight: 300;
     margin-bottom: 30px;
-    margin-top: 35px;
+    margin-top: 20px;
     text-align: center;
-    width: 100vw;
-    padding: 15px;
+    padding: 30px 15px 15px 15px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+.about-head {
+    background-color: #E1C0B5;
+    background-image: url("/images/illustrations/undraw_showing_support_re_5f2v.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding: 30px;
+
 }
 
 .about-main-container {
@@ -17,8 +28,9 @@
 .subtitle {
     font-size: 30px;
     text-align: center;
-    padding: 0 30px;
+    padding: 0 30px 30px 30px;
     line-height: 30px;
+
 }
 
 a {
@@ -34,10 +46,12 @@ a {
 
 .intro {
     text-align: center;
+    margin-top: 15px;
     padding: 10px;
     line-height: 25px;
 }
-.about-illustration{
+
+.about-illustration {
     margin-top: 45px;
     width: 170px;
     display: block;
@@ -45,6 +59,7 @@ a {
     margin-right: auto;
     margin-bottom: 20px;
 }
+
 .main-steps-container {
     padding: 20px 30px 0 30px;
     text-align: center;
@@ -55,9 +70,18 @@ a {
 }
 
 .main-steps-container li {
-    margin-bottom: 30px;
-    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
     text-align: center;
+}
+
+.steps-text {
+    background-color: #E1C0B5;
+    padding: 20px;
+    color: #111111;
+    border-radius: 20px;
+
 }
 
 .completed-token-img {
@@ -66,7 +90,8 @@ a {
 }
 
 .minus-token {
-    margin-top: 30px;
+
+    margin-top: 40px;
     max-width: 300px;
 }
 
@@ -92,6 +117,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
+
 
 }
 
@@ -107,7 +134,7 @@ a {
     color: #CA633E;
 }
 
-p{
+p {
     line-height: 20px;
 }
 
@@ -139,12 +166,12 @@ p{
         margin-bottom: 25px;
     }
 
-    .hope-about{
+    .hope-about {
         font-size: 18px;
         line-height: 30px;
     }
 
-    .thankyou-line{
+    .thankyou-line {
         font-size: 30px;
         margin-bottom: 20px;
     }
