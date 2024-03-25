@@ -7,16 +7,16 @@ import PostCard from "../../components/PostCard/PostCard";
 
 
 function MyProfile() {
-    const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const userIdFromAuth = user._id
     const [userData, setUserData] = useState('')
     const [helpPostsArray, setHelpPostsArray] = useState([])
     const [HelpPostIVolunteered, setHelpPostIVolunteered] = useState([])
     const [HelpPostIHaveBeenChosen, setHelpPostIHaveBeenChosen] = useState([])
     const [skills, setSkills] = useState([])
-    const skillsString = userData.skills ? userData.skills.join(', ') : ''
-   
-    
+    const skillsString = userData.skills ? userData.skills.join(' + ') : ''
+
+
     const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
 
     useEffect(() => {
@@ -27,9 +27,9 @@ function MyProfile() {
             .then((jsonData) => {
                 setUserData(jsonData);
                 setHelpPostsArray(jsonData.helpPosts)
-                setSkills(jsonData.skills.join(', '))
+                setSkills(jsonData.skills/* .join(',') */)
                 console.log("USERDATA", userData)
-                
+
             })
             .catch((err) => console.log(err))
     }, []);
@@ -63,11 +63,15 @@ function MyProfile() {
                                     <h2 className="user-name">{userData.name}</h2>
                                     <div className="location-container">
                                         <h4>Location:</h4>
-                                        <p>{userData.location}    <i className="fa fa-map-marker"></i></p>
+                                        <p>{userData.location}<i className="fa fa-map-marker"></i></p>
                                     </div>
                                     <div className="skills-container">
                                         <h4 className="skills-title">Skills:</h4>
-                                        <p className="skills-profile" >{skillsString}</p>
+                                        <div className="skills-list-container">
+                                            {skillsString.split(',').map((skill, index) => (
+                                                <p key={index} className="skills-profile">{skill.trim()}</p>
+                                            ))}
+                                        </div>
                                     </div>
                                     <div className="tokens-container">
                                         <p>TOKENS LEFT: </p>

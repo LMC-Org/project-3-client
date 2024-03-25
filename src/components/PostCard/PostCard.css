@@ -9,9 +9,9 @@
 .help-post-card-small {
 	background-color: #A4CACE;
 	color: #111111;
-	width: 100px;
+	width: 120px;
 	font-size: 9px;
-	
+
 	gap: 10px;
 	min-height: 110px;
 	border-radius: 8px;
@@ -25,10 +25,9 @@
 
 }
 
-.help-post-card-small .location {
-	border-top: 1px solid #111111;
-
-}
+/* .help-post-card-small .location {
+	text-shadow: 2px 3px 7px #a7705f;
+} */
 
 .help-post-card-small .title {
 	border: 0;
@@ -36,7 +35,7 @@
 
 }
 
-.btn-custom-style:hover{
+.btn-custom-style:hover {
 	color: #111111
 }
 
@@ -67,7 +66,7 @@
 
 }
 
-.fa-map-marker{
+.fa-map-marker {
 	margin-left: 5px;
 }
 
