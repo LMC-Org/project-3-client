@@ -3,24 +3,36 @@
 
 .help-post-home {
 	width: 250px;
-	height: 210px;
+	height: 200px;
 	margin-bottom: 20px;
 	border-radius: 10px;
-	padding: 18px;
-	background-color: #A4CACE;
+	padding: 15px;
+	background-color: #E1C0B5;
 	box-shadow: 1px 1px 10px rgba(171, 171, 217, 0.3);
 	color: #111111;
 	overflow: hidden;
 	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .help-post-home .title {
 	font-family: "Poppins";
-	font-size: 1.2em;
+	font-size: 16px;
 	margin-bottom: 10px;
 	padding: 3px;
 	line-height: 20px;
 	height: 50px;
+	
+}
+
+.creator-container{
+	display: flex;
+	gap: 5px;
+	align-items: flex-end;
+	color:#CA633E;
+	font-weight: 400;
 	
 }
 
@@ -49,13 +61,16 @@
 	margin-top: 15px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+.creator-name-small{
+	font-size: 10px;
 }
 
 .location{
-	color: #CA633E;
-	background-color: #E1C0B5;
+	color: #A4CACE;
+	background-color: #111111;
 	border-radius: 20px;
 	padding: 5px 7px 5px 7px;
 }

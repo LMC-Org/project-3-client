@@ -81,7 +81,7 @@ function Navbar() {
         .then((response) => response.json())
         .then((responseJson) => {
           setUserData(responseJson);
-          console.log("userdata",responseJson);
+          console.log("userdata",responseJson.profilePicture);
           checkNotificationsLoop();
         })
         .catch((err) => console.log(err));
@@ -97,7 +97,7 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-logo-round-peach-transparentv2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-tuscan-transparentv2.svg" alt="" />
             </Link>
             <div className="nav-right">
               <svg id="notifications-icon" className="" onClick={notificationsClickHandle} width="24" height="24" viewBox="0 0 24 24">
