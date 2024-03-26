@@ -1,14 +1,4 @@
-/* .volunteerCard-link {
-	
-    background-color: antiquewhite;
-    border-radius: 8px;
-    padding: 14px;
-	display: flex;
-    flex-direction: column;
-	margin-bottom: 20px;
-	text-decoration: none;
-	color: black;
-} */
+
 .volunteerCard-link {
 	display: flex;
 	flex-direction: column;
@@ -16,13 +6,16 @@
 	gap: 10px;
 	border-radius: 8px;
 	text-decoration: none;
-	background-color: #A4CACE;
+	background-color: #D5D5D5;
 	color: black;
 	padding: 10px;
 }
 
 .volunteerCard-link .btn-custom-style {
 	margin-bottom: 0;
+}
+.volunteerCard-link .btn-custom-style:hover {
+	background-color: #80947E;
 }
 
 .volunteerCard-link button {
@@ -73,5 +66,5 @@
 }
 
 .btn-custom-style{
-	background-color: #CA633E;
+	background-color: #D29D3B;
 }

@@ -7,17 +7,17 @@
 }
 
 .help-post-card-small {
-	background-color: #A4CACE;
+	background-color: #80947E;
 	color: #111111;
 	width: 120px;
 	font-size: 9px;
 
 	gap: 10px;
-	min-height: 110px;
+	min-height: 120px;
 	border-radius: 8px;
 	padding: 10px;
 	box-shadow: 2px 2px 3px rgba(45, 45, 45);
-	line-height: 25px;
+	line-height: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -31,6 +31,7 @@
 
 .help-post-card-small .title {
 	border: 0;
+	line-height: 15px;
 
 
 }
@@ -40,21 +41,6 @@
 }
 
 
-.title {
-	font-weight: 400;
-	border-bottom: 1px solid #111111;
-	font-size: 10px;
-	line-height: 15px;
-	font-weight: 500;
-}
-
-
-
-.help-post-home .title {
-	font-size: 1.2em;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
 
 .help-post-home .location {
 

@@ -1,7 +1,7 @@
 .testimony {
     width: 270px;
-    background-color: #E1C0B5;
-    color: rgb(1, 1, 1);
+    background-color: rgb(1, 1, 1);
+    color: white;
     min-height: 130px;
     border-radius: 8px;
     padding: 15px;
@@ -11,6 +11,7 @@
     justify-content: space-around;
     margin-bottom: 10px;
     margin-top: 20px;
+    border-top: 2px solid #80947E;
     /* padding-top: 3px; */
 }
 
@@ -56,7 +57,7 @@
 }
 
 .testimony-rating {
-    color: #3C8996 ;
+    color: #D29D3B ;
     font-size: 14px;
     margin-bottom: 3px;
 }

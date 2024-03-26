@@ -6,11 +6,13 @@ function About() {
 
     return (
         <>
+        <div className="head-container">
             <section className="about-head">
                 <p className="title-about">HOW IT WORKS</p>
                 <p className="subtitle">Bridging skills, <span className="subtitle-highlight"> Building connections</span></p>
                 <br />
             </section>
+            </div>
             <div className="about-main-container">
                 <p className="intro">
                     With <Link to="/">4HANDS</Link>  you can connect with caring people whose skills or tangible advantages suit your needs.</p>
