@@ -154,7 +154,7 @@ function PostDetails() {
 
                             <div className="help-img-container" style={{ backgroundImage: `url(${helpData.foundHelpPost.helpImageUrl})`, backgroundSize: "cover", }}>                           </div>
                             <div className="info-post-container">
-                                <h3 className="info-title">{helpData.foundHelpPost.title}</h3>
+                                <h3 className="info-title" >{helpData.foundHelpPost.title}</h3>
                                 <p className="details-location">{helpData.foundHelpPost.location} <i className="fa fa-map-marker"></i></p>
                                 <div className="description-container">
                                     <p className="description-title">Description:</p>

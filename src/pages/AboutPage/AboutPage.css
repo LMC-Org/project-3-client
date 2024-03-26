@@ -1,22 +1,31 @@
 p.title-about {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    color: #111111;
+    color: #D5D5D5;
     font-weight: 300;
     margin-bottom: 30px;
-    margin-top: 20px;
     text-align: center;
-    padding: 30px 15px 15px 15px;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
+    padding: 0px 15px 15px 15px;
+  
+}
+
+.head-container {
+    height: 400px;
+    background-color: #204460;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    gap: 70px;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .about-head {
-    background-color: #E1C0B5;
     background-image: url("/images/illustrations/undraw_showing_support_re_5f2v.svg");
-    background-size: contain;
+    background-size: 40%;
+    background-position: 50% 35%;
     background-repeat: no-repeat;
-    height: 300px;
     padding: 30px;
 
 }
@@ -28,20 +37,21 @@ p.title-about {
 .subtitle {
     font-size: 30px;
     text-align: center;
-    padding: 0 30px 30px 30px;
-    line-height: 30px;
+    margin-top: 90px;
+    padding-top: 90px;
+    line-height: 35px;
 
 }
 
 a {
     text-decoration: none;
-    color: #CA633E;
+    color: #D29D3B;
     cursor: pointer;
 
 }
 
 .subtitle-highlight {
-    color: #CA633E;
+    color: #D29D3B;
 }
 
 .intro {
@@ -113,7 +123,7 @@ a {
 }
 
 .material-symbols-outlined {
-    color: #CA633E;
+    color: #D29D3B;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +141,7 @@ a {
 .thankyou-line {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #CA633E;
+    color: #D29D3B;
 }
 
 p {

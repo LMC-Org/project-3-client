@@ -9,7 +9,6 @@
     line-height: 25px;
     padding: 10px;
     border-radius: 15px;
-    background-color: #111111;
 }
 
 .general-post-container {
@@ -22,7 +21,7 @@
     justify-content: center;
     padding: 0;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0 ;
     
     
 }
@@ -54,12 +53,14 @@
 
 .info-post-container {
     padding: 20px;
+    background-color: #204460;
+
 }
 
 .details-location {
     font-size: 14px;
     margin-bottom: 15px;
-    border-top: 1px solid #CA633E;
+    border-top: 1px solid #D29D3B;
     padding-top: 10px;
     text-align: right;
 }
@@ -74,6 +75,8 @@
     margin-bottom: 25px;
     padding: 1px;
     font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 .post-creator-container {
@@ -115,19 +118,21 @@
 }
 
 .details-volunteer {
+    border-top: 1px solid #D29D3B;
+padding-top: 10px;
     margin: 40px 0 20px 0;
 }
 
 .I-can-help {
     color: rgb(240, 243, 247);
-    outline: 1px solid #CA633E;
     padding: 2px;
-    width: 150px;
+    background-color: #D29D3B;
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 10px;
     text-align: center;
     margin-top: 30px;
+    text-align: center;
 }
 
 .edit-help-buttons {
@@ -140,22 +145,24 @@
 }
 
 .edit-button {
-    color: rgb(240, 243, 247);
-    outline: 1px solid whitesmoke;
     padding: 2px;
     width: 200px;
     padding-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
     padding-left: 10px;
     border-radius: 10px;
     text-align: center;
     margin-top: 10px;
     margin-left: 0 auto;
+    background-color: #E88706;
+    color: #111111;
 }
 
 .edit-button:hover {
-    background-color: #E88706;
     color: #111111;
     outline: none;
+    background-color: #80947E;
 
 }
 

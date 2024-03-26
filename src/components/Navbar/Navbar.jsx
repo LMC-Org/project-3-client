@@ -97,7 +97,7 @@ function Navbar() {
         {isLoggedIn && (
           <>
             <Link to="/home">
-              <img className="logo" src="/images/4H-logo-round-tuscan-transparentv2.svg" alt="" />
+              <img className="logo" src="/images/4H-logo-round-peach-transparentv2.svg" alt="" />
             </Link>
             <div className="nav-right">
               <svg id="notifications-icon" className="" onClick={notificationsClickHandle} width="24" height="24" viewBox="0 0 24 24">
@@ -134,7 +134,7 @@ function Navbar() {
                         className="side-element">
                         Create Help request
                         {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
-                        {"  "} <i className="fa fa-plus" style={{ color: "#E88706" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#D29D3B" }}></i>
                       </p>
                     </Link>
                   </li>

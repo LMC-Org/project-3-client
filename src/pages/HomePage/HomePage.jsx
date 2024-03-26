@@ -8,11 +8,11 @@ import Loading from "../../components/Loading/Loading";
 
 function HomePage() {
 	const [helpPostsArr, setHelpPostsArr] = useState([]);
-	const { user} = useContext(AuthContext);
+	const { user } = useContext(AuthContext);
 
 	const handleSearch = (searchValue) => {
 		helpPostsArr.filter((eachHelpPost) => {
-			
+
 			return eachHelpPost.title.includes(searchValue)
 		})
 		if (searchValue === "") {
@@ -40,34 +40,32 @@ function HomePage() {
 
 	return (
 		<>
-		{helpPostsArr && user ? 
-		<div className="home-page-container">
-
-			<div id="home-content-wrapper">
-
-				<div className="home-head">
-					<p className="home-title">HOW CAN YOU HELP TODAY ?</p>
+			{helpPostsArr && user ?
+				<><div className="home-head">
+					<p className="home-title" style={{ fontFamily: 'NY', fontStyle: 'italic', fontWeight: 'lighter' }}>HOW CAN YOU HELP TODAY ?</p>
 					<p className="home-subtitle">Browse among all posts, filter by any word.</p>
 					<br />
 					<div className="search-bar">
-						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" placeholder="English classes intermediate"/>
+						<input onChange={(event) => handleSearch(event.target.value)} type="text" name="search-input" id="search-input" placeholder="English classes intermediate" />
 						<span>{''}    {''}<i className="fa fa-search"></i></span>
 					</div>
-				</div>
-				{
-					helpPostsArr && helpPostsArr.map((eachPost, index) => {
-						
-						return (
-							<div key={index} className="posts-container">
+				</div><div className="home-page-container">
 
-								<HelpPostHome  post={eachPost} />
-							</div>
-						);
-					})
-				}
-			</div>
-		</div>
-		: <Loading/>}
+						<div id="home-content-wrapper">
+
+							{helpPostsArr && helpPostsArr.map((eachPost, index) => {
+
+								return (
+									<div key={index} className="posts-container">
+
+										<HelpPostHome post={eachPost} />
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				</>
+				: <Loading />}
 		</>
 	);
 }

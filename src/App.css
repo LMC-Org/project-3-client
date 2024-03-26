@@ -10,7 +10,7 @@
 }
 
 body{
-  background-color: rgb(9, 9, 9);
+  background-color: #0E100F;
   color: rgb(246, 251, 255);
   
 }
@@ -20,8 +20,6 @@ body{
 }
 
 .btn-custom-style {
-  color: rgb(240, 243, 247);
-    outline: 1px solid whitesmoke;
     padding: 2px;
     padding-right: 10px;
     padding-left: 10px;
