@@ -2,12 +2,12 @@
 
 
 .help-post-home {
-	width: 250px;
+	width: 280px;
 	height: 260px;
 	margin-bottom: 20px;
 	border-radius: 10px;
 	padding: 15px;
-	background-color: #E1C0B5;
+	background-color: #D5D5D5;
 	color: #111111;
 	overflow: hidden;
 	font-size: 12px;
@@ -17,7 +17,7 @@
 }
 
 .help-post-home:hover {
-	box-shadow: 1px 1px 10px rgba(171, 171, 217, 0.592);
+	box-shadow: 1px 1px 10px rgba(190, 190, 223, 0.415);
 
 
 }
@@ -27,7 +27,7 @@
 	font-size: 16px;
  	padding-bottom: 5px;
  	margin: 5px;
- min-height: 40px;
+ min-height: 60px;
 	line-height: 20px;
 	color: #204460;
 	font-weight: 900;
@@ -78,8 +78,9 @@
 }
 
 .location{
-	color: #D29D3B;
-	background-color: #111111;
+	color: #224460;
 	border-radius: 20px;
-	padding: 5px 7px 5px 7px;
+	padding: 5px 7px 10px 7px;
+	text-align: right;
+	font-weight: 500;
 }

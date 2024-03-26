@@ -81,12 +81,12 @@
 
 .post-creator-container {
     display: flex;
-    gap: 20px;
+    gap:10px;
     align-items: center;
 }
 
 .name-creator {
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .creator-title {
@@ -133,6 +133,9 @@ padding-top: 10px;
     text-align: center;
     margin-top: 30px;
     text-align: center;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .edit-help-buttons {
@@ -142,6 +145,7 @@ padding-top: 10px;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
+   
 }
 
 .edit-button {
