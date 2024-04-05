@@ -159,14 +159,38 @@ padding-top: 10px;
     text-align: center;
     margin-top: 10px;
     margin-left: 0 auto;
+    border: 1px solid #E88706;
+    color: #ffffff;
+}
+
+.complete-task{
+    padding: 2px;
+    width: 200px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0 auto;
     background-color: #E88706;
     color: #111111;
+
+}
+
+.complete-task:hover{
+    cursor: pointer;
+    color: #111111;
+    outline: none;
+    background-color: #E1C9C3;
+
 }
 
 .edit-button:hover {
     color: #111111;
     outline: none;
-    background-color: #80947E;
+    background-color: #E1C9C3;
 
 }
 
