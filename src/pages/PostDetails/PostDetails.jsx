@@ -187,7 +187,7 @@ function PostDetails() {
                                             {(isCreator() && !isCompleted()) &&
                                                 <>
                                                     <p>{`The user ${selectedVolunteer.name} was chosen`}</p>
-                                                    <button className="btn-custom-style" onClick={complete}>Complete Task! ✅</button>
+                                                    <button className="complete-task" onClick={complete}>COMPLETE TASK</button>
                                                 </>
                                             }
                                             {isSelectedVolunteer() &&
