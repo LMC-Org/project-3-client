@@ -5,7 +5,7 @@
 .SignupPage input{
     color: black;
     border-radius: 5px;
-    width: 200px;
+    width: 300px;
     margin-bottom: 15px;
     padding: 5px;
 
@@ -42,5 +42,6 @@ form label {
 .submitbutton {
     margin-top: 20px;
     font-size: 20px;
+    background-color: #D19C3B;
     
 }

@@ -13,7 +13,7 @@ function HomePage() {
 	const handleSearch = (searchValue) => {
 		helpPostsArr.filter((eachHelpPost) => {
 
-			return eachHelpPost.title.includes(searchValue)
+			return eachHelpPost.title?.includes(searchValue.toLocaleLowerCase())
 		})
 		if (searchValue === "") {
 			const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
@@ -42,7 +42,7 @@ function HomePage() {
 		<>
 			{helpPostsArr && user ?
 				<><div className="home-head">
-					<p className="home-title" style={{ fontFamily: 'NY', fontStyle: 'italic', fontWeight: 'lighter' }}>HOW CAN YOU HELP TODAY ?</p>
+					<p className="home-title" >HOW CAN YOU HELP TODAY ?</p>
 					<p className="home-subtitle">Browse among all posts, filter by any word.</p>
 					<br />
 					<div className="search-bar">

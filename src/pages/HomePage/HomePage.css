@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
 	text-decoration: none;
 	/* color: black; */
@@ -39,11 +42,14 @@ span i {
 }
 
 .home-title {
+	font-family: "Raleway", sans-serif;
+	font-style: italic;
+	font-weight: 200;
 	margin-top: 25px;
-	font-size: 60px;
+	font-size: 65px;
 	text-align: center;
 	width: 100vw;
-	line-height: 50px;
+	line-height: 60px;
 	color: #D5D5D5;
 	padding: 10px;
 }

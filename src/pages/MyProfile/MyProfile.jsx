@@ -10,6 +10,7 @@ function MyProfile() {
     const { user } = useContext(AuthContext);
     const userIdFromAuth = user._id
     const [userData, setUserData] = useState('')
+    const [profilePicture, setProfilePicture] = useState('')
     const [helpPostsArray, setHelpPostsArray] = useState([])
     const [HelpPostIVolunteered, setHelpPostIVolunteered] = useState([])
     const [HelpPostIHaveBeenChosen, setHelpPostIHaveBeenChosen] = useState([])
@@ -22,13 +23,15 @@ function MyProfile() {
     useEffect(() => {
         fetch(`${BACKEND_ROOT}/user/${userIdFromAuth}`)
             .then((response) => {
+                
                 return response.json();
             })
             .then((jsonData) => {
                 setUserData(jsonData);
                 setHelpPostsArray(jsonData.helpPosts)
                 setSkills(jsonData.skills/* .join(',') */)
-                console.log("USERDATA", userData)
+                setProfilePicture(jsonData.profilePicture)
+                console.log("USERDATA", jsonData)
 
             })
             .catch((err) => console.log(err))
@@ -76,10 +79,10 @@ function MyProfile() {
                                     <div className="tokens-container">
                                         <p>TOKENS LEFT: </p>
                                         <p className="tokens-number">
+                                            </p>
                                             <span className="material-symbols-outlined">
-                                                stat_0
+                                                stat_0 <p>{userData.tokens}</p>
                                             </span>
-                                            {userData.tokens}</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +106,7 @@ function MyProfile() {
                             {/* show all post that you have been chosen as volunteer */}
                             {HelpPostIHaveBeenChosen.length > 0 ?
                                 <div >
-                                    <h3>I've been chosen as volunteer:</h3>
+                                    <h3>I&aposve been chosen as volunteer:</h3>
                                     <div className="cards-container">
                                         {
                                             HelpPostIHaveBeenChosen.map((eachPost, index) => {

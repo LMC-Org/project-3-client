@@ -55,7 +55,7 @@ function LoginPage() {
 
       {errorMessage && <p >{errorMessage}</p>}
       <p className="error-message">Don{"'"}t have an account yet?</p>
-      <Link className="submitbutton" to={"/signup"}> Sign Up</Link>
+      <Link className="signUpButton" to={"/signup"}> Sign Up</Link>
     </div>
   );
 }
