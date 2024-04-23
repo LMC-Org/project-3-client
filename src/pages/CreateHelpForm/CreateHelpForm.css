@@ -24,12 +24,12 @@
     width: 300px;
     padding: 10px;
     color: whitesmoke;
-    background-color:#111111;
+    background-color:#101010;
     border-radius: 15px;
 }
 
 #helpImageUrl#file-upload-button{
-    color: #111111;
+    color: #101010;
 }
 
 #create-help-title {
@@ -79,14 +79,14 @@ textarea#location{
 
 
 #title {
-    background-color: #111111;
+    background-color: #101010;
     /*     outline: 1px solid rgb(255, 166, 70);*/
     border-bottom: 1px solid rgb(255, 166, 70);
     margin-bottom: 10px;
 }
 
 .create-help-button {
-    color: #111111;
+    color: #101010;
     font-weight: 500;
     padding: 2px;
     padding-right: 10px;

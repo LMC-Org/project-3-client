@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Testimony from "../../components/Testimony/Testimony";
 import "./LandingPage.css";
-import { useEffect, useState } from "react";
+
 
 
 
@@ -41,15 +42,15 @@ const LandingPage = () => {
 
                             <div className="landing-img-container">
                                 <p id="img-title-landing">You are not alone</p>
-                                <img className="landing-img" src="\images\elder-landing.jpg" alt="man-door-pleased-to-see-you" />
+                                <img className="landing-img" src="images/asian-elder-couple.jpg" alt="man-door-pleased-to-see-you" />
                             </div>
                             <div className="landing-img-container">
                                 <p id="img-title-landing">Connect with caring people</p>
-                                <img className="landing-img" src="\images\kitchen-landing.jpg" alt="kitchen-women-convo" />
+                                <img className="landing-img" src="images\kitchen-landing.jpg" alt="kitchen-women-convo" />
                             </div>
                             <div className="landing-img-container">
                                 <p id="img-title-landing">Where Needs Meet Deeds</p>
-                                <img className="landing-img fitness" src="\images\fitness-landing.jpg" alt="kitchen-women-convo" />
+                                <img className="landing-img fitness" src="images\fitness-landing.jpg" alt="kitchen-women-convo" />
                             </div>
                         </div>
                     </section>

@@ -15,7 +15,7 @@ function MyProfile() {
     const [HelpPostIVolunteered, setHelpPostIVolunteered] = useState([])
     const [HelpPostIHaveBeenChosen, setHelpPostIHaveBeenChosen] = useState([])
     const [skills, setSkills] = useState([])
-    const skillsString = userData.skills ? userData.skills.join(' + ') : ''
+    const skillsString = userData.skills ? userData.skills.join(' , ') : ''
 
 
     const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
