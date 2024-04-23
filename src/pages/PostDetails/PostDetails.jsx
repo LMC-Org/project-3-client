@@ -160,66 +160,67 @@ function PostDetails() {
                                     <p className="description-title">Description:</p>
                                     <p className="info-description"> {helpData.foundHelpPost.description}</p>
                                 </div>
-                                <p className="creator-title">Creator: </p>
                                 <div className="post-creator-container">
+                                <p className="creator-title">Creator: </p>
                                     <img className="creator-picture" src={helpData.foundHelpPost.creator.profilePicture} alt="" />
                                     <p className="name-creator">{helpData.foundHelpPost.creator.name}</p>
                                 </div>
 
 
+                                    <p className="volunteer"></p>
+                                    {(volunteersArray.length > 0 && isCreator() && selectedVolunteer === null) ?
+                                        <>
+                                            <p className="details-volunteer">  Volunteers: </p>
+                                            <div className="volunteers-wrapper">
+                                                {volunteersArray.map((eachVolunteer, index) => {
+                                                    //console.log(eachVolunteer);
+                                                    //console.log(helpId)
+                                                    return (<VolunteerCard key={index} volunteer={eachVolunteer} postId={helpId} setStuff={setStuff} />)
+                                                })}
+                                            </div></> : <p></p>
+                                    }
+                                <div className="cond-buttons">
 
-                                <p className="volunteer"></p>
-                                {(volunteersArray.length > 0 && isCreator() && selectedVolunteer === null) ?
-                                    <>
-                                        <p className="details-volunteer">  Volunteers: </p>
-                                        <div className="volunteers-wrapper">
-                                            {volunteersArray.map((eachVolunteer, index) => {
-                                                //console.log(eachVolunteer);
-                                                //console.log(helpId)
-                                                return (<VolunteerCard key={index} volunteer={eachVolunteer} postId={helpId} setStuff={setStuff} />)
-                                            })}
-                                        </div></> : <p></p>
-                                }
+                                    {
+                                        selectedVolunteer === null ?
+                                            <p></p> : (<>
+                                                {(isCreator() && !isCompleted()) &&
+                                                    <>
+                                                        <p>{`The user ${selectedVolunteer.name} was chosen`}</p>
+                                                        <button className="complete-task" onClick={complete}>COMPLETE TASK</button>
+                                                    </>
+                                                }
+                                                {isSelectedVolunteer() &&
+                                                    <p>You were chosen to help. Thanks!</p>
+                                                }
+                                            </>)
+                                    }
+                                    {(isCreator() && !isCompleted()) &&
+                                        <div className="edit-help-buttons">
+                                            <Link to={`/edithelp/${helpId}`}>
+                                                <p className="edit-button">EDIT POST</p>
+                                            </Link>
 
-                                {
-                                    selectedVolunteer === null ?
-                                        <p></p> : (<>
-                                            {(isCreator() && !isCompleted()) &&
-                                                <>
-                                                    <p>{`The user ${selectedVolunteer.name} was chosen`}</p>
-                                                    <button className="complete-task" onClick={complete}>COMPLETE TASK</button>
-                                                </>
-                                            }
-                                            {isSelectedVolunteer() &&
-                                                <p>You were chosen to help. Thanks!</p>
-                                            }
-                                        </>)
-                                }
-                                {(isCreator() && !isCompleted()) &&
-                                    <div className="edit-help-buttons">
-                                        <Link to={`/edithelp/${helpId}`}>
-                                            <p className="edit-button">EDIT POST</p>
-                                        </Link>
+                                            <p onClick={deleteHelp} className="edit-button">DELETE POST</p>
 
-                                        <p onClick={deleteHelp} className="edit-button">DELETE POST</p>
+                                        </div>
+                                    }
 
-                                    </div>
-                                }
+                                    {
+                                        isCompleted() &&
+                                        <p>THIS HELP IS ALREADY COMPLETED</p>
+                                    }
 
-                                {
-                                    isCompleted() &&
-                                    <p>THIS HELP IS ALREADY COMPLETED</p>
-                                }
+                                    {(!isCreator() && !isVolunteer() && !isSelectedVolunteer()) &&
+                                        <p className="I-can-help pointer" onClick={onIcanHelp}>I CAN HELP</p>
+                                    }
 
-                                {(!isCreator() && !isVolunteer() && !isSelectedVolunteer()) &&
-                                    <p className="I-can-help pointer" onClick={onIcanHelp}>I CAN HELP</p>
-                                }
-
-                                {(isVolunteer()) &&
-                                    <p>YOU ARE VOLUNTEER HERE</p>
-                                }
-                            </div>
-                        </div>}
+                                    {(isVolunteer()) &&
+                                        <p>YOU ARE VOLUNTEER HERE</p>
+                                    }
+                                </div>
+                        </div>
+                            </div>}
                     </div>
                 </div>
                 : <Loading />}

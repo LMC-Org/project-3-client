@@ -83,7 +83,7 @@
 }
 
 .about-landing:hover a {
-    background-color: #111111;
+    background-color: #101010;
     color: #D29D3B;
     outline: none;
 
@@ -91,7 +91,7 @@
 
 .about-landing:hover {
     background-color: #D29D3B;
-    color: #111111;
+    color: #101010;
     cursor: pointer;
     outline: none;
 }
@@ -101,16 +101,16 @@
 }
 
 .features-section {
+    padding-bottom: 10px;
     text-align: center;
     color: black;
-    font-weight: 600;
-    margin-top: 80px;
     background-color: #D5D5D5;
-    padding: 20px 15px 0px 15px;
     display: flex;
     flex-direction: column;
-    height: 900px;
+    align-items: center;
+    height: 600px;
     margin-bottom: 70px;
+    justify-content: space-around;
 }
 
 .features-text {
@@ -123,7 +123,7 @@
 }
 
 .get-help-button {
-    color: #111111;
+    color: #101010;
     background-color: #D29D3B;
     text-align: center;
     margin-left: auto;
@@ -143,11 +143,11 @@
 }
 
 .middle-bottom {
-    background-color: rgb(8, 8, 8);
+    background-color: #101010;
 }
 
 #img-title-landing {
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 20px;
     font-weight: 200;
 }
@@ -155,13 +155,13 @@
 .landing-img-container {
     /*     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgb(233, 137, 34) 100%);
  */
-    position: relative;
     width: 100%;
-    height: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
+    padding: 5px;
 
 
 }
@@ -169,10 +169,11 @@
 .landing-img {
     position: relative;
     display: block;
-    width: auto;
-    height: 60%;
-    object-fit: cover;
-    margin-top: 30px;
+    width: 80%;
+    height: auto;
+    object-fit:contain;
+    margin-top: 5px;
+    border-radius: 10px;
 
 
 }
@@ -184,8 +185,8 @@
 
 
 .testimonies-container-landing {
-    background-color: rgb(8, 8, 8);
-    margin-bottom: 20px;
+    background-color: #101010;
+    padding-bottom: 20px;
 }
 
 #landing-testimonies {
@@ -299,6 +300,7 @@
 
     .landing-img-container {
         margin-bottom: 10px;
+        display: flex;
     }
 
 }

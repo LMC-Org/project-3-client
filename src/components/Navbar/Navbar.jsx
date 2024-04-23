@@ -14,6 +14,7 @@ function Navbar() {
   const handleSidebar = () => {
     const sideBar = document.querySelector(".navbar .sidebar");
     sideBar.classList.toggle("hidden");
+    console.log("userdata:",userData)
     if (sideBar.style.right === "0px") {
       sideBar.style.right = "-400px"
     }
@@ -89,7 +90,7 @@ function Navbar() {
         })
         .catch((err) => console.log(err));
     }
-  }, []);
+  }, [userId]);
 
   return (
     <div className="navbar-container">
@@ -149,7 +150,7 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                        {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#101010" }}></i>
                         <i className="fa fa-plus" style={{ color: "#E88706" }}></i>
                       </p>
                     </Link>

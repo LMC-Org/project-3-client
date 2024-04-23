@@ -8,7 +8,7 @@
 
 .help-post-card-small {
 	background-color: #D5D5D5;
-	color: #111111;
+	color: #101010;
 	width: 120px;
 	font-size: 9px;
 
@@ -37,7 +37,7 @@
 }
 
 .btn-custom-style:hover {
-	color: #111111
+	color: #101010
 }
 
 
