@@ -32,6 +32,7 @@
     margin-bottom: 5px;
     height: 30px;
     border-radius: 50%;
+    
 }
 
 .creator-rating{
@@ -46,6 +47,7 @@
     line-height: 18px;
     min-height: 70px;
     padding: 5px;
+    text-align: left;
 }
 
 .testimony .quote::before {

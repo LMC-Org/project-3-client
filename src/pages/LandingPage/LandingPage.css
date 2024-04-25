@@ -120,7 +120,7 @@
 
 .get-help-button {
     color: #101010;
-    background-color: #D29D3B;
+    background-color: var(--identity-color);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
