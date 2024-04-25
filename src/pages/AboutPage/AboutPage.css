@@ -45,13 +45,13 @@ p.title-about {
 
 a {
     text-decoration: none;
-    color: #D29D3B;
+    color: var(--identity-color);
     cursor: pointer;
 
 }
 
 .subtitle-highlight {
-    color: #D29D3B;
+    color: var(--identity-color);
 }
 
 .intro {
@@ -67,7 +67,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .main-steps-container {
@@ -87,10 +87,10 @@ a {
 }
 
 .steps-text {
-    background-color: #E1C0B5;
+    background-color: #D5D5D5 ;
     padding: 20px;
     color: #101010;
-    border-radius: 20px;
+    border-radius: 15px;
 
 }
 
@@ -106,24 +106,25 @@ a {
 }
 
 .token-icon {
-    color: #CA633E;
+    color: var(--identity-color);
 
 }
 
 .about-thankyou {
     margin-top: 15px;
     padding: 15px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .policy-about {
     padding: 20px;
-    margin-top: 0px;
+    margin-top: 10px;
     text-align: left;
 }
 
 .material-symbols-outlined {
-    color: #D29D3B;
+    color: var(--identity-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +142,7 @@ a {
 .thankyou-line {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #D29D3B;
+    color: var(--identity-color);
 }
 
 p {

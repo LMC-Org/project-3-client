@@ -94,7 +94,7 @@ function CreateHelpForm() {
     return (
         <>
             {userData ?
-                <div >
+                <div className="create-help-main-cont">
                     <h1 id="create-help-title">Create Help Request</h1>
                     <div >
                         <form id="create-help-container">
@@ -102,9 +102,10 @@ function CreateHelpForm() {
                             <input disabled={tokens <= 0} placeholder="Name your help request" value={title} onChange={(event) => setTitle(event.target.value)} type="text" name="title" id="title" />
 
                             <label htmlFor="description">Description</label>
-                            <textarea disabled={tokens <= 0} value={description} onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description" />
+                            <textarea disabled={tokens <= 0} value={description} placeholder="Detail the kind of help you need." onChange={(event) => setDescription(event.target.value)} type="text" name="description" id="description" />
                             <label htmlFor="location">Location</label>
                             <textarea disabled={tokens <= 0} value={location} onChange={(event) => setLocation(event.target.value)} type="text" name="location" id="location" />
+                            <p>You can set a different location than the one set on your profile</p>
 
 
                             <label htmlFor="helpImageUrl">Help Image</label>
@@ -115,7 +116,7 @@ function CreateHelpForm() {
                                 id="helpImageUrl" />
                             {helpImageUrl && <img className="img-preview" src={helpImageUrl} alt="Help Image" />}
 
-                            <p onClick={(event) => postHelp(event)} disabled={tokens <= 0} className="create-help-button">CREATE</p>
+                            <p onClick={(event) => postHelp(event)} disabled={tokens <= 0} className="submitbutton">CREATE</p>
                         </form>
                     </div>
                 </div>

@@ -26,8 +26,6 @@
     color: rgb(255, 255, 255);
     text-shadow: 3px 3px 10px #d9d9d999;
     margin-top: 130px;
-
-
 }
 
 .landing-subtitle {
@@ -48,11 +46,9 @@
 
 #landing-upper {
     width: 100%;
-    min-height:400px;
+    min-height: 400px;
     background-size: cover;
-
     overflow-x: hidden;
-
 }
 
 #landing-cta {
@@ -101,7 +97,7 @@
 }
 
 .features-section {
-    padding-bottom: 10px;
+    padding: 10px;
     text-align: center;
     color: black;
     background-color: #D5D5D5;
@@ -147,7 +143,6 @@
 }
 
 #img-title-landing {
-    margin-top: 5px;
     font-size: 20px;
     font-weight: 200;
 }
@@ -162,8 +157,6 @@
     justify-content: space-around;
     flex-direction: column;
     padding: 5px;
-
-
 }
 
 .landing-img {
@@ -171,18 +164,14 @@
     display: block;
     width: 80%;
     height: auto;
-    object-fit:contain;
-    margin-top: 5px;
+    object-fit: contain;
     border-radius: 10px;
-
 
 }
 
 .landing-img.fitness {
     object-position: 50% 95%;
 }
-
-
 
 .testimonies-container-landing {
     background-color: #101010;
@@ -213,7 +202,7 @@
         margin-top: 150px;
     }
 
-   
+
 
 }
 
@@ -225,10 +214,10 @@
     }
 
     #landing-upper {
-        
-        min-height:500px;
-        
-    
+
+        min-height: 500px;
+
+
     }
 
     .first-title {
@@ -256,25 +245,9 @@
 
     .features-section {
         margin-bottom: 150px;
-        height: 900px;
+        height: 700px;
     }
 
-    .humans-img-container {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 100px;
-
-    }
-
-
-    .landing-img {
-        margin-top: 50px;
-        width: 110%;
-        height: 70%;
-
-    }
 
     .landing-img.fitness {
         object-position: 50% 95%;
@@ -301,6 +274,8 @@
     .landing-img-container {
         margin-bottom: 10px;
         display: flex;
+        gap: 5px;
+        max-width: 500px;
     }
 
 }
@@ -317,38 +292,18 @@
     }
 
     .features-section {
-
-        height: 500px;
+        height: 700px;
     }
 
     .landing-main-image {
         object-position: 10% 15%;
         transform: scale(1) translate(0%, -20%);
-
     }
-
-    .landing-img-container {
-        width: 100%;
-        object-position: 60% 15%;
-
-
-    }
-
-    .humans-img-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 100px;
-
-    }
-
 
     #img-title-landing {
-        margin-top: -110px;
         margin-bottom: 20px;
 
     }
-
 
     .about-landing {
         margin-bottom: 90px;
@@ -366,27 +321,6 @@
         margin-top: 30px;
     }
 
-    .landing-img-container {
-        margin-bottom: 10px;
-    }
-
-    .landing-img {
-        position: absolute;
-        width: 200%;
-        height: 120%;
-        object-fit: cover;
-        position: absolute;
-        object-fit: cover;
-        object-position: 50% 15%;
-        transform: scale(0.4) translate(0%, 20%);
-
-    }
-
-    .humans-img-container {
-        flex-direction: row;
-        padding: 0;
-        margin-bottom: 20px;
-    }
 }
 
 
@@ -400,7 +334,6 @@
         padding: 10px;
 
     }
-
 
     #main-image-container {
         margin-top: 0px;
@@ -452,9 +385,11 @@
     }
 
     .features-section {
+        flex-direction: row;
+        
 
-        height: 500px;
-        margin-top: 90px;
+        height: 400px;
+        margin-top: 100px;
     }
 
     .features-section p {
@@ -462,7 +397,6 @@
         padding: 15px;
 
     }
-
 
     .about-landing {
         margin-top: 5px;
@@ -484,32 +418,16 @@
 
     .landing-img-container {
         margin-bottom: 10px;
+        height: 250px;
+        max-width: 600px;
+        justify-content: space-between;
     }
 
-    .landing-img {
-        position: absolute;
-        width: 130%;
-        height: 120%;
-        object-fit: cover;
-        position: absolute;
-        top: -20;
-        object-fit: cover;
-        object-position: 60% 15%;
-        transform: scale(0.6) translate(0%, 30%);
-        border-radius: 20px;
-
-    }
-
-    .humans-img-container {
-        flex-direction: row;
-        padding: 0;
-        margin-bottom: 20px;
-    }
 
     #img-title-landing {
         font-size: 30px;
         line-height: 35px;
-        margin-bottom: 100px;
+        margin-bottom: 10px;
 
     }
 

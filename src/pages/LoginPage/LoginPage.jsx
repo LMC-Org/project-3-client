@@ -1,6 +1,6 @@
 import "./LoginPage.css";
 import { useState, useContext } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import authService from "../../services/auth.service";
 
@@ -9,7 +9,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
-  
+
 
   const { storeToken, authenticateUser } = useContext(AuthContext);
   const handleEmail = (e) => setEmail(e.target.value);
@@ -36,12 +36,12 @@ function LoginPage() {
   return (
     <div className="LoginPage">
       <h1>Login</h1>
-
+<div className="not-logged-main-cont">
       <form onSubmit={handleLoginSubmit}>
-        <label>Email:
+        <label>Email:</label>
           <input type="email" name="email" value={email} onChange={handleEmail} placeholder="example@gmail.com" />
-        </label>
-        <label>Password:
+        
+        <label>Password:</label>
           <input
             type="password"
             name="password"
@@ -49,13 +49,14 @@ function LoginPage() {
             onChange={handlePassword}
             placeholder="Enter your password"
           />
-        </label>
-        <button className="submitbutton" type="submit">Login</button>
+        
+        <button className="submitbutton" type="submit">LOGIN</button>
       </form>
 
       {errorMessage && <p >{errorMessage}</p>}
       <p className="error-message">Don{"'"}t have an account yet?</p>
-      <Link className="signUpButton" to={"/signup"}> Sign Up</Link>
+      <Link className="submitbutton" to={"/signup"}> SIGN UP</Link>
+    </div>
     </div>
   );
 }

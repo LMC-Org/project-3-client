@@ -1,5 +1,5 @@
 import "./EditHelpPage.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from 'react'
 import { AuthContext } from "../../context/auth.context";
 import service from "../../services/file-upload.service";
@@ -7,7 +7,7 @@ import Loading from "../../components/Loading/Loading";
 
 
 function EditHelpForm() {
-    const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+    const {  user  } = useContext(AuthContext);
     const [helpPut, setHelpPut] = useState('')
     const [title, setTitle] = useState('')
     const [location, setLocation] = useState('')

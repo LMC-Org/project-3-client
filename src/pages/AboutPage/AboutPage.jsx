@@ -6,12 +6,12 @@ function About() {
 
     return (
         <>
-        <div className="head-container">
-            <section className="about-head">
-                <p className="title-about">HOW IT WORKS</p>
-                <p className="subtitle">Bridging skills, <span className="subtitle-highlight"> Building connections</span></p>
-                <br />
-            </section>
+            <div className="head-container">
+                <section className="about-head">
+                    <p className="title-about">HOW IT WORKS</p>
+                    <p className="subtitle">Bridging skills, <span className="subtitle-highlight"> Building connections</span></p>
+                    <br />
+                </section>
             </div>
             <div className="about-main-container">
                 <p className="intro">
@@ -26,15 +26,17 @@ function About() {
                         <li> New users get 3 free tokens.</li>
                         <li>Tokens are redeemed to create and post help requests.</li>
                         <li>Once you are out of tokens you won't be able to create posts.</li>
-                    </div> <br />
                     <img className="minus-token" src="/images/about-tokens-2v2.png" alt="" />
+                    </div> <br />
 
                     <li><span className="material-symbols-outlined token-icon">
                         stat_0 </span></li>
-                    <li>You can earn more tokens by helping others.</li>
-                    <li>For each help request from other users that you complete, you earn one token.
-                    </li>
+                    <div className="steps-text">
+                        <li>You can earn more tokens by helping others.</li>
+                        <li>For each help request from other users that you complete, you earn one token.
+                        </li>
                     <img className="completed-token-img" src="images/about-tokens-1v2.png" alt="completed-help-+1token" />
+                    </div>
                     <li><span className="material-symbols-outlined token-icon">
                         stat_0 </span></li>
 
