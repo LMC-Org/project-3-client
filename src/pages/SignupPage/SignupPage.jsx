@@ -32,7 +32,7 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
+    <div className="not-logged-main-cont">
       <h1>Sign Up</h1>
 
       <form onSubmit={handleSignupSubmit}>

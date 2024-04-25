@@ -38,10 +38,11 @@ const LandingPage = () => {
                         <p className="get-help-button">Join now</p>
                     </Link>
                     <section className="features-section">
-                        <div className="humans-img-container">
+                        
 
                             <div className="landing-img-container">
-                                <p id="img-title-landing">You are not alone</p>
+                                <p id="img-title-landing">You are not alone     </p>
+                                <p style={{display: "none"}}>bulto</p>
                                 <img className="landing-img" src="images/asian-elder-couple.jpg" alt="man-door-pleased-to-see-you" />
                             </div>
                             <div className="landing-img-container">
@@ -52,7 +53,7 @@ const LandingPage = () => {
                                 <p id="img-title-landing">Where Needs Meet Deeds</p>
                                 <img className="landing-img fitness" src="images\fitness-landing.jpg" alt="kitchen-women-convo" />
                             </div>
-                        </div>
+                        
                     </section>
                     <Link to="/about"><p className="about-landing">HOW IT WORKS</p></Link>
                     {/* In backend I need to populate creator and send it populated to frontend */}

@@ -10,9 +10,9 @@ function EditProfile() {
   const [userPut, setUserPut] = useState('')
   const [location, setLocation] = useState('')
   const [profilePicture, setProfilePicture] = useState('')
+  const [name, setName] = useState('')
   let [skills, setSkills] = useState([])
   const [description, setDescription] = useState('')
-  const [helpImageUrl, setHelpImageUrl] = useState("");
   const [loading, setLoading] = useState(true)
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
@@ -45,6 +45,7 @@ function EditProfile() {
         return response.json();
       })
       .then((responsejson) => {
+        setName(responsejson.name)
         setLocation(responsejson.location)
         setProfilePicture(responsejson.profilePicture)
         setSkills(responsejson.skills)
@@ -98,43 +99,53 @@ function EditProfile() {
 
   return (
     <>
-    {userIdFromAuth ?
-    <div>
-      <form encType="multipart/form-data" onSubmit={(event) => putData(event)}>
-      <h1>Edit my profile</h1>
-        <div className='edit-profile-container'>
-          <label htmlFor="location">Location: </label>
-          <textarea type="textarea" name="location" id='location' value={location} onChange={(event) => setLocation(event.target.value)} />
-          <br />
-          <label htmlFor="profilePicture" className="fileInputLabel">Profile Picture: </label>
-          <input type="file" accept="image/*" className="image-input"
+      {userIdFromAuth ?
+        <div>
+          <form encType="multipart/form-data" onSubmit={(event) => putData(event)}>
+            <h1>Edit my profile</h1>
+            <div className='edit-profile-container'>
 
-            onChange={(event) => handleFileUpload(event)}
-            name="profilePicture"
-            id="profilePicture" />
-          {profilePicture && <img className="img-preview" src={profilePicture} alt="User Profile Image" />}
-          <br />
-          <label htmlFor="skills" className='custom-select'  >Skills: </label>
-          <div id='skills'>
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Languages')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Languages" /> <span className="checkboxLabel">Languages</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Tech')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Tech" /> <span className="checkboxLabel">Tech</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Strength')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Strength" />  <span className="checkboxLabel">Strength</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Dancing')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Dancing" />  <span className="checkboxLabel">Dancing</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Active listening')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Active listening" /> <span className="checkboxLabel">Active listening</span> </label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Body disciplines')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Body disciplines" /> <span className="checkboxLabel">Body disciplines</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Coaching')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Coaching" />  <span className="checkboxLabel">Coaching</span> </label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Humor')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Humor" />  <span className="checkboxLabel">Humor</span></label><br />
-            <label><input onChange={handleSkillsChange} checked={skills.includes('Sports')}  type="checkbox" className="hiddenCheckbox" name="skills" value="Sports" />  <span className="checkboxLabel">Sports</span></label><br />
-          </div>
-          <br />
-          <label htmlFor="description">Description: </label>
-          <textarea type="textarea" name="description" id='description' value={description} onChange={(event) => setDescription(event.target.value)} />
-          <br />
-          <button className='edit-send' type="submit">Send</button>
-        </div>
-      </form>
-    </div >
-    : <Loading />}
+              <div className='name-loc-container'>
+                <div className='name-container'>
+                  <label htmlFor="name">Name: </label>
+                  <input type="text" name="name" id='name' value={name} onChange={(event) => setLocation(event.target.value)} />
+                </div>
+
+                <div className='location-continer'>
+                  <label htmlFor="location">Location: </label>
+                  <input type="text" name="location" id='location' value={location} onChange={(event) => setLocation(event.target.value)} />
+                </div>
+              </div>
+              <br />
+              <label htmlFor="profilePicture" className="fileInputLabel">Profile Picture: </label>
+              <input type="file" accept="image/*" className="image-input"
+
+                onChange={(event) => handleFileUpload(event)}
+                name="profilePicture"
+                id="profilePicture" />
+              {profilePicture && <img className="img-preview" src={profilePicture} alt="User Profile Image" />}
+              <br />
+              <label htmlFor="skills" className='custom-select'  >Skills: </label>
+              <div id='skills'>
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Languages')} type="checkbox" className="hiddenCheckbox" name="skills" value="Languages" /> <span className="checkboxLabel">Languages</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Tech')} type="checkbox" className="hiddenCheckbox" name="skills" value="Tech" /> <span className="checkboxLabel">Tech</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Strength')} type="checkbox" className="hiddenCheckbox" name="skills" value="Strength" />  <span className="checkboxLabel">Strength</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Dancing')} type="checkbox" className="hiddenCheckbox" name="skills" value="Dancing" />  <span className="checkboxLabel">Dancing</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Active listening')} type="checkbox" className="hiddenCheckbox" name="skills" value="Active listening" /> <span className="checkboxLabel">Active listening</span> </label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Body disciplines')} type="checkbox" className="hiddenCheckbox" name="skills" value="Body disciplines" /> <span className="checkboxLabel">Body disciplines</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Coaching')} type="checkbox" className="hiddenCheckbox" name="skills" value="Coaching" />  <span className="checkboxLabel">Coaching</span> </label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Humor')} type="checkbox" className="hiddenCheckbox" name="skills" value="Humor" />  <span className="checkboxLabel">Humor</span></label><br />
+                <label><input onChange={handleSkillsChange} checked={skills.includes('Sports')} type="checkbox" className="hiddenCheckbox" name="skills" value="Sports" />  <span className="checkboxLabel">Sports</span></label><br />
+              </div>
+              <br />
+              <label htmlFor="description">Description: </label>
+              <textarea type="textarea" name="description" id='description' value={description} onChange={(event) => setDescription(event.target.value)} />
+              <br />
+              <button className='submitbutton' type="submit">Send</button>
+            </div>
+          </form>
+        </div >
+        : <Loading />}
     </>
   );
 }

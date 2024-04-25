@@ -14,7 +14,7 @@ function Navbar() {
   const handleSidebar = () => {
     const sideBar = document.querySelector(".navbar .sidebar");
     sideBar.classList.toggle("hidden");
-    console.log("userdata:",userData)
+    
     if (sideBar.style.right === "0px") {
       sideBar.style.right = "-400px"
     }
@@ -82,15 +82,12 @@ function Navbar() {
         .then((response) => response.json())
         .then((responseJson) => {
           setUserData(responseJson);
-
           checkNotificationsLoop();
         })
-        .then((userData) => {
-          console.log("userdata:", userData);
-        })
+        
         .catch((err) => console.log(err));
     }
-  }, [userId]);
+  }, []);
 
   return (
     <div className="navbar-container">

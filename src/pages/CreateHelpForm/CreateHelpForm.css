@@ -5,30 +5,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+
 }
 
-#create-help-container{
-    padding: 15px;
+.create-help-main-cont {
+    margin-left: 0 auto;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#create-help-container {
+    padding: 15px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
-    gap: 5px;
-
-
+    gap: 3px;
 
 }
-#create-help-container input,
-#create-help-container select {
-    width: 300px;
-    padding: 10px;
-    color: whitesmoke;
-    background-color:#101010;
-    border-radius: 15px;
-}
 
-#helpImageUrl#file-upload-button{
+
+#helpImageUrl#file-upload-button {
     color: #101010;
 }
 
@@ -41,70 +43,20 @@
 }
 
 
-input#title{
- padding: 10px;
- background-color: whitesmoke;
-}
-
-
-textarea{
-    width: 300px;
-    padding: 10px;
-    color: #090909;
-    background-color: whitesmoke;
-    border-radius: 15px;
-}
-
-textarea#description{
-    width: 300px;
-    border-radius: 15px;
-
-    padding: 10px;
-
-}
-textarea#location{
-    width: 300px;
-    padding: 10px;
-
-}
-
-
-.create-help-container>label {
-    margin-top: 20px;
-}
-
-.create-help-container p {
-    margin-top: 50px;
-}
-
-
 #title {
     background-color: #101010;
-    /*     outline: 1px solid rgb(255, 166, 70);*/
     border-bottom: 1px solid rgb(255, 166, 70);
     margin-bottom: 10px;
 }
 
-.create-help-button {
-    color: #101010;
-    font-weight: 500;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 300px;
-    text-align: center;
-    margin-bottom: 60px;
-    background-color: rgb(255, 166, 70);
-    margin-top: 60px;
-}
-
-.create-help-button:hover {
-    background-color: #A4CACE;
-}
 
 .img-preview {
     max-width: 50vw;
     border-radius: 10px;
+}
+
+form p{
+    font-size: 12px;
+    color: #A4CACE;
+    margin-bottom: 15px;
 }

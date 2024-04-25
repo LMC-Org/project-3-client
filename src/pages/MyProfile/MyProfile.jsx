@@ -31,7 +31,7 @@ function MyProfile() {
                 setHelpPostsArray(jsonData.helpPosts)
                 setSkills(jsonData.skills/* .join(',') */)
                 setProfilePicture(jsonData.profilePicture)
-                console.log("USERDATA", jsonData)
+                console.log("USERDATA:", jsonData)
 
             })
             .catch((err) => console.log(err))

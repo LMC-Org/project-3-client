@@ -1,6 +1,18 @@
+.edit-help-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-help-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .edit-help-container textarea {
-    color: rgb(247, 247, 247);
-    width: 200px;
+    color: #101010;
+    width: 100%;
 }
 
 .edit-help-container select {
@@ -12,17 +24,12 @@
     border-radius: 10px;
 }
 
-.edit-location textarea  {
-    width: 90px;
-}
 
 .edit-description {
     height: 100px;
 }
 
-label{
-    margin-bottom: 10px;
-}
+
 
 .create-help-button.save-changes{
     margin-top: 40px;

@@ -1,10 +1,3 @@
-form textarea {
-    color: whitesmoke;
-}
-
-form button {
-    color: black;
-}
 
 .edit-profile-container {
     display: flex;
@@ -19,50 +12,19 @@ form button {
 
 }
 
-.edit-send {
-    background-color: black;
-    color: aliceblue;
-    outline: 1px solid whitesmoke;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
+.name-loc-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: flex-start;
 }
 
-.img-preview {
-    max-width: 30vw;
-    border-radius: 10px;
+
+.location-container label{
+    margin-bottom: 10px;
+
 }
 
-.edit-send {
-    background-color: black;
-    color: aliceblue;
-    outline: 1px solid whitesmoke;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
-}
-
-.img-preview {
-    max-width: 30vw;
-    border-radius: 10px;
-}
-
-.edit-send {
-    background-color: black;
-    color: aliceblue;
-    outline: 1px solid whitesmoke;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
-}
-
-.img-preview {
-    max-width: 30vw;
-    border-radius: 10px;
-}
 
 .hiddenCheckbox {
     position: absolute;
@@ -83,7 +45,7 @@ form button {
 }
 
 .hiddenCheckbox:checked +.checkboxLabel {
-    background-color: #a8e41c;
+    background-color: var(--identity-color);
     color: black;
 }
 
