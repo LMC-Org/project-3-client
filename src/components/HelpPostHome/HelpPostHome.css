@@ -10,6 +10,7 @@
 	background-color: #D5D5D5;
 	color: #101010;
 	overflow: hidden;
+	text-align: left;
 	font-size: 12px;
 	display: flex;
 	flex-direction: column;
@@ -26,6 +27,7 @@
 	font-family: "Poppins";
 	font-size: 16px;
  	padding-bottom: 5px;
+	 text-align: left;
  	margin: 5px;
  min-height: 60px;
 	line-height: 20px;
@@ -55,6 +57,8 @@
     -webkit-box-orient: vertical;
 	padding: 5px;
 	line-height: 20px;
+	font-size: 12px;
+	text-align: left;
 
 }
 
@@ -80,7 +84,7 @@
 .location{
 	color: #224460;
 	border-radius: 20px;
-	padding: 5px 7px 10px 7px;
+	padding: 5px 7px 15px 7px;
 	text-align: right;
 	font-weight: 500;
 }

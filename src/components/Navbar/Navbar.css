@@ -1,5 +1,3 @@
-
-  
 * {
     margin: 0px;
     padding: 0px;
@@ -8,7 +6,7 @@
 
 .navbar-container {
     width: 100%;
-    position:sticky;
+    position: sticky;
     height: 30;
 }
 
@@ -28,11 +26,13 @@
     height: 100%;
     width: 300px;
     padding: 20px 30px;
-    background-color: #101010;
+    background-color: #a9a9a9;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     transition: 500ms ease;
     z-index: 2;
     border-radius: 10px 0 0 10px;
+    text-align: left;
+
 }
 
 .navbar .sidebar.hidden {
@@ -43,10 +43,14 @@
 .sidebar .sidebar-content {
     margin-top: 60px;
     padding: 30px 0px;
+
 }
 
 .side-list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .sidebar-stroke {
@@ -68,8 +72,12 @@
     min-width: 100px;
 }
 
+p.side-element {
+    text-align: left;
+}
+
 .side-element:hover {
-   color: var(--identity-color);
+    color: var(--identity-color);
 }
 
 .sidebar-content .side-element button {
@@ -149,23 +157,23 @@ nav .home {
     border-radius: 50%;
 }
 
-.nav-right{
+.nav-right {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     gap: 18px;
     color: var(--identity-color);
 }
 
-.tokens-state{
+.tokens-state {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 2px;
     margin-top: 4px;
 }
 
-.tokens-state p{
+.tokens-state p {
     font-size: 12px;
 }
 
@@ -217,19 +225,28 @@ nav .home {
 #notifications-icon {
     margin-top: 4px;
     fill: var(--no-notif-color);
-	cursor: pointer;
+    cursor: pointer;
 }
-#notifications-icon.new{
-	animation-name: notif-alert;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
+
+#notifications-icon.new {
+    animation-name: notif-alert;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes notif-alert {
-	0% {fill: var(--no-notif-color);}
-	50% {fill: var(--identity-color);}
-	100% {fill: var(--no-notif-color);}
+    0% {
+        fill: var(--no-notif-color);
+    }
+
+    50% {
+        fill: var(--identity-color);
+    }
+
+    100% {
+        fill: var(--no-notif-color);
+    }
 }
 
 @media (min-width: 750px) {

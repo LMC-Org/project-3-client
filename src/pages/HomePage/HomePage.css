@@ -36,7 +36,7 @@ span i {
 	justify-content: space-around;
 	align-items: center;
 	margin-bottom: 25px;
-	background-color: #204460;
+	background-color: #a9a9a9;
 	min-height: 400px;
 
 }
@@ -58,7 +58,7 @@ span i {
 	margin-top: 15px;
 	font-style: italic;
 	font-size: 18px;
-	color: #D29D3B;
+	color: #204460;
 	padding: 10px;
 	text-align: center;
  }
@@ -82,7 +82,7 @@ span i {
 
 .fa-search{
 	padding: 15px;
-	color: #D29D3B;
+	color: #204460;
 }
 
 @media (min-width: 769px) {
