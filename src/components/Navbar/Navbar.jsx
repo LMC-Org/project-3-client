@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, /* useParams, */ useNavigate } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../context/auth.context";
 
@@ -7,7 +7,7 @@ function Navbar() {
   let newNotifications = false;
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const [userData, setUserData] = useState([])
-  const { userId } = useParams()
+  //const { userId } = useParams()
   const BACKEND_ROOT = import.meta.env.VITE_SERVER_URL;
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ function Navbar() {
   }
 
   const hasTokens = async () => {
-    //console.log(userData.tokens)
+   
     if (userData.tokens < 1) {
       try {
         await new Promise((resolve) => setTimeout(resolve, 100));
@@ -84,6 +84,9 @@ function Navbar() {
           setUserData(responseJson);
           checkNotificationsLoop();
         })
+        .then((responseJson) =>{
+           console.log(responseJson)
+        })
         
         .catch((err) => console.log(err));
     }
@@ -134,7 +137,7 @@ function Navbar() {
                       <p onClick={() => { handleSidebar(); hasTokens(); hideBanner(); }}
                         className="side-element">
                         Create Help request
-                        {"  "} <i className="fa fa-plus" style={{ color: "#111111" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#D5D5D5" }}></i>
                         {"  "} <i className="fa fa-plus" style={{ color: "#D29D3B" }}></i>
                       </p>
                     </Link>
@@ -147,14 +150,14 @@ function Navbar() {
                   <li >
                     <Link to="/createtestimony">
                       <p onClick={handleSidebar} className="side-element">Create testimony {"   "}
-                        {"  "} <i className="fa fa-plus" style={{ color: "#101010" }}></i>
+                        {"  "} <i className="fa fa-plus" style={{ color: "#D5D5D5" }}></i>
                         <i className="fa fa-plus" style={{ color: "#E88706" }}></i>
                       </p>
                     </Link>
                   </li>
                   <li>
                     <Link to="/about" >
-                      <p className="side-element about-sidebar" onClick={handleSidebar} >About</p>
+                      <p className="side-element " onClick={handleSidebar} >About</p>
                     </Link>
                   </li>
                   <li>

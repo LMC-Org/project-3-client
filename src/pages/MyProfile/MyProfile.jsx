@@ -57,7 +57,7 @@ function MyProfile() {
 
                         <div className="user-details-picture-responsive">
                             <div className="profile-picture-container">
-                                <img className="user-profilepicture" src={userData.profilePicture} alt={userData.name} />
+                                <img className="user-profilepicture" src={profilePicture} alt={userData.name} />
                             </div>
 
                             <div className="user-details-container">

@@ -84,13 +84,14 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
+    text-align: right;
     flex-wrap: wrap;
     border-top: 1px solid whitesmoke;
 }
 
 .skills-list-container{
     width: 250px;
-    text-align: right;
+   
     display: flex;
     flex-direction: column;
     color: #D19C3B;
@@ -99,7 +100,8 @@
 }
 
 .skills-profile {
-    color: #D19C3B;
+    text-align: right;
+    font-size: 10;
 
 }
 
